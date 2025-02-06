@@ -1,0 +1,83 @@
+`timescale 1ns/10ps
+
+module DataPath_tb;
+  // Control signals for registers and bus
+  reg R3out, R4out;  // Output enable signals
+  reg R3in, R4in;    // Input enable signals
+  reg Clock, Clear;
+  
+  // Data signals
+  reg [31:0] initialData;
+  wire [31:0] BusMuxOut;
+  
+  // Parameters for states
+  parameter Default = 4'b0000, LoadR3 = 4'b0001, TransferR3toR4 = 4'b0010;
+  reg [3:0] Present_state = Default;
+
+  // Instantiate the datapath
+  DataPath DUT(
+    .clock(Clock),
+    .clear(Clear),
+    .R3out(R3out),
+    .R4out(R4out),
+    .R3in(R3in),
+    .R4in(R4in)
+  );
+
+  // Clock generation
+  initial 
+  begin
+    Clock = 0;
+    forever #10 Clock = ~Clock;
+  end
+
+  // State machine for test sequence
+  always @(posedge Clock)
+  begin
+    case (Present_state)
+      Default:      Present_state = LoadR3;
+      LoadR3:       Present_state = TransferR3toR4;
+      TransferR3toR4: Present_state = Default;
+    endcase
+  end
+
+  // Test sequence
+  always @(Present_state)
+  begin
+    case (Present_state)
+      Default: begin
+        // Initialize all signals to 0
+        Clear <= 1;
+        R3out <= 0; R4out <= 0;
+        R3in <= 0; R4in <= 0;
+        initialData <= 32'h00000000;
+        #15 Clear <= 0;
+      end
+
+      LoadR3: begin
+        // Load R3 with test data
+        initialData <= 32'hAAAAAAAA;  // Test pattern
+        R3in <= 1;
+        #15 R3in <= 0;
+      end
+
+      TransferR3toR4: begin
+        // Transfer data from R3 to R4
+        R3out <= 1; R4in <= 1;
+        #15 R3out <= 0; R4in <= 0;
+      end
+    endcase
+  end
+
+  // Monitor changes
+  initial begin
+    $monitor("Time=%3d Clear=%b State=%3b R3out=%b R4in=%b BusMuxOut=%8h",
+             $time, Clear, Present_state, R3out, R4in, BusMuxOut);
+  end
+
+  // Test run length
+  initial
+  begin
+    #500 $finish;
+  end
+endmodule

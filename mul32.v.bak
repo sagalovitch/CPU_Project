@@ -1,0 +1,8 @@
+// 32-bit multiply module
+// Use Booth's Algorithm
+
+// Q multiplier, M multiplicand
+module mul32(input [31:0] Q, M, output [64:0] product);
+
+
+endmodule

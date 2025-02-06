@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/ELEC374/CPU_Project {C:/Users/sloth/ELEC374/CPU_Project/adder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/ELEC374/CPU_Project {C:/Users/sloth/ELEC374/CPU_Project/Bus.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/ELEC374/CPU_Project {C:/Users/sloth/ELEC374/CPU_Project/DataPath.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/ELEC374/CPU_Project {C:/Users/sloth/ELEC374/CPU_Project/register.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/ELEC374/CPU_Project {C:/Users/sloth/ELEC374/CPU_Project/mux2to1.v}
+

@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20js32/Desktop/CPU_Project-main/simulation/modelsim
+vBus
+Z1 !s110 1738853492
+!i10b 1
+!s100 zU6QSzNP7B[;VGan:T_?20
+I4YidOZ^HZK`dB@;XO6]XD0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1738848419
+8C:/Users/20js32/Desktop/CPU_Project-main/Bus.v
+FC:/Users/20js32/Desktop/CPU_Project-main/Bus.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1738853492.000000
+!s107 C:/Users/20js32/Desktop/CPU_Project-main/Bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/Desktop/CPU_Project-main|C:/Users/20js32/Desktop/CPU_Project-main/Bus.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main
+Z7 tCvgOpt 0
+n@bus
+vDataPath
+R1
+!i10b 1
+!s100 9[EiQ[Qcf6]gTRJF;d8Y23
+Imo_60UlIZYg5UAh]<<Y>j2
+R2
+R0
+w1738849672
+8C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v
+FC:/Users/20js32/Desktop/CPU_Project-main/DataPath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/Desktop/CPU_Project-main|C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v|
+!i113 1
+R5
+R6
+R7
+n@data@path
+vDataPath_tb
+R1
+!i10b 1
+!s100 N]_?=]d`B8=09YK8WV92X2
+IoH_Qk]nU>mkkg;z[AcHPg0
+R2
+R0
+w1738851626
+8C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v
+FC:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/Desktop/CPU_Project-main|C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v|
+!i113 1
+R5
+R6
+R7
+n@data@path_tb
+vmux2to1
+R1
+!i10b 1
+!s100 nVMeg_obJXW49Xk86HQJS3
+ITIFadmz6VlLEKCjP4]]W[0
+R2
+R0
+w1738852586
+8C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v
+FC:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/Desktop/CPU_Project-main|C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v|
+!i113 1
+R5
+R6
+R7
+vregister
+R1
+!i10b 1
+!s100 j:BOLL1iKO]K<6:GV[WOc1
+IXzEJlO=8]YK5=T]Dzif>h2
+R2
+R0
+w1738853246
+8C:/Users/20js32/Desktop/CPU_Project-main/register.v
+FC:/Users/20js32/Desktop/CPU_Project-main/register.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20js32/Desktop/CPU_Project-main/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/Desktop/CPU_Project-main|C:/Users/20js32/Desktop/CPU_Project-main/register.v|
+!i113 1
+R5
+R6
+R7

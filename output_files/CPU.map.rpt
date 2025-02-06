@@ -1,0 +1,600 @@
+Analysis & Elaboration report for CPU
+Thu Feb 06 09:47:38 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: register:R0
+  5. Parameter Settings for User Entity Instance: register:R1
+  6. Parameter Settings for User Entity Instance: register:R2
+  7. Parameter Settings for User Entity Instance: register:R3
+  8. Parameter Settings for User Entity Instance: register:R4
+  9. Parameter Settings for User Entity Instance: register:R5
+ 10. Parameter Settings for User Entity Instance: register:R6
+ 11. Parameter Settings for User Entity Instance: register:R7
+ 12. Parameter Settings for User Entity Instance: register:R8
+ 13. Parameter Settings for User Entity Instance: register:R9
+ 14. Parameter Settings for User Entity Instance: register:R10
+ 15. Parameter Settings for User Entity Instance: register:R11
+ 16. Parameter Settings for User Entity Instance: register:R12
+ 17. Parameter Settings for User Entity Instance: register:R13
+ 18. Parameter Settings for User Entity Instance: register:R14
+ 19. Parameter Settings for User Entity Instance: register:R15
+ 20. Parameter Settings for User Entity Instance: register:HI
+ 21. Parameter Settings for User Entity Instance: register:LO
+ 22. Parameter Settings for User Entity Instance: register:MDR
+ 23. Parameter Settings for User Entity Instance: register:MAR
+ 24. Parameter Settings for User Entity Instance: register:PC
+ 25. Parameter Settings for User Entity Instance: register:IR
+ 26. Analysis & Elaboration Settings
+ 27. Port Connectivity Checks: "Bus:bus"
+ 28. Port Connectivity Checks: "register:IR"
+ 29. Port Connectivity Checks: "register:MAR"
+ 30. Analysis & Elaboration Messages
+ 31. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                  ;
++-------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Feb 06 09:47:38 2025           ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                 ; CPU                                             ;
+; Top-level Entity Name         ; DataPath                                        ;
+; Family                        ; Cyclone V                                       ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
+; Total registers               ; N/A until Partition Merge                       ;
+; Total pins                    ; N/A until Partition Merge                       ;
+; Total virtual pins            ; N/A until Partition Merge                       ;
+; Total block memory bits       ; N/A until Partition Merge                       ;
+; Total PLLs                    ; N/A until Partition Merge                       ;
+; Total DLLs                    ; N/A until Partition Merge                       ;
++-------------------------------+-------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R0            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R1            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R2            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R3            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R4            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R5            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R6            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R7            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R8            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R9            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R10           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R11           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R12           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R13           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R14           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:R15           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:HI            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:LO            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:MDR           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:MAR           ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:PC            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: register:IR            ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
+; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
+; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; DataPath           ; CPU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bus:bus"                                                                                                                                                            ;
++-----------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                                                                                                                                   ;
++-----------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; BusMuxIn_InPort ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "BusMuxIn_InPort[31..1]" will be connected to GND. ;
++-----------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:IR"                                                                                  ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; RegisterOutput ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:MAR"                                                                                                                                 ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+; RegisterOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "RegisterOutput[31..1]" have no fanouts ;
+; RegisterOutput ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                 ;
++----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Feb 06 09:47:28 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: adder File: C:/Users/20js32/Desktop/CPU_Project-main/adder.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: Bus File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: DataPath File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register File: C:/Users/20js32/Desktop/CPU_Project-main/register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
+    Info (12023): Found entity 1: DataPath_tb File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v Line: 2
+Warning (10275): Verilog HDL Module Instantiation warning at register_transfer_tb.v(80): ignored dangling comma in List of Port Connections File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 80
+Info (12021): Found 1 design units, including 1 entities, in source file register_transfer_tb.v
+    Info (12023): Found entity 1: Bus_tb File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file and32.v
+    Info (12023): Found entity 1: and32 File: C:/Users/20js32/Desktop/CPU_Project-main/and32.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file or32.v
+    Info (12023): Found entity 1: or32 File: C:/Users/20js32/Desktop/CPU_Project-main/or32.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file not32.v
+    Info (12023): Found entity 1: not32 File: C:/Users/20js32/Desktop/CPU_Project-main/not32.v Line: 2
+Info (12021): Found 3 design units, including 3 entities, in source file add32.v
+    Info (12023): Found entity 1: CLA4 File: C:/Users/20js32/Desktop/CPU_Project-main/add32.v Line: 4
+    Info (12023): Found entity 2: CLA16 File: C:/Users/20js32/Desktop/CPU_Project-main/add32.v Line: 21
+    Info (12023): Found entity 3: add32 File: C:/Users/20js32/Desktop/CPU_Project-main/add32.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file mul32.v
+    Info (12023): Found entity 1: mul32 File: C:/Users/20js32/Desktop/CPU_Project-main/mul32.v Line: 5
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(87): created implicit net for "MARoutput" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 87
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(126): created implicit net for "BusMuxIn_InPort" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(154): created implicit net for "InPortout" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 154
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(155): created implicit net for "Cout" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 155
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(31): created implicit net for "R0out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(32): created implicit net for "R1out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(33): created implicit net for "R2out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(35): created implicit net for "R4out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(36): created implicit net for "R5out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(37): created implicit net for "R6out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(39): created implicit net for "R8out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(40): created implicit net for "R9out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(41): created implicit net for "R10out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(42): created implicit net for "R11out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(43): created implicit net for "R12out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(44): created implicit net for "R13out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(45): created implicit net for "R14out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 45
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(46): created implicit net for "R15out" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(49): created implicit net for "R0in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(50): created implicit net for "R1in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(54): created implicit net for "R5in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(55): created implicit net for "R6in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(57): created implicit net for "R8in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(58): created implicit net for "R9in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(59): created implicit net for "R10in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(60): created implicit net for "R11in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(61): created implicit net for "R12in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 61
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(62): created implicit net for "R13in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(63): created implicit net for "R14in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(64): created implicit net for "R15in" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(68): created implicit net for "MDRin" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 68
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(69): created implicit net for "Zhighout" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(70): created implicit net for "Zlowout" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(71): created implicit net for "PCout" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 71
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(72): created implicit net for "Zin" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 72
+Warning (10236): Verilog HDL Implicit Net warning at register_transfer_tb.v(73): created implicit net for "PCin" File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at mul32.v(11): created implicit net for "M_neg" File: C:/Users/20js32/Desktop/CPU_Project-main/mul32.v Line: 11
+Info (12127): Elaborating entity "DataPath" for the top level hierarchy
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 65
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 85
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v Line: 159
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 63
+Info (10041): Inferred latch for "q[0]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[1]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[2]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[3]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[4]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[5]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[6]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[7]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[8]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[9]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[10]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[11]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[12]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[13]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[14]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[15]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[16]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[17]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[18]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[19]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[20]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[21]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[22]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[23]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[24]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[25]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[26]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[27]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[28]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[29]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[30]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Info (10041): Inferred latch for "q[31]" at Bus.v(86) File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v Line: 86
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/20js32/Desktop/CPU_Project-main/output_files/CPU.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Thu Feb 06 09:47:38 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/20js32/Desktop/CPU_Project-main/output_files/CPU.map.smsg.
+
+

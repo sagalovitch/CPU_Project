@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at register_transfer_tb.v(99): always construct contains both blocking and non-blocking assignments File: C:/Users/20js32/Desktop/CPU_Project-main/register_transfer_tb.v Line: 99

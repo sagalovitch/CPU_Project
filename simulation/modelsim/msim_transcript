@@ -1,0 +1,150 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do CPU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main {C:/Users/20js32/Desktop/CPU_Project-main/Bus.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:32 on Feb 06,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/Desktop/CPU_Project-main" C:/Users/20js32/Desktop/CPU_Project-main/Bus.v 
+# -- Compiling module Bus
+# 
+# Top level modules:
+# 	Bus
+# End time: 09:51:32 on Feb 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main {C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:32 on Feb 06,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/Desktop/CPU_Project-main" C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v 
+# -- Compiling module DataPath
+# 
+# Top level modules:
+# 	DataPath
+# End time: 09:51:32 on Feb 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main {C:/Users/20js32/Desktop/CPU_Project-main/register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:32 on Feb 06,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/Desktop/CPU_Project-main" C:/Users/20js32/Desktop/CPU_Project-main/register.v 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 09:51:32 on Feb 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main {C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:32 on Feb 06,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/Desktop/CPU_Project-main" C:/Users/20js32/Desktop/CPU_Project-main/mux2to1.v 
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# End time: 09:51:32 on Feb 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/Desktop/CPU_Project-main {C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:51:32 on Feb 06,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/Desktop/CPU_Project-main" C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v 
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 09:51:32 on Feb 06,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DataPath_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" DataPath_tb 
+# Start time: 09:51:32 on Feb 06,2025
+# Loading work.DataPath_tb
+# Loading work.DataPath
+# Loading work.register
+# Loading work.mux2to1
+# Loading work.Bus
+# ** Warning: (vsim-3015) C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v(87): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/20js32/Desktop/CPU_Project-main/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/20js32/Desktop/CPU_Project-main/register.v
+# ** Warning: (vsim-3015) C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v(100): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_InPort'. The port definition is at: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/bus File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: 20js32  Hostname: WLH214-03  ProcessID: 4188
+#           Attempting to use alternate WLF file "./wlftn3xr11".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn3xr11
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
+# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000022
+# Time=20 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000022 MDRMuxOut=00000022
+# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000022 MDRMuxOut=xxxxxxxx
+# Time=30 State=0010 BusMuxOut=00000022, BusMuxIn_MDR=00000022 MDRMuxOut=00000022
+# Time=50 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000022 MDRMuxOut=00000024
+# Time=60 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000024 MDRMuxOut=00000024
+# Time=65 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000024 MDRMuxOut=00000022
+# Time=70 State=0100 BusMuxOut=00000024, BusMuxIn_MDR=00000024 MDRMuxOut=00000024
+# Time=90 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000024 MDRMuxOut=00000028
+# Time=100 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000028 MDRMuxOut=00000028
+# Time=105 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000028 MDRMuxOut=00000024
+# Time=110 State=0110 BusMuxOut=00000028, BusMuxIn_MDR=00000028 MDRMuxOut=00000028
+# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=00000028 MDRMuxOut=00000000
+# Time=150 State=1000 BusMuxOut=00000000, BusMuxIn_MDR=00000028 MDRMuxOut=2a2b8000
+# Time=160 State=1000 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=170 State=1001 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=190 State=1010 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=210 State=1011 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=230 State=1100 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# ** Note: $finish    : C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v(176)
+#    Time: 500 ns  Iteration: 0  Instance: /DataPath_tb
+# 1
+# Break in Module DataPath_tb at C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v line 176
+restart
+# ** Warning: (vsim-3015) C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v(87): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/20js32/Desktop/CPU_Project-main/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/20js32/Desktop/CPU_Project-main/register.v
+# ** Warning: (vsim-3015) C:/Users/20js32/Desktop/CPU_Project-main/DataPath.v(100): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_InPort'. The port definition is at: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/bus File: C:/Users/20js32/Desktop/CPU_Project-main/Bus.v
+add wave -position end  sim:/DataPath_tb/DUT/MDR_Mux/select
+add wave -position end  sim:/DataPath_tb/DUT/MDR_Mux/Input1
+add wave -position end  sim:/DataPath_tb/DUT/MDR_Mux/Input0
+add wave -position end  sim:/DataPath_tb/DUT/MDR_Mux/MuxOut
+add wave -position end  sim:/DataPath_tb/DUT/MDR_Mux/q
+add wave -position end  sim:/DataPath_tb/DUT/bus/BusMuxInMDR
+add wave -position end  sim:/DataPath_tb/DUT/bus/BusMuxInR15
+add wave -position end  sim:/DataPath_tb/DUT/bus/BusMuxOut
+run 500ns
+# Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
+# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000022
+# Time=20 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000022 MDRMuxOut=00000022
+# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000022 MDRMuxOut=xxxxxxxx
+# Time=30 State=0010 BusMuxOut=00000022, BusMuxIn_MDR=00000022 MDRMuxOut=00000022
+# Time=50 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000022 MDRMuxOut=00000024
+# Time=60 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000024 MDRMuxOut=00000024
+# Time=65 State=0011 BusMuxOut=00000022, BusMuxIn_MDR=00000024 MDRMuxOut=00000022
+# Time=70 State=0100 BusMuxOut=00000024, BusMuxIn_MDR=00000024 MDRMuxOut=00000024
+# Time=90 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000024 MDRMuxOut=00000028
+# Time=100 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000028 MDRMuxOut=00000028
+# Time=105 State=0101 BusMuxOut=00000024, BusMuxIn_MDR=00000028 MDRMuxOut=00000024
+# Time=110 State=0110 BusMuxOut=00000028, BusMuxIn_MDR=00000028 MDRMuxOut=00000028
+# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=00000028 MDRMuxOut=00000000
+# Time=150 State=1000 BusMuxOut=00000000, BusMuxIn_MDR=00000028 MDRMuxOut=2a2b8000
+# Time=160 State=1000 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=170 State=1001 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=190 State=1010 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=210 State=1011 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# Time=230 State=1100 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
+# ** Note: $finish    : C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v(176)
+#    Time: 500 ns  Iteration: 0  Instance: /DataPath_tb
+# 1
+# Break in Module DataPath_tb at C:/Users/20js32/Desktop/CPU_Project-main/DataPath_tb.v line 176

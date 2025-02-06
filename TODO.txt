@@ -1,0 +1,6 @@
+Jacob TODO Feb 2nd:
+1. Check if registers can move onto BUS
+2. Finalize all registers on the bus
+
+
+-- Consolidate input and output ports for DataPath, not sure but some seem exsesive, maybe turn into array

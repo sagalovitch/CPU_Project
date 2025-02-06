@@ -1,0 +1,5 @@
+// neg module
+module (input [31:0] a, output [31:0] b);
+
+
+endmodule
