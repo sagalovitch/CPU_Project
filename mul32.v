@@ -28,5 +28,5 @@ always @ (*) begin
 	end	
 	
 end
-
+assign product = C;
 endmodule
