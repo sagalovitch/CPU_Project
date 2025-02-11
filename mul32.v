@@ -1,32 +1,50 @@
-// 32-bit multiply module
-// Use Booth's Algorithm
+`timescale 1ns/10ps
 
-// Q multiplier, M multiplicand
-module mul32(input [31:0] Q, M, output [64:0] product);
+module mul32 (
+    input wire [31:0] M, Q,  // M = Multiplicand, Q = Multiplier
+    output reg [63:0] P      // 64-bit product
+);
 
-// loop through Q (shift 3 bits each time to determine bit-pair)
-// why would we need an always block? If our goal is to just multiply this, similar to a function. Is this for just when something gets passed
-// as an input it will do the below steps?
-reg [63:0] C = 64'b0;
-assign M_neg = ~M + 1;
-integer i;
+    // Booth encoding groups (storing 3-bit values)
+    reg [2:0] bG [15:0];
 
+    // Temporary variables
+    reg signed [32:0] cA;    // Stores the adjusted M or -M
+    reg signed [63:0] sCA;   // Stores the shifted value of cA
 
-// Apparently could also just do - A instead of two's complement since verilog auto handles negatives as two's complement.
-always @ (*) begin
-	
-	// Cycle through Q three bits at a time
-	for (i = 0; i < 30; i = i + 2) begin
-        case ({Q[i+1], Q[i], (i == 0) ? 1'b0 : Q[i-1]})  // 3-bit slice
-           //3'b000, 3'b111: C = C; 
-            3'b001, 3'b010: C = C + (M << i);  // +1 × M
-            3'b011: C = C + (M << (i+1));  // +2 × M
-            3'b100: C = C + (M_neg << (i+1));  // -2 × M
-            3'b101, 3'b110: C = C + (M_neg << i);  // -1 × M
-            default: C = C;  
-        endcase
-	end	
-	
-end
-assign product = C;
+    wire [31:0] nM;  // Two’s complement of M (negative M)
+
+    // Inline neg_32 function - computes two's complement of M
+    assign nM = ~M + 1;  // Negating M using bitwise NOT and +1
+
+    integer i, j;
+
+    always @(*) begin
+        P = 0;  // Initialize product to 0
+        
+        // Booth Encoding: Break multiplier Q into 3-bit groups
+        for (i = 0; i < 16; i = i + 1) begin
+            if (i == 0) begin
+                bG[i] = {Q[i+1], Q[i], 1'b0};  // First group (assume Q[-1] = 0)
+            end else begin
+                bG[i] = {Q[(i*2)+1], Q[(i*2)], Q[(i*2)-1]};  // Extract 3-bit pairs
+            end
+        end
+
+        // Process each Booth encoded group
+        for (j = 0; j < 16; j = j + 1) begin
+            case (bG[j])
+                3'b001, 3'b010: cA = {M[31], M[31:0]};  // +M
+                3'b011: cA = {M[31:0], 1'b0};  // +2M (shift left)
+                3'b100: cA = {nM[31:0], 1'b0};  // -2M (shift left)
+                3'b101, 3'b110: cA = {nM[31], nM[31:0]};  // -M
+                3'b111, 3'b000: cA = 0;  // No operation
+                default: cA = 0;
+            endcase
+
+            sCA = cA << (j * 2);  // Shift left based on position
+            P = P + sCA;  // Accumulate partial results
+        end
+    end
+
 endmodule
