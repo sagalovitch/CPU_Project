@@ -1,6 +1,9 @@
 This project aims to design, simulate, implement, and verify a simple RISC Computer (SRC) consiting of a RISC processor, memory, and I/O.
 
-This SRC takes inspiration from processor design in _Computer Systems Design and Architecture_ by V.P. Heuring.
+This SRC takes inspiration from the processor design in _Computer Systems Design and Architecture_ by V.P. Heuring.
+
+**Note**
+Some of these verilog files are redunant and are a WIP, they will be removed in the near future. 
 
 MIT License
 
