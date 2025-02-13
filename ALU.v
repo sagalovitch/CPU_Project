@@ -1,6 +1,8 @@
 // ALU module 
 // In this case, input A is always going to be the Y register (this will be setup in the DataPath
-module ALU ( input [31:0] A, B, output [63:0] C, input [4:0] opcode);
+module ALU (input [31:0] A, B, 
+			output reg [63:0] C, 
+			input [4:0] opcode);
 
 parameter Add = 5'b00011, Sub = 5'b00100, AND = 5'b00101, OR = 5'b00110, RotateRight = 5'b00111, 
 RotateLeft = 5'b01000, ShiftRight = 01001, ShiftRightArithmetic = 5'b01010, ShiftLeft = 5'b01011,
@@ -8,8 +10,24 @@ AddImmediate = 5'b01100, ANDImmediate = 5'b01101, ORImmediate = 5'b01110, Divide
 NOT = 5'b10010;
 
 // instatiate alu modules here with corresponding outputs then have C take value of those inputs 
-wire [63:0] multi_out, div_out;
-wire [31:0] add_out, sub_out, and_out, or_out, ror_out, rol_out, shr_out, shra_out, shl_out, addi_out, andi_out, ori_out, IncPC_out, neg_out, not_out;
+wire [63:0] mul_out;
+wire [31:0] add_out, add_cout, sub_out, sub_cout, and_out, or_out, ror_out, rol_out, shr_out, shra_out, shl_out, 
+ori_out, IncPC_out, neg_out, not_out, div_out, div_remainder;
+
+// alu operation module instantiations
+add32 add_32(.A(A), .B(B), .Cin(1'd0), .Sum(add_out), .Cout(add_cout));
+sub32 sub_32(.A(A), .B(B), .Cin(1'd0), .Diff(sub_out), .Cout(sub_cout));
+mul32 mul_32(.M(A), .Q(B), .P(mul_out));
+div32 div_32(.A(A), .M(B), .Q(div_out), .R(div_remainder));
+and32 and_32(.Ra(A), .Rb(B), .Rz(and_out));
+or32 or_32(.Ra(A), .Rb(B), .Rz(or_out));
+ror32 ror_32(.Ra(A), .shift_amt(B), .result(ror_out));
+rol32 rol_32(.Ra(A), .shift_amt(B), .result(rol_out));
+shr32 shr_32(.Ra(A), .shift_amt(B), .result(shr_out));
+shra32 shra_32(.Ra(A), .shift_amt(B), .result(shra_out));
+shl32 shl_32(.Ra(A), .shift_amt(B), .result(shl_out));
+neg neg_32(.a(A), .b(neg_out));
+not32 not_32(.Ra(A), .Rb(not_out));
 
 always @(*) begin
 	case (opcode)
@@ -41,7 +59,7 @@ always @(*) begin
 			C[31:0] <= shr_out;
 			C[63:32] <= 32'd0;
 		end
-		ShiftRightArtithmetic: begin
+		ShiftRightArithmetic: begin
 			C[31:0] <= shra_out;
 			C[63:32] <= 32'd0;
 		end
@@ -50,11 +68,11 @@ always @(*) begin
 			C[63:32] <= 32'd0;
 		end
 		AddImmediate: begin
-			C[31:0] <= addi_out;
+			C[31:0] <= add_out;
 			C[63:32] <= 32'd0;
 		end
 		ANDImmediate:begin
-			C[31:0] <= andi_out;
+			C[31:0] <= and_out;
 			C[63:32] <= 32'd0;
 		end
 		ORImmediate: begin
@@ -65,7 +83,7 @@ always @(*) begin
 			C[63:0] <= div_out;
 		end
 		Multiply: begin
-			C[63:0] <= multi_out;
+			C[63:0] <= mul_out;
 		end
 		Negate: begin
 			C[31:0] <= neg_out;
@@ -77,3 +95,5 @@ always @(*) begin
 		end
 	endcase
 end
+
+endmodule

@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CEBA4F23C7
 set_global_assignment -name TOP_LEVEL_ENTITY DataPath
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:10:20  JANUARY 23, 2025"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -66,7 +66,6 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH DataPath_tb -se
 set_global_assignment -name EDA_TEST_BENCH_NAME DataPath_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id DataPath_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DataPath_tb -section_id DataPath_tb
-set_global_assignment -name VERILOG_FILE register_transfer_tb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME Bus_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Bus_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Bus_tb -section_id Bus_tb
@@ -77,5 +76,14 @@ set_global_assignment -name VERILOG_FILE or32.v
 set_global_assignment -name VERILOG_FILE not32.v
 set_global_assignment -name VERILOG_FILE add32.v
 set_global_assignment -name VERILOG_FILE mul32.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE neg.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE div32.v
+set_global_assignment -name VERILOG_FILE rol32.v
+set_global_assignment -name VERILOG_FILE ror32.v
+set_global_assignment -name VERILOG_FILE shl32.v
+set_global_assignment -name VERILOG_FILE shr32.v
+set_global_assignment -name VERILOG_FILE shra32.v
+set_global_assignment -name VERILOG_FILE sub32.v
+set_global_assignment -name VERILOG_FILE mul32_jacob.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

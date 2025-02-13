@@ -29,6 +29,7 @@ module DataPath_tb;
 			PCout, PCin, IRin, IncPC;
 	reg [31:0] Mdatain;
 	reg AND;
+	reg [4:0] opcode;
 
   // State parameters
   parameter Default = 4'b0000, 
@@ -75,7 +76,8 @@ module DataPath_tb;
 	.MDRout(MDRout), .MDRin(MDRin),
 	.PCout(PCout), .PCin(PCin), .IRin(IRin),
 	.Mdatain(Mdatain),
-	.MARin(MARin), .IncPC(IncPC)
+	.MARin(MARin), .IncPC(IncPC),
+	.opcode(opcode)
   );
 
   // Clock generation - unchanged
@@ -113,6 +115,7 @@ always @(Present_state) // do the required job in each state
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
 			R3in <= 0; R4in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0;
+			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
 			Mdatain <= 32'h00000022;
@@ -144,23 +147,29 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value 0x28 
 		end
 		T0: begin // see if you need to de-assert these signals
-			PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1;
+			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
 		end
 		T1: begin
 			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
 			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7”
+			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin
 			MDRout <= 1; IRin <= 1; 
+			#15 MDRout <= 0; IRin <= 0;
 		end
 		T3: begin
 			R3out <= 1; Yin <= 1; 
+			#15 Yin <= 0; R3out <= 0; 
 		end
 		T4: begin
-			R7out <= 1; AND <= 1; Zin <= 1; 
+			R7out <= 1; opcode <= 5'b00101; Zin <= 1; 
+			#15 opcode <= 5'bzzzzz; Zin <= 0; R7out <= 0;
 		end
 		T5: begin
 			Zlowout <= 1; R4in <= 1; 
+			#15 Zlowout <= 0; R4in <= 0;
 		end
   endcase
 end

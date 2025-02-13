@@ -27,7 +27,8 @@ module DataPath(
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC,
-	input [31:0] Mdatain
+	input [31:0] Mdatain,
+	input [4:0] opcode
 );
 
 
@@ -80,9 +81,7 @@ register R14(clear, clock, R14in, BusMuxOut, BusMuxIn_R14);
 register R15(clear, clock, R15in, BusMuxOut, BusMuxIn_R15);
 register HI(clear, clock, HIin, BusMuxOut, BusMuxIn_HI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
-register Zhi(clear, clock, Zin, BusMuxOut, BusMuxIn_Zhigh);
-register Zlo(clear, clock, Zin, BusMuxOut, BusMuxIn_Zlow);
-register Y(clear, clock, Yin, BusMuxOut, Y
+register Y(clear, clock, Yin, BusMuxOut, Yout);
 
 // Memory Registers
 mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
@@ -92,12 +91,12 @@ register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
 
 register IR(clear, clock, IRin, BusMuxOut, IRout);
 
-// I/O Registers
+wire [63:0] Z_64;
 
-// adder
-//adder add(A, BusMuxOut, Zregin);
-//register RZ(clear, clock, RZin, Zregin, BusMuxIn_RZ);
-//register RY(clear, clock, RYin, BusMuxOut, Yout); 
+// ALU alu(.A(Yout), .B(BusMuxOut), .C(Z_64),.opcode(Mdatain[31:27])); // Trying to decode Mdatain, ignore for now
+ALU alu(.A(Yout), .B(BusMuxOut), .C(Z_64),.opcode(opcode));
+register Zhi(clear, clock, Zin, Z_64[63:32], BusMuxIn_Zhigh);
+register Zlo(clear, clock, Zin, Z_64[31:0], BusMuxIn_Zlow);
 
 // Bus
 Bus bus(
