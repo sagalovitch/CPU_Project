@@ -1,54 +1,59 @@
-Analysis & Elaboration report for CPU
-Wed Feb 12 23:17:59 2025
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis report for CPU
+Thu Feb 13 11:16:03 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: register:R0
-  5. Parameter Settings for User Entity Instance: register:R1
-  6. Parameter Settings for User Entity Instance: register:R2
-  7. Parameter Settings for User Entity Instance: register:R3
-  8. Parameter Settings for User Entity Instance: register:R4
-  9. Parameter Settings for User Entity Instance: register:R5
- 10. Parameter Settings for User Entity Instance: register:R6
- 11. Parameter Settings for User Entity Instance: register:R7
- 12. Parameter Settings for User Entity Instance: register:R8
- 13. Parameter Settings for User Entity Instance: register:R9
- 14. Parameter Settings for User Entity Instance: register:R10
- 15. Parameter Settings for User Entity Instance: register:R11
- 16. Parameter Settings for User Entity Instance: register:R12
- 17. Parameter Settings for User Entity Instance: register:R13
- 18. Parameter Settings for User Entity Instance: register:R14
- 19. Parameter Settings for User Entity Instance: register:R15
- 20. Parameter Settings for User Entity Instance: register:HI
- 21. Parameter Settings for User Entity Instance: register:LO
- 22. Parameter Settings for User Entity Instance: register:Y
- 23. Parameter Settings for User Entity Instance: register:MDR
- 24. Parameter Settings for User Entity Instance: register:MAR
- 25. Parameter Settings for User Entity Instance: register:PC
- 26. Parameter Settings for User Entity Instance: register:IR
- 27. Parameter Settings for User Entity Instance: ALU:alu
- 28. Parameter Settings for User Entity Instance: register:Zhi
- 29. Parameter Settings for User Entity Instance: register:Zlo
- 30. Analysis & Elaboration Settings
- 31. Port Connectivity Checks: "Bus:bus"
- 32. Port Connectivity Checks: "ALU:alu|shl32:shl_32"
- 33. Port Connectivity Checks: "ALU:alu|shra32:shra_32"
- 34. Port Connectivity Checks: "ALU:alu|shr32:shr_32"
- 35. Port Connectivity Checks: "ALU:alu|rol32:rol_32"
- 36. Port Connectivity Checks: "ALU:alu|ror32:ror_32"
- 37. Port Connectivity Checks: "ALU:alu|div32:div_32"
- 38. Port Connectivity Checks: "ALU:alu|sub32:sub_32|add32:cla_adder"
- 39. Port Connectivity Checks: "ALU:alu|sub32:sub_32"
- 40. Port Connectivity Checks: "ALU:alu|add32:add_32"
- 41. Port Connectivity Checks: "register:IR"
- 42. Port Connectivity Checks: "register:MAR"
- 43. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: register:R0
+ 10. Parameter Settings for User Entity Instance: register:R1
+ 11. Parameter Settings for User Entity Instance: register:R2
+ 12. Parameter Settings for User Entity Instance: register:R3
+ 13. Parameter Settings for User Entity Instance: register:R4
+ 14. Parameter Settings for User Entity Instance: register:R5
+ 15. Parameter Settings for User Entity Instance: register:R6
+ 16. Parameter Settings for User Entity Instance: register:R7
+ 17. Parameter Settings for User Entity Instance: register:R8
+ 18. Parameter Settings for User Entity Instance: register:R9
+ 19. Parameter Settings for User Entity Instance: register:R10
+ 20. Parameter Settings for User Entity Instance: register:R11
+ 21. Parameter Settings for User Entity Instance: register:R12
+ 22. Parameter Settings for User Entity Instance: register:R13
+ 23. Parameter Settings for User Entity Instance: register:R14
+ 24. Parameter Settings for User Entity Instance: register:R15
+ 25. Parameter Settings for User Entity Instance: register:HI
+ 26. Parameter Settings for User Entity Instance: register:LO
+ 27. Parameter Settings for User Entity Instance: register:Y
+ 28. Parameter Settings for User Entity Instance: register:MDR
+ 29. Parameter Settings for User Entity Instance: register:MAR
+ 30. Parameter Settings for User Entity Instance: register:PC
+ 31. Parameter Settings for User Entity Instance: register:IR
+ 32. Parameter Settings for User Entity Instance: ALU:alu
+ 33. Parameter Settings for User Entity Instance: register:Zhi
+ 34. Parameter Settings for User Entity Instance: register:Zlo
+ 35. Port Connectivity Checks: "Bus:bus"
+ 36. Port Connectivity Checks: "ALU:alu|shl32:shl_32"
+ 37. Port Connectivity Checks: "ALU:alu|shra32:shra_32"
+ 38. Port Connectivity Checks: "ALU:alu|shr32:shr_32"
+ 39. Port Connectivity Checks: "ALU:alu|rol32:rol_32"
+ 40. Port Connectivity Checks: "ALU:alu|ror32:ror_32"
+ 41. Port Connectivity Checks: "ALU:alu|sub32:sub_32|add32:cla_adder"
+ 42. Port Connectivity Checks: "ALU:alu|sub32:sub_32"
+ 43. Port Connectivity Checks: "ALU:alu|add32:add_32"
+ 44. Port Connectivity Checks: "register:IR"
+ 45. Port Connectivity Checks: "register:MAR"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -71,22 +76,114 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Feb 12 23:17:59 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; CPU                                         ;
-; Top-level Entity Name         ; DataPath                                    ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Feb 13 11:16:03 2025           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; CPU                                             ;
+; Top-level Entity Name           ; DataPath                                        ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 87                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; DataPath           ; CPU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -94,8 +191,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -103,6 +200,84 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; Bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/Bus.v      ;         ;
+; DataPath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/DataPath.v ;         ;
+; register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/register.v ;         ;
+; mux2to1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/mux2to1.v  ;         ;
+; and32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/and32.v    ;         ;
+; or32.v                           ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/or32.v     ;         ;
+; not32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/not32.v    ;         ;
+; add32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/add32.v    ;         ;
+; mul32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/mul32.v    ;         ;
+; neg.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/neg.v      ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/ALU.v      ;         ;
+; div32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/div32.v    ;         ;
+; rol32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/rol32.v    ;         ;
+; ror32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/ror32.v    ;         ;
+; shl32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/shl32.v    ;         ;
+; shr32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/shr32.v    ;         ;
+; shra32.v                         ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/shra32.v   ;         ;
+; sub32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20js32/CPU_Project/sub32.v    ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 87    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 87    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |DataPath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 87   ; 0            ; |DataPath           ; DataPath    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +---------------------------------------------------------------------+
@@ -392,7 +567,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; OR                   ; 00110 ; Unsigned Binary       ;
 ; RotateRight          ; 00111 ; Unsigned Binary       ;
 ; RotateLeft           ; 01000 ; Unsigned Binary       ;
-; ShiftRight           ; 1001  ; Signed Integer        ;
+; ShiftRight           ; 01001 ; Unsigned Binary       ;
 ; ShiftRightArithmetic ; 01010 ; Unsigned Binary       ;
 ; ShiftLeft            ; 01011 ; Unsigned Binary       ;
 ; AddImmediate         ; 01100 ; Unsigned Binary       ;
@@ -430,93 +605,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; DataPath           ; CPU                ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Bus:bus"                                                                                                                                                            ;
 +-----------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -544,14 +632,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu|shr32:shr_32"                                                                                                                                                                   ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; shift_amt ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; result    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|shr32:shr_32"                                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; shift_amt ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -572,15 +659,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu|div32:div_32"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; R    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------+
 ; Port Connectivity Checks: "ALU:alu|sub32:sub_32|add32:cla_adder" ;
 +------+-------+----------+----------------------------------------+
@@ -590,26 +668,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu|sub32:sub_32"                                                                                                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Cin      ; Input  ; Info     ; Stuck at GND                                                                                                                                                            ;
-; Cout     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; Cout[-1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|sub32:sub_32"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu|add32:add_32"                                                                                                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Cin      ; Input  ; Info     ; Stuck at GND                                                                                                                                                            ;
-; Cout     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; Cout[-1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu|add32:add_32"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -631,197 +707,307 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 87                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 12 23:17:54 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Feb 13 11:15:52 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/sloth/ELEC374/CPU_Project/adder.v Line: 2
+    Info (12023): Found entity 1: adder File: C:/Users/20js32/CPU_Project/adder.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 1
+    Info (12023): Found entity 1: Bus File: C:/Users/20js32/CPU_Project/Bus.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: DataPath File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 1
+    Info (12023): Found entity 1: DataPath File: C:/Users/20js32/CPU_Project/DataPath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/Users/sloth/ELEC374/CPU_Project/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/Users/20js32/CPU_Project/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
-    Info (12023): Found entity 1: DataPath_tb File: C:/Users/sloth/ELEC374/CPU_Project/DataPath_tb.v Line: 3
+    Info (12023): Found entity 1: DataPath_tb File: C:/Users/20js32/CPU_Project/DataPath_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/sloth/ELEC374/CPU_Project/mux2to1.v Line: 2
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/20js32/CPU_Project/mux2to1.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file and32.v
-    Info (12023): Found entity 1: and32 File: C:/Users/sloth/ELEC374/CPU_Project/and32.v Line: 2
+    Info (12023): Found entity 1: and32 File: C:/Users/20js32/CPU_Project/and32.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or32.v
-    Info (12023): Found entity 1: or32 File: C:/Users/sloth/ELEC374/CPU_Project/or32.v Line: 2
+    Info (12023): Found entity 1: or32 File: C:/Users/20js32/CPU_Project/or32.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file not32.v
-    Info (12023): Found entity 1: not32 File: C:/Users/sloth/ELEC374/CPU_Project/not32.v Line: 2
+    Info (12023): Found entity 1: not32 File: C:/Users/20js32/CPU_Project/not32.v Line: 2
 Info (12021): Found 3 design units, including 3 entities, in source file add32.v
-    Info (12023): Found entity 1: cla_4bit_adder File: C:/Users/sloth/ELEC374/CPU_Project/add32.v Line: 4
-    Info (12023): Found entity 2: cla_16bit_adder File: C:/Users/sloth/ELEC374/CPU_Project/add32.v Line: 27
-    Info (12023): Found entity 3: add32 File: C:/Users/sloth/ELEC374/CPU_Project/add32.v Line: 44
+    Info (12023): Found entity 1: cla_4bit_adder File: C:/Users/20js32/CPU_Project/add32.v Line: 4
+    Info (12023): Found entity 2: cla_16bit_adder File: C:/Users/20js32/CPU_Project/add32.v Line: 27
+    Info (12023): Found entity 3: add32 File: C:/Users/20js32/CPU_Project/add32.v Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file mul32.v
-    Info (12023): Found entity 1: mul32 File: C:/Users/sloth/ELEC374/CPU_Project/mul32.v Line: 3
+    Info (12023): Found entity 1: mul32 File: C:/Users/20js32/CPU_Project/mul32.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file neg.v
-    Info (12023): Found entity 1: neg File: C:/Users/sloth/ELEC374/CPU_Project/neg.v Line: 2
+    Info (12023): Found entity 1: neg File: C:/Users/20js32/CPU_Project/neg.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 3
+    Info (12023): Found entity 1: ALU File: C:/Users/20js32/CPU_Project/ALU.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file div32.v
-    Info (12023): Found entity 1: div32 File: C:/Users/sloth/ELEC374/CPU_Project/div32.v Line: 3
-Warning (10229): Verilog HDL Expression warning at rol32.v(6): truncated literal to match 5 bits File: C:/Users/sloth/ELEC374/CPU_Project/rol32.v Line: 6
+    Info (12023): Found entity 1: div32 File: C:/Users/20js32/CPU_Project/div32.v Line: 3
+Warning (10229): Verilog HDL Expression warning at rol32.v(6): truncated literal to match 5 bits File: C:/Users/20js32/CPU_Project/rol32.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rol32.v
-    Info (12023): Found entity 1: rol32 File: C:/Users/sloth/ELEC374/CPU_Project/rol32.v Line: 1
-Warning (10229): Verilog HDL Expression warning at ror32.v(6): truncated literal to match 5 bits File: C:/Users/sloth/ELEC374/CPU_Project/ror32.v Line: 6
+    Info (12023): Found entity 1: rol32 File: C:/Users/20js32/CPU_Project/rol32.v Line: 1
+Warning (10229): Verilog HDL Expression warning at ror32.v(6): truncated literal to match 5 bits File: C:/Users/20js32/CPU_Project/ror32.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file ror32.v
-    Info (12023): Found entity 1: ror32 File: C:/Users/sloth/ELEC374/CPU_Project/ror32.v Line: 1
+    Info (12023): Found entity 1: ror32 File: C:/Users/20js32/CPU_Project/ror32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shl32.v
-    Info (12023): Found entity 1: shl32 File: C:/Users/sloth/ELEC374/CPU_Project/shl32.v Line: 1
+    Info (12023): Found entity 1: shl32 File: C:/Users/20js32/CPU_Project/shl32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shr32.v
-    Info (12023): Found entity 1: shr32 File: C:/Users/sloth/ELEC374/CPU_Project/shr32.v Line: 1
+    Info (12023): Found entity 1: shr32 File: C:/Users/20js32/CPU_Project/shr32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shra32.v
-    Info (12023): Found entity 1: shra32 File: C:/Users/sloth/ELEC374/CPU_Project/shra32.v Line: 1
+    Info (12023): Found entity 1: shra32 File: C:/Users/20js32/CPU_Project/shra32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sub32.v
-    Info (12023): Found entity 1: sub32 File: C:/Users/sloth/ELEC374/CPU_Project/sub32.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file mul32_jacob.v
-    Info (12023): Found entity 1: mul32_jacob File: C:/Users/sloth/ELEC374/CPU_Project/mul32_jacob.v Line: 5
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "MARoutput" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 89
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(128): created implicit net for "BusMuxIn_InPort" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 128
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(156): created implicit net for "InPortout" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 156
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(157): created implicit net for "Cout" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 157
-Warning (10236): Verilog HDL Implicit Net warning at mul32_jacob.v(11): created implicit net for "M_neg" File: C:/Users/sloth/ELEC374/CPU_Project/mul32_jacob.v Line: 11
+    Info (12023): Found entity 1: sub32 File: C:/Users/20js32/CPU_Project/sub32.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(89): created implicit net for "MARoutput" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 89
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(128): created implicit net for "BusMuxIn_InPort" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 128
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(156): created implicit net for "InPortout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 156
+Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(157): created implicit net for "Cout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 157
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
-Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 66
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 87
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 97
-Warning (10199): Verilog HDL Case Statement warning at ALU.v(58): case item expression never matches the case expression File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 58
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(33): incomplete case statement has no default case item File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(33): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[0]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[1]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[2]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[3]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[4]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[5]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[6]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[7]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[8]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[9]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[10]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[11]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[12]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[13]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[14]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[15]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[16]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[17]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[18]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[19]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[20]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[21]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[22]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[23]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[24]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[25]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[26]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[27]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[28]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[29]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[30]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[31]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[32]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[33]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[34]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[35]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[36]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[37]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[38]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[39]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[40]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[41]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[42]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[43]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[44]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[45]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[46]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[47]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[48]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[49]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[50]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[51]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[52]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[53]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[54]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[55]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[56]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[57]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[58]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[59]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[60]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[61]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[62]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (10041): Inferred latch for "C[63]" at ALU.v(33) File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 33
-Info (12128): Elaborating entity "add32" for hierarchy "ALU:alu|add32:add_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 18
-Info (12128): Elaborating entity "cla_16bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low" File: C:/Users/sloth/ELEC374/CPU_Project/add32.v Line: 52
-Info (12128): Elaborating entity "cla_4bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low|cla_4bit_adder:adder0" File: C:/Users/sloth/ELEC374/CPU_Project/add32.v Line: 36
-Info (12128): Elaborating entity "sub32" for hierarchy "ALU:alu|sub32:sub_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 19
-Info (12128): Elaborating entity "mul32" for hierarchy "ALU:alu|mul32:mul_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 20
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(35): case item expression never matches the case expression File: C:/Users/sloth/ELEC374/CPU_Project/mul32.v Line: 35
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(36): case item expression never matches the case expression File: C:/Users/sloth/ELEC374/CPU_Project/mul32.v Line: 36
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(38): case item expression never matches the case expression File: C:/Users/sloth/ELEC374/CPU_Project/mul32.v Line: 38
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(39): case item expression never matches the case expression File: C:/Users/sloth/ELEC374/CPU_Project/mul32.v Line: 39
-Info (12128): Elaborating entity "div32" for hierarchy "ALU:alu|div32:div_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 21
-Warning (10240): Verilog HDL Always Construct warning at div32.v(14): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/ELEC374/CPU_Project/div32.v Line: 14
-Info (12128): Elaborating entity "and32" for hierarchy "ALU:alu|and32:and_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 22
-Info (12128): Elaborating entity "or32" for hierarchy "ALU:alu|or32:or_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 23
-Info (12128): Elaborating entity "ror32" for hierarchy "ALU:alu|ror32:ror_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 24
-Info (12128): Elaborating entity "rol32" for hierarchy "ALU:alu|rol32:rol_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 25
-Info (12128): Elaborating entity "shr32" for hierarchy "ALU:alu|shr32:shr_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 26
-Info (12128): Elaborating entity "shra32" for hierarchy "ALU:alu|shra32:shra_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 27
-Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 28
-Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 29
-Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/sloth/ELEC374/CPU_Project/ALU.v Line: 30
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/sloth/ELEC374/CPU_Project/DataPath.v Line: 161
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 63
-Info (10041): Inferred latch for "q[0]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[1]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[2]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[3]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[4]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[5]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[6]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[7]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[8]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[9]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[10]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[11]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[12]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[13]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[14]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[15]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[16]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[17]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[18]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[19]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[20]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[21]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[22]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[23]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[24]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[25]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[26]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[27]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[28]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[29]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[30]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Info (10041): Inferred latch for "q[31]" at Bus.v(86) File: C:/Users/sloth/ELEC374/CPU_Project/Bus.v Line: 86
-Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Wed Feb 12 23:17:59 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 66
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 87
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 97
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(34): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(34): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[0]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[1]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[2]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[3]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[4]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[5]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[6]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[7]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[8]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[9]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[10]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[11]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[12]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[13]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[14]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[15]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[16]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[17]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[18]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[19]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[20]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[21]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[22]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[23]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[24]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[25]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[26]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[27]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[28]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[29]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[30]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[31]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[32]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[33]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[34]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[35]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[36]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[37]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[38]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[39]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[40]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[41]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[42]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[43]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[44]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[45]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[46]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[47]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[48]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[49]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[50]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[51]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[52]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[53]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[54]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[55]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[56]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[57]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[58]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[59]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[60]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[61]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[62]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (10041): Inferred latch for "C[63]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Info (12128): Elaborating entity "add32" for hierarchy "ALU:alu|add32:add_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 19
+Info (12128): Elaborating entity "cla_16bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low" File: C:/Users/20js32/CPU_Project/add32.v Line: 52
+Info (12128): Elaborating entity "cla_4bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low|cla_4bit_adder:adder0" File: C:/Users/20js32/CPU_Project/add32.v Line: 36
+Info (12128): Elaborating entity "sub32" for hierarchy "ALU:alu|sub32:sub_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 20
+Info (12128): Elaborating entity "mul32" for hierarchy "ALU:alu|mul32:mul_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 21
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(35): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 35
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(36): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 36
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(38): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 38
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(39): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 39
+Info (12128): Elaborating entity "div32" for hierarchy "ALU:alu|div32:div_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at div32.v(14): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 14
+Info (12128): Elaborating entity "and32" for hierarchy "ALU:alu|and32:and_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 23
+Info (12128): Elaborating entity "or32" for hierarchy "ALU:alu|or32:or_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 24
+Info (12128): Elaborating entity "ror32" for hierarchy "ALU:alu|ror32:ror_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 25
+Info (12128): Elaborating entity "rol32" for hierarchy "ALU:alu|rol32:rol_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 26
+Info (12128): Elaborating entity "shr32" for hierarchy "ALU:alu|shr32:shr_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 27
+Info (12128): Elaborating entity "shra32" for hierarchy "ALU:alu|shra32:shra_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 28
+Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 29
+Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 30
+Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 31
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 161
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/Bus.v Line: 63
+Info (10041): Inferred latch for "q[0]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[1]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[2]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[3]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[4]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[5]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[6]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[7]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[8]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[9]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[10]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[11]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[12]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[13]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[14]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[15]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[16]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[17]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[18]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[19]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[20]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[21]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[22]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[23]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[24]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[25]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[26]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[27]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[28]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[29]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[30]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Info (10041): Inferred latch for "q[31]" at Bus.v(86) File: C:/Users/20js32/CPU_Project/Bus.v Line: 86
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 87 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 2
+    Warning (15610): No output dependent on input pin "clear" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 2
+    Warning (15610): No output dependent on input pin "read" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 2
+    Warning (15610): No output dependent on input pin "R0out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 5
+    Warning (15610): No output dependent on input pin "R0in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 5
+    Warning (15610): No output dependent on input pin "R1out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 6
+    Warning (15610): No output dependent on input pin "R1in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 6
+    Warning (15610): No output dependent on input pin "R2out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 7
+    Warning (15610): No output dependent on input pin "R2in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 7
+    Warning (15610): No output dependent on input pin "R3out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 8
+    Warning (15610): No output dependent on input pin "R3in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 8
+    Warning (15610): No output dependent on input pin "R4out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 9
+    Warning (15610): No output dependent on input pin "R4in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 9
+    Warning (15610): No output dependent on input pin "R5out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 10
+    Warning (15610): No output dependent on input pin "R5in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 10
+    Warning (15610): No output dependent on input pin "R6out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 11
+    Warning (15610): No output dependent on input pin "R6in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 11
+    Warning (15610): No output dependent on input pin "R7out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 12
+    Warning (15610): No output dependent on input pin "R7in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 12
+    Warning (15610): No output dependent on input pin "R8out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 14
+    Warning (15610): No output dependent on input pin "R8in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 14
+    Warning (15610): No output dependent on input pin "R9out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 16
+    Warning (15610): No output dependent on input pin "R9in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 16
+    Warning (15610): No output dependent on input pin "R10out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 18
+    Warning (15610): No output dependent on input pin "R10in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 18
+    Warning (15610): No output dependent on input pin "R11out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 19
+    Warning (15610): No output dependent on input pin "R11in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 19
+    Warning (15610): No output dependent on input pin "R12out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 20
+    Warning (15610): No output dependent on input pin "R12in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 20
+    Warning (15610): No output dependent on input pin "R13out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 21
+    Warning (15610): No output dependent on input pin "R13in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 21
+    Warning (15610): No output dependent on input pin "R14out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 23
+    Warning (15610): No output dependent on input pin "R14in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 23
+    Warning (15610): No output dependent on input pin "R15out" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 24
+    Warning (15610): No output dependent on input pin "R15in" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 24
+    Warning (15610): No output dependent on input pin "HIout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 25
+    Warning (15610): No output dependent on input pin "HIin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 25
+    Warning (15610): No output dependent on input pin "LOout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 26
+    Warning (15610): No output dependent on input pin "LOin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 26
+    Warning (15610): No output dependent on input pin "Zhighout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 27
+    Warning (15610): No output dependent on input pin "Zlowout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 27
+    Warning (15610): No output dependent on input pin "Zin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 27
+    Warning (15610): No output dependent on input pin "Yin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 27
+    Warning (15610): No output dependent on input pin "MDRout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 28
+    Warning (15610): No output dependent on input pin "MDRin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 28
+    Warning (15610): No output dependent on input pin "MARin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 28
+    Warning (15610): No output dependent on input pin "PCout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 29
+    Warning (15610): No output dependent on input pin "PCin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 29
+    Warning (15610): No output dependent on input pin "IRin" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 29
+    Warning (15610): No output dependent on input pin "IncPC" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 29
+    Warning (15610): No output dependent on input pin "Mdatain[0]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[1]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[2]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[3]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[4]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[5]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[6]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[7]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[8]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[9]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[10]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[11]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[12]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[13]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[14]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[15]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[16]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[17]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[18]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[19]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[20]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[21]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[22]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[23]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[24]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[25]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[26]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[27]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[28]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[29]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[30]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "Mdatain[31]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 30
+    Warning (15610): No output dependent on input pin "opcode[0]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 32
+    Warning (15610): No output dependent on input pin "opcode[1]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 32
+    Warning (15610): No output dependent on input pin "opcode[2]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 32
+    Warning (15610): No output dependent on input pin "opcode[3]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 32
+    Warning (15610): No output dependent on input pin "opcode[4]" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 32
+Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 87 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 104 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Thu Feb 13 11:16:03 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 

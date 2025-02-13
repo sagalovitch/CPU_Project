@@ -1,9 +1,9 @@
 `timescale 1ns/10ps
 
 module div32 (
-    input wire [31:0] A,   // Dividend 
-    input wire [31:0] M,   // Divisor 
-    output reg [31:0] Q,   // Quotient 
+    input wire [31:0] A,   // Dividend Q
+    input wire [31:0] M,   // Divisor M
+    output reg [31:0] Q,   // Quotient Q/M
     output reg [31:0] R    // Remainder 
 );
 

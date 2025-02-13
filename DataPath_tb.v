@@ -44,7 +44,8 @@ module DataPath_tb;
             T2 = 4'b1001,
             T3 = 4'b1010,
             T4 = 4'b1011,
-            T5 = 4'b1100;
+            T5 = 4'b1100,
+				T6 = 4'b1101;
 
   reg [3:0] Present_state = Default;
 
@@ -111,14 +112,15 @@ always @(Present_state) // do the required job in each state
   case (Present_state) // assert the required signals in each clock cycle
 		Default: begin
 			PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
-			R3out <= 0; R7out <= 0; MARin <= 0; Zin <= 0; 
+			MARin <= 0; Zin <= 0; 
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
-			R3in <= 0; R4in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0;
-			opcode <= 5'bzzzzz;
+			R4in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0; R7out <= 0; R3in <= 0; R3out <= 0;
+			HIin <= 0; LOin <= 0;
+			opcode <= 5'd0;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h00000022;
+			Mdatain <= 32'hF0F;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -129,7 +131,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R3in <= 0; // initialize R3 with the value 0x22 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'h00000024;
+			Mdatain <= 32'b0100;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
@@ -138,13 +140,13 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R7in <= 0; // initialize R7 with the value 0x24 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'h00000028;
-			Read <= 1; MDRin <= 1; 
-			#15 Read <= 0; MDRin <= 0;
+		//	Mdatain <= 32'h000000028;
+		//	Read <= 1; MDRin <= 1; 
+		//	#15 Read <= 0; MDRin <= 0;
 		end
 		Reg_load3b: begin
-		  MDRout <= 1; R4in <= 1; 
-		  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value 0x28 
+		 // MDRout <= 1; R4in <= 1; 
+		//  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value 0x28 
 		end
 		T0: begin // see if you need to de-assert these signals
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1;
@@ -152,7 +154,7 @@ always @(Present_state) // do the required job in each state
 		end
 		T1: begin
 			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7”
+			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7” // ignoring for now
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin
@@ -164,8 +166,8 @@ always @(Present_state) // do the required job in each state
 			#15 Yin <= 0; R3out <= 0; 
 		end
 		T4: begin
-			R7out <= 1; opcode <= 5'b00101; Zin <= 1; 
-			#15 opcode <= 5'bzzzzz; Zin <= 0; R7out <= 0;
+			R7out <= 1; opcode <= 5'b01001; Zin <= 1; // opcode for shr
+			#15 opcode <= 5'd0; Zin <= 0; R7out <= 0;
 		end
 		T5: begin
 			Zlowout <= 1; R4in <= 1; 
@@ -173,11 +175,11 @@ always @(Present_state) // do the required job in each state
 		end
   endcase
 end
- // Monitor signals
- initial begin
-	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
-				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
- end
+// // Monitor signals
+// initial begin
+//	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
+//				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
+// end
 
 // Test run length
 initial

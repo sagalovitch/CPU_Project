@@ -2,7 +2,7 @@
 // Use Booth's Algorithm
 
 // Q multiplier, M multiplicand
-module mul32_jacob(input [31:0] Q, M, output [64:0] product);
+module mul32_jacob(input [31:0] Q, M, output [64:0] P);
 
 // loop through Q (shift 3 bits each time to determine bit-pair)
 // why would we need an always block? If our goal is to just multiply this, similar to a function. Is this for just when something gets passed
@@ -28,5 +28,5 @@ always @ (*) begin
 	end	
 	
 end
-assign product = C;
+assign P = C;
 endmodule

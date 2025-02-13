@@ -5,13 +5,14 @@ module ALU (input [31:0] A, B,
 			input [4:0] opcode);
 
 parameter Add = 5'b00011, Sub = 5'b00100, AND = 5'b00101, OR = 5'b00110, RotateRight = 5'b00111, 
-RotateLeft = 5'b01000, ShiftRight = 01001, ShiftRightArithmetic = 5'b01010, ShiftLeft = 5'b01011,
+RotateLeft = 5'b01000, ShiftRight = 5'b01001, ShiftRightArithmetic = 5'b01010, ShiftLeft = 5'b01011,
 AddImmediate = 5'b01100, ANDImmediate = 5'b01101, ORImmediate = 5'b01110, Divide = 5'b01111, Multiply = 5'b10000, Negate = 5'b10001,
 NOT = 5'b10010;
 
 // instatiate alu modules here with corresponding outputs then have C take value of those inputs 
 wire [63:0] mul_out;
-wire [31:0] add_out, add_cout, sub_out, sub_cout, and_out, or_out, ror_out, rol_out, shr_out, shra_out, shl_out, 
+wire add_cout, sub_cout;
+wire [31:0] add_out, sub_out, and_out, or_out, ror_out, rol_out, shr_out, shra_out, shl_out, 
 ori_out, IncPC_out, neg_out, not_out, div_out, div_remainder;
 
 // alu operation module instantiations
@@ -80,7 +81,8 @@ always @(*) begin
 			C[63:32] <= 32'd0;
 		end
 		Divide: begin
-			C[63:0] <= div_out;
+			C[63:32] <= div_out;
+			C[31:0] <= div_remainder;
 		end
 		Multiply: begin
 			C[63:0] <= mul_out;

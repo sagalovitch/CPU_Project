@@ -8,7 +8,7 @@ module sub32 (
 );
 
     wire [31:0] B_complement; 
-    assign B_complement = ~B; 
+    assign B_complement = ~B + 1; 
 
     add32 cla_adder (
         .A(A),
