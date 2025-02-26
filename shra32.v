@@ -1,7 +1,7 @@
 module shra32 (
-    input [31:0] Ra,       
+    input signed [31:0] Ra,       
     input [4:0] shift_amt, 
-    output [31:0] result   
+    output signed [31:0] result   
 );
-    assign result = $signed(Ra) >>> shift_amt; 
+    assign result = Ra >>> shift_amt; 
 endmodule
