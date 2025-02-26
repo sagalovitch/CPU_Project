@@ -121,7 +121,7 @@ always @(Present_state) // do the required job in each state
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h6666666;
+			Mdatain <= 32'hFF5;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -132,7 +132,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R2in <= 0; // initialize R3 with the value 0x22 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'h7777777;
+			Mdatain <= 32'hFFFFFFFD;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
@@ -141,7 +141,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R6in <= 0; // initialize R7 with the value 0x24 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'h00000028;
+			Mdatain <= 32'h000000028;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0;
 		end
@@ -167,7 +167,7 @@ always @(Present_state) // do the required job in each state
 			#15 Yin <= 0; R2out <= 0; 
 		end
 		T4: begin
-			R6out <= 1; opcode <= 5'b10000; Zin <= 1; // opcode for multiply
+			R6out <= 1; opcode <= 5'b01111; Zin <= 1; // opcode for divide
 			#15 opcode <= 5'bzzzzz; Zin <= 0; R6out <= 0;
 		end
 		T5: begin

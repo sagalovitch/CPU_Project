@@ -44,8 +44,7 @@ module DataPath_tb;
             T2 = 4'b1001,
             T3 = 4'b1010,
             T4 = 4'b1011,
-            T5 = 4'b1100,
-				T6 = 4'b1101;
+            T5 = 4'b1100;
 
   reg [3:0] Present_state = Default;
 
@@ -104,7 +103,6 @@ always @(posedge Clock)
       T2           : Present_state = T3;
       T3           : Present_state = T4;
       T4           : Present_state = T5;
-		T5				 : Present_state = T6;
     endcase
 end
  
@@ -113,32 +111,31 @@ always @(Present_state) // do the required job in each state
   case (Present_state) // assert the required signals in each clock cycle
 		Default: begin
 			PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
-			R2out <= 0; R6out <= 0; MARin <= 0; Zin <= 0; 
+			R3out <= 0; R7out <= 0; MARin <= 0; Zin <= 0; 
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
-			R2in <= 0; R6in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0;
-			HIin <= 0; LOin <= 0;
+			R3in <= 0; R4in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0;
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h6666666;
+			Mdatain <= 32'h00000022;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
 			#15 Read <= 0; MDRin <= 0; // for your current implementation
 		end
 		Reg_load1b: begin
-		  MDRout <= 1; R2in <= 1; 
-		  #15 MDRout <= 0; R2in <= 0; // initialize R3 with the value 0x22 
+		  MDRout <= 1; R3in <= 1; 
+		  #15 MDRout <= 0; R3in <= 0; // initialize R3 with the value 0x22 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'h7777777;
+			Mdatain <= 32'h00000024;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
 		Reg_load2b: begin
-		  MDRout <= 1; R6in <= 1; 
-		  #15 MDRout <= 0; R6in <= 0; // initialize R7 with the value 0x24 
+		  MDRout <= 1; R7in <= 1; 
+		  #15 MDRout <= 0; R7in <= 0; // initialize R7 with the value 0x24 
 		end
 		Reg_load3a: begin 
 			Mdatain <= 32'h00000028;
@@ -155,7 +152,7 @@ always @(Present_state) // do the required job in each state
 		end
 		T1: begin
 			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7” // ignoring for now
+			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7”
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin
@@ -163,20 +160,16 @@ always @(Present_state) // do the required job in each state
 			#15 MDRout <= 0; IRin <= 0;
 		end
 		T3: begin
-			R2out <= 1; Yin <= 1; 
-			#15 Yin <= 0; R2out <= 0; 
+			R3out <= 1; Yin <= 1; 
+			#15 Yin <= 0; R3out <= 0; 
 		end
 		T4: begin
-			R6out <= 1; opcode <= 5'b10000; Zin <= 1; // opcode for multiply
-			#15 opcode <= 5'bzzzzz; Zin <= 0; R6out <= 0;
+			R7out <= 1; opcode <= 5'b00011; Zin <= 1; // add r4, r3, r7
+			#15 opcode <= 5'bzzzzz; Zin <= 0; R7out <= 0;
 		end
 		T5: begin
-			Zlowout <= 1; LOin <= 1; 
-			#15 Zlowout <= 0; LOin <= 0;
-		end
-		T6: begin
-			Zhighout <= 1; HIin <= 1;
-			#15 Zhighout <= 0; HIin <= 0;
+			Zlowout <= 1; R4in <= 1; 
+			#15 Zlowout <= 0; R4in <= 0;
 		end
   endcase
 end
