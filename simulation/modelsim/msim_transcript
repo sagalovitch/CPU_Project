@@ -12,77 +12,77 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/Bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:42 on Feb 26,2025
+# Start time: 11:05:08 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/Bus.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:01
+# End time: 11:05:08 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:08 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath.v 
 # -- Compiling module DataPath
 # 
 # Top level modules:
 # 	DataPath
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:08 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:08 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:08 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:08 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mux2to1.v 
 # -- Compiling module mux2to1
 # 
 # Top level modules:
 # 	mux2to1
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/and32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/and32.v 
 # -- Compiling module and32
 # 
 # Top level modules:
 # 	and32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/or32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/or32.v 
 # -- Compiling module or32
 # 
 # Top level modules:
 # 	or32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/not32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/not32.v 
 # -- Compiling module not32
 # 
 # Top level modules:
 # 	not32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/add32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/add32.v 
 # -- Compiling module cla_4bit_adder
 # -- Compiling module cla_16bit_adder
@@ -90,123 +90,123 @@
 # 
 # Top level modules:
 # 	add32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mul32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mul32.v 
 # -- Compiling module mul32
 # 
 # Top level modules:
 # 	mul32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/neg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/neg.v 
 # -- Compiling module neg
 # 
 # Top level modules:
 # 	neg
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/div32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/div32.v 
 # -- Compiling module div32
 # 
 # Top level modules:
 # 	div32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/rol32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/rol32.v 
 # -- Compiling module rol32
 # 
 # Top level modules:
 # 	rol32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ror32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ror32.v 
 # -- Compiling module ror32
 # 
 # Top level modules:
 # 	ror32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shl32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shl32.v 
 # -- Compiling module shl32
 # 
 # Top level modules:
 # 	shl32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:09 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shr32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:09 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shr32.v 
 # -- Compiling module shr32
 # 
 # Top level modules:
 # 	shr32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:10 on Feb 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shra32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:10 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shra32.v 
 # -- Compiling module shra32
 # 
 # Top level modules:
 # 	shra32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:10 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/sub32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:10 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/sub32.v 
 # -- Compiling module sub32
 # 
 # Top level modules:
 # 	sub32
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:10 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:10 on Feb 27,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath_tb.v 
 # -- Compiling module DataPath_tb
 # 
 # Top level modules:
 # 	DataPath_tb
-# End time: 21:00:43 on Feb 26,2025, Elapsed time: 0:00:00
+# End time: 11:05:10 on Feb 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DataPath_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" DataPath_tb 
-# Start time: 21:00:43 on Feb 26,2025
+# Start time: 11:05:10 on Feb 27,2025
 # Loading work.DataPath_tb
 # Loading work.DataPath
 # Loading work.register
@@ -252,41 +252,40 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: 20js32  Hostname: WLH214-03  ProcessID: 4188
-#           Attempting to use alternate WLF file "./wlftkk9arj".
+#           Attempting to use alternate WLF file "./wlftr76eq1".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftkk9arj
+#           Using alternate file: ./wlftr76eq1
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000001
-# Time=20 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000001 MDRMuxOut=00000001
-# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000001 MDRMuxOut=xxxxxxxx
-# Time=30 State=0010 BusMuxOut=00000001, BusMuxIn_MDR=00000001 MDRMuxOut=00000001
-# Time=50 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=00000001 MDRMuxOut=ff000000
-# Time=60 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=ff000000 MDRMuxOut=ff000000
-# Time=65 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=ff000000 MDRMuxOut=00000001
-# Time=70 State=0100 BusMuxOut=ff000000, BusMuxIn_MDR=ff000000 MDRMuxOut=ff000000
-# Time=90 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=ff000000 MDRMuxOut=80000000
-# Time=100 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=80000000 MDRMuxOut=80000000
-# Time=105 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=80000000 MDRMuxOut=ff000000
-# Time=110 State=0110 BusMuxOut=80000000, BusMuxIn_MDR=80000000 MDRMuxOut=80000000
-# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=80000000 MDRMuxOut=00000000
-# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=80000000 MDRMuxOut=2a2b8000
+# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
+# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
+# Time=30 State=0010 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
+# Time=50 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=000abcde
+# Time=60 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
+# Time=65 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=00000000
+# Time=70 State=0100 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
+# Time=90 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=ff543211
+# Time=100 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
+# Time=105 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=000abcde
+# Time=110 State=0110 BusMuxOut=ff543211, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
+# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=ff543211 MDRMuxOut=00000000
+# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=ff543211 MDRMuxOut=2a2b8000
 # Time=160 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
 # Time=165 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=xxxxxxxx
 # Time=170 State=1001 BusMuxOut=2a2b8000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=190 State=1010 BusMuxOut=80000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=80000000
-# Time=210 State=1011 BusMuxOut=ff000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff000000
-# Time=230 State=1100 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=00000000
-# Time=250 State=1101 BusMuxOut=ff800000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff800000
+# Time=190 State=1010 BusMuxOut=ff543211, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff543211
+# Time=210 State=1011 BusMuxOut=000abcde, BusMuxIn_MDR=2a2b8000 MDRMuxOut=000abcde
+# Time=230 State=1100 BusMuxOut=fffffff1, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff1
+# Time=250 State=1101 BusMuxOut=fffffff0, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff0
 # ** Note: $finish    : C:/Users/20js32/CPU_Project/DataPath_tb.v(192)
 #    Time: 500 ns  Iteration: 0  Instance: /DataPath_tb
 # 1
 # Break in Module DataPath_tb at C:/Users/20js32/CPU_Project/DataPath_tb.v line 192
-do mul_tb.do
+do div_tb.do
 restart
 # ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(89): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/20js32/CPU_Project/register.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/20js32/CPU_Project/register.v
@@ -310,26 +309,25 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/bus File: C:/Users/20js32/CPU_Project/Bus.v
 run 450ns
 # Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000001
-# Time=20 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000001 MDRMuxOut=00000001
-# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000001 MDRMuxOut=xxxxxxxx
-# Time=30 State=0010 BusMuxOut=00000001, BusMuxIn_MDR=00000001 MDRMuxOut=00000001
-# Time=50 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=00000001 MDRMuxOut=ff000000
-# Time=60 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=ff000000 MDRMuxOut=ff000000
-# Time=65 State=0011 BusMuxOut=00000001, BusMuxIn_MDR=ff000000 MDRMuxOut=00000001
-# Time=70 State=0100 BusMuxOut=ff000000, BusMuxIn_MDR=ff000000 MDRMuxOut=ff000000
-# Time=90 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=ff000000 MDRMuxOut=80000000
-# Time=100 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=80000000 MDRMuxOut=80000000
-# Time=105 State=0101 BusMuxOut=ff000000, BusMuxIn_MDR=80000000 MDRMuxOut=ff000000
-# Time=110 State=0110 BusMuxOut=80000000, BusMuxIn_MDR=80000000 MDRMuxOut=80000000
-# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=80000000 MDRMuxOut=00000000
-# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=80000000 MDRMuxOut=2a2b8000
+# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
+# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
+# Time=30 State=0010 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
+# Time=50 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=000abcde
+# Time=60 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
+# Time=65 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=00000000
+# Time=70 State=0100 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
+# Time=90 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=ff543211
+# Time=100 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
+# Time=105 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=000abcde
+# Time=110 State=0110 BusMuxOut=ff543211, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
+# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=ff543211 MDRMuxOut=00000000
+# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=ff543211 MDRMuxOut=2a2b8000
 # Time=160 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
 # Time=165 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=xxxxxxxx
 # Time=170 State=1001 BusMuxOut=2a2b8000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=190 State=1010 BusMuxOut=80000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=80000000
-# Time=210 State=1011 BusMuxOut=ff000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff000000
-# Time=230 State=1100 BusMuxOut=00000000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=00000000
-# Time=250 State=1101 BusMuxOut=ff800000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff800000
-# End time: 21:01:15 on Feb 26,2025, Elapsed time: 0:00:32
+# Time=190 State=1010 BusMuxOut=ff543211, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff543211
+# Time=210 State=1011 BusMuxOut=000abcde, BusMuxIn_MDR=2a2b8000 MDRMuxOut=000abcde
+# Time=230 State=1100 BusMuxOut=fffffff1, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff1
+# Time=250 State=1101 BusMuxOut=fffffff0, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff0
+# End time: 11:06:18 on Feb 27,2025, Elapsed time: 0:01:08
 # Errors: 0, Warnings: 24

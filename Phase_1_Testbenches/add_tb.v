@@ -118,7 +118,7 @@ always @(Present_state) // do the required job in each state
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h00000022;
+			Mdatain <= 32'hF00D;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -129,7 +129,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R3in <= 0; // initialize R3 with the value 0x22 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'h00000024;
+			Mdatain <= 32'hABCD;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
@@ -138,7 +138,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R7in <= 0; // initialize R7 with the value 0x24 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'h00000028;
+			Mdatain <= 32'h00000001;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0;
 		end
@@ -173,11 +173,7 @@ always @(Present_state) // do the required job in each state
 		end
   endcase
 end
- // Monitor signals
- initial begin
-	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
-				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
- end
+
 
 // Test run length
 initial

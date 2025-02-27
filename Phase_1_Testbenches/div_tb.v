@@ -121,7 +121,7 @@ always @(Present_state) // do the required job in each state
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'hFF5;
+			Mdatain <= 32'h0;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -129,25 +129,25 @@ always @(Present_state) // do the required job in each state
 		end
 		Reg_load1b: begin
 		  MDRout <= 1; R2in <= 1; 
-		  #15 MDRout <= 0; R2in <= 0; // initialize R3 with the value 0x22 
+		  #15 MDRout <= 0; R2in <= 0; 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'hFFFFFFFD;
+			Mdatain <= 32'hABCDE; // Load this value into MDR to then be loaded into 
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
 		Reg_load2b: begin
 		  MDRout <= 1; R6in <= 1; 
-		  #15 MDRout <= 0; R6in <= 0; // initialize R7 with the value 0x24 
+		  #15 MDRout <= 0; R6in <= 0; 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'h000000028;
+			Mdatain <= 32'hFF543211; // -ABCDEF 
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0;
 		end
 		Reg_load3b: begin
-		  MDRout <= 1; R4in <= 1; 
-		  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value 0x28 
+		  MDRout <= 1; R2in <= 1; 
+		  #15 MDRout <= 0; R2in <= 0; 
 		end
 		T0: begin // see if you need to de-assert these signals
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1;
@@ -163,7 +163,7 @@ always @(Present_state) // do the required job in each state
 			#15 MDRout <= 0; IRin <= 0;
 		end
 		T3: begin
-			R2out <= 1; Yin <= 1; 
+			R2out <= 1; Yin <= 1; 	// R2 goes into Y, then A, it is dividend, R6 is divisor --> R2 / R6
 			#15 Yin <= 0; R2out <= 0; 
 		end
 		T4: begin
@@ -190,5 +190,6 @@ end
 initial
 	begin
 		#500 $finish;
-end
+	end
+
 endmodule
