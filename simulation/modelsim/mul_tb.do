@@ -24,23 +24,23 @@ add wave -noupdate /DataPath_tb/Mdatain
 add wave -noupdate /DataPath_tb/AND
 add wave -noupdate /DataPath_tb/opcode
 add wave -noupdate /DataPath_tb/Present_state
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInR2
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInR6
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInZhigh
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInZlow
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInHI
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInLO
-add wave -noupdate /DataPath_tb/DUT/bus/BusMuxOut
-add wave -noupdate /DataPath_tb/DUT/alu/A
-add wave -noupdate /DataPath_tb/DUT/alu/B
-add wave -noupdate /DataPath_tb/DUT/alu/C
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxInR2
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxInR6
+add wave -noupdate -radix binary /DataPath_tb/DUT/bus/BusMuxInZhigh
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxInZlow
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxInHI
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxInLO
+add wave -noupdate -radix decimal /DataPath_tb/DUT/bus/BusMuxOut
+add wave -noupdate -radix decimal /DataPath_tb/DUT/alu/A
+add wave -noupdate -radix decimal /DataPath_tb/DUT/alu/B
+add wave -noupdate -radix decimal /DataPath_tb/DUT/alu/C
 add wave -noupdate /DataPath_tb/DUT/alu/opcode
-add wave -noupdate /DataPath_tb/DUT/alu/mul_out
+add wave -noupdate -radix decimal /DataPath_tb/DUT/alu/mul_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
-quietly wave cursor active 0
-configure wave -namecolwidth 281
-configure wave -valuecolwidth 100
+WaveRestoreCursors {{Cursor 1} {80908 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 348
+configure wave -valuecolwidth 175
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -53,6 +53,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {449197 ps} {450043 ps}
-restart
-run 450ns
+WaveRestoreZoom {0 ps} {426545 ps}

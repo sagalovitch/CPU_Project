@@ -17,9 +17,9 @@ ori_out, IncPC_out, neg_out, not_out, div_out, div_remainder;
 
 // alu operation module instantiations
 add32 add_32(.A(A), .B(B), .Cin(1'd0), .Sum(add_out), .Cout(add_cout));
-sub32 sub_32(.A(A), .B(B), .Cin(1'd0), .Diff(sub_out), .Cout(sub_cout));
+sub32 sub_32(.A(A), .B(B), .Overflow(), .Diff(sub_out), .Cout(sub_cout));
 mul32 mul_32(.M(A), .Q(B), .P(mul_out));
-div32 div_32(.A(A), .M(B), .Q(div_out), .R(div_remainder));
+div32 div_32(.dividend(A), .divisor(B), .quotient(div_out), .remainder(div_remainder));
 and32 and_32(.Ra(A), .Rb(B), .Rz(and_out));
 or32 or_32(.Ra(A), .Rb(B), .Rz(or_out));
 ror32 ror_32(.Ra(A), .shift_amt(B), .result(ror_out));

@@ -121,7 +121,7 @@ always @(Present_state) // do the required job in each state
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h6666666;
+			Mdatain <= 32'h1;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -132,22 +132,22 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R2in <= 0; // initialize R3 with the value 0x22 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'h7777777;
+			Mdatain <= -32'h01000000; // Load this value (-2) into MDR to then be loaded into 
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
 		Reg_load2b: begin
 		  MDRout <= 1; R6in <= 1; 
-		  #15 MDRout <= 0; R6in <= 0; // initialize R7 with the value 0x24 
+		  #15 MDRout <= 0; R6in <= 0; 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'h00000028;
+			Mdatain <= 32'h80000000;
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0;
 		end
 		Reg_load3b: begin
-		  MDRout <= 1; R4in <= 1; 
-		  #15 MDRout <= 0; R4in <= 0; // initialize R4 with the value 0x28 
+		  MDRout <= 1; R2in <= 1; 
+		  #15 MDRout <= 0; R2in <= 0; // initialize R4 with the value 0x28 
 		end
 		T0: begin // see if you need to de-assert these signals
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1;
@@ -190,5 +190,6 @@ end
 initial
 	begin
 		#500 $finish;
-end
+	end
+
 endmodule
