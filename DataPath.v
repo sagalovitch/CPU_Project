@@ -1,5 +1,5 @@
 module DataPath(
-	input clock, clear, read,
+	input clock, clear, read, RAMwrite,
 	// 16 32-bit registers control (out is to put it into the bus, in is to write to the register)
 	// R0-7 General-purpose registers
 	input	R0out, R0in,
@@ -28,7 +28,11 @@ module DataPath(
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC,
 	input [31:0] Mdatain,
-	input [4:0] opcode
+	input [4:0] opcode,
+	output [31:0] Outport_Out, 
+	input Out_portIn,
+	input [31: 0] Inport_In,
+	input Strobe
 );
 
 
@@ -59,7 +63,8 @@ wire [31:0]	BusMuxOut,
 			BusMuxIn_PC,
 			MDRMuxOut, 
 			Yout,
-			IRout;
+			IRout,
+			BusMuxIn_InPort;
 
 
 // Registers
@@ -83,12 +88,16 @@ register HI(clear, clock, HIin, BusMuxOut, BusMuxIn_HI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
 register Y(clear, clock, Yin, BusMuxOut, Yout);
 
+register Out_Port(clear, clock, Out_portIn, BusMuxOut, Outport_Out);
+InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort)
+
 // Memory Registers
 mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
 register MDR(clear, clock, MDRin, MDRMuxOut, BusMuxIn_MDR);
 register MAR(clear, clock, MARin, BusMuxOut, MARoutput);
-register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
+RAM ram(clock, clear, read, RAMwrite, MARoutput, MDRMuxOut, Mdatain);
 
+register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
 register IR(clear, clock, IRin, BusMuxOut, IRout);
 
 wire [63:0] Z_64;
