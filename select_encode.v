@@ -5,15 +5,15 @@ module select_encode(
 	R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
 	output R0out, R1out, R2out, R3out, R4out, R5out, 
 	R6out, R7out, R8out, R9out, R10out, R11out, R12out, 
-	R13out, R14out, R15out
+	R13out, R14out, R15out,
 	input [31:0] instruction,
-	output [31:0] C_sign_extended;
+	output [31:0] C_sign_extended
 );
 
 
 
 
-input [3:0] Ra, Rb, Rc, binary_in;
+wire [3:0] Ra, Rb, Rc, binary_in;
 assign Ra = instruction[26:23];
 assign Rb = instruction[22:19];
 assign Rc = instruction[18:15];
@@ -51,7 +51,10 @@ always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
 		4'hD: R13 <= 1;
 		4'hE: R14 <= 1;
 		4'hF: R15 <= 1;
+		default: {R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15} <= 0;
 	endcase
+
+end
 	
 	assign R0in = R0 & Rin;
 	assign R1in = R1 & Rin;
@@ -89,9 +92,8 @@ always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
 	
 	// Push out C_sign_extended, use shift right arithmetic to extend the
 	// 19 bit C_sign_extended to 32 bits, 
-	C_sign_extended[31:0] = 32'b0;
-	C_sign_extended[31:13] = instruction[18:0];
-	C_sign_extended[31:0] = C_sign_extended >>> 13;
+	assign C_sign_extended[31:0] = 32'b0;
+	assign C_sign_extended[31:13] = instruction[18:0];
+	assign C_sign_extended[31:0] = C_sign_extended >>> 13;
 
-end
-
+endmodule

@@ -27,7 +27,7 @@ module DataPath_tb;
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC;
-	reg [31:0] Mdatain;
+	// reg [31:0] Mdatain;
 	reg AND;
 	reg [4:0] opcode;
 
@@ -116,12 +116,12 @@ always @(Present_state) // do the required job in each state
 			R2out <= 0; R6out <= 0; MARin <= 0; Zin <= 0; 
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
-			R2in <= 0; R6in <= 0; R7in <= 0; Mdatain <= 32'h00000000; Clear <= 0;
+			R2in <= 0; R6in <= 0; R7in <= 0;  Clear <= 0;
 			HIin <= 0; LOin <= 0;
 			opcode <= 5'bzzzzz;
 		end
 		Reg_load1a: begin 
-			Mdatain <= 32'h0;
+		//	Mdatain <= 32'h0;
 			// Read = 0; MDRin = 0; // the first zero is there for completeness
 			Read <= 1; 
 			MDRin <= 1; // Took out #10 for '1', as it may not be needed
@@ -132,7 +132,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R2in <= 0; 
 		end
 		Reg_load2a: begin 
-			Mdatain <= 32'hABCDE; // Load this value into MDR to then be loaded into 
+		//	Mdatain <= 32'hABCDE; // Load this value into MDR to then be loaded into 
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0; 
 		end
@@ -141,7 +141,7 @@ always @(Present_state) // do the required job in each state
 		  #15 MDRout <= 0; R6in <= 0; 
 		end
 		Reg_load3a: begin 
-			Mdatain <= 32'hFF543211; // -ABCDEF 
+		//	Mdatain <= 32'hFF543211; // -ABCDEF 
 			Read <= 1; MDRin <= 1; 
 			#15 Read <= 0; MDRin <= 0;
 		end
@@ -155,7 +155,6 @@ always @(Present_state) // do the required job in each state
 		end
 		T1: begin
 			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-			Mdatain <= 32'h2A2B8000; // opcode for “and R4, R3, R7” // ignoring for now
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin

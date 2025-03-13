@@ -8,7 +8,7 @@ module RAM(
     // "memory" is a 512 x 32-bit array
     reg [31:0] memory [0:511];
 
-    always @(posedge clk) begin
+    always @(posedge clock) begin
         if (memWrite)
             // Write dataIn into memory at this address
             memory[address] <= dataIn;

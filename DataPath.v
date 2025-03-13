@@ -27,7 +27,8 @@ module DataPath(
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC,
-	input [31:0] Mdatain,
+	// No longer require Mdatain as input, this will come from the RAM 
+	//input [31:0] Mdatain,
 	input [4:0] opcode,
 	output [31:0] Outport_Out, 
 	input Out_portIn,
@@ -66,7 +67,7 @@ wire [31:0]	BusMuxOut,
 			IRout,
 			BusMuxIn_InPort;
 
-
+wire [31:0] Mdatain;
 // Registers
 register R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
 register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
@@ -89,13 +90,14 @@ register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
 register Y(clear, clock, Yin, BusMuxOut, Yout);
 
 register Out_Port(clear, clock, Out_portIn, BusMuxOut, Outport_Out);
-InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort)
+InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort);
 
 // Memory Registers
 mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
 register MDR(clear, clock, MDRin, MDRMuxOut, BusMuxIn_MDR);
 register MAR(clear, clock, MARin, BusMuxOut, MARoutput);
-RAM ram(clock, clear, read, RAMwrite, MARoutput, MDRMuxOut, Mdatain);
+// Use RAM from Library
+ram_lib ram(.clock(clock), .rden(read), .wren(RAMwrite), .address(MARoutput), .data(MDRMuxOut), .q(Mdatain));
 
 register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
 register IR(clear, clock, IRin, BusMuxOut, IRout);
