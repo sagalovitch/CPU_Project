@@ -1,32 +1,13 @@
 `timescale 1ns/10ps
 
 module DataPath_tb; 
-  	reg Clock, Clear, Read;
-	reg		R0out, R0in,
-			R1out, R1in,
-			R2out, R2in,
-			R3out, R3in,
-			R4out, R4in,
-			R5out, R5in,
-			R6out, R6in,
-			R7out, R7in,
-	// R8 is return address register (RA)
-			R8out, R8in,
-	// R9 is Stack Pointer (SP)
-			R9out, R9in,
-	// R10-13 are argument registers
-			R10out, R10in,
-			R11out, R11in,
-			R12out, R12in,
-			R13out, R13in,
-	// R14-15 are return value registers
-			R14out, R14in,
-			R15out, R15in,
+  	reg Clock, Clear, Read,
+			Gra, Grb, Grc, Rin, Rout, BAout,
 			HIout, HIin,
 			LOout, LOin,
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
-			PCout, PCin, IRin, IncPC;
+			PCout, PCin, IRin, IncPC, Cout;
 	// reg [31:0] Mdatain;
 	reg AND;
 	reg [4:0] opcode;
@@ -45,7 +26,8 @@ module DataPath_tb;
             T3 = 4'b1010,
             T4 = 4'b1011,
             T5 = 4'b1100,
-				T6 = 4'b1101;
+				T6 = 4'b1101,
+				T7 = 4'b1110;
 
   reg [3:0] Present_state = Default;
 
@@ -54,31 +36,15 @@ module DataPath_tb;
 	.clock(Clock),
 	.clear(Clear),
 	.read(Read),
-	.R0out(R0out), .R0in(R0in),
-	.R1out(R1out), .R1in(R1in),
-	.R2out(R2out), .R2in(R2in),
-	.R3out(R3out), .R3in(R3in),
-	.R4out(R4out), .R4in(R4in),
-	.R5out(R5out), .R5in(R5in),
-	.R6out(R6out), .R6in(R6in),
-	.R7out(R7out), .R7in(R7in),
-	.R8out(R8out), .R8in(R8in),
-	.R9out(R9out), .R9in(R9in),
-	.R10out(R10out), .R10in(R10in),
-	.R11out(R11out), .R11in(R11in),
-	.R12out(R12out), .R12in(R12in),
-	.R13out(R13out), .R13in(R13in),
-	.R14out(R14out), .R14in(R14in),
-	.R15out(R15out), .R15in(R15in),
+	.Gra(Gra), .Grb(Grb), .Grc(Grc), 
+	.BAout(BAout), .Rin(Rin), .Rout(Rout),
 	.HIout(HIout), .HIin(HIin),
 	.LOout(LOout), .LOin(LOin),
 	.Zhighout(Zhighout), .Zlowout(Zlowout),
 	.Zin(Zin), .Yin(Yin),
 	.MDRout(MDRout), .MDRin(MDRin),
 	.PCout(PCout), .PCin(PCin), .IRin(IRin),
-	.Mdatain(Mdatain),
-	.MARin(MARin), .IncPC(IncPC),
-	.opcode(opcode)
+	.MARin(MARin), .IncPC(IncPC), .opcode(opcode)
   );
 
   // Clock generation - unchanged
@@ -87,6 +53,8 @@ module DataPath_tb;
     Clock = 0;
     forever #10 Clock = ~ Clock;
   end
+  
+
 
   // State machine - unchanged
 always @(posedge Clock)
@@ -105,6 +73,7 @@ always @(posedge Clock)
       T3           : Present_state = T4;
       T4           : Present_state = T5;
 		T5				 : Present_state = T6;
+		T6				 : Present_state = T7;
     endcase
 end
  
@@ -113,10 +82,10 @@ always @(Present_state) // do the required job in each state
   case (Present_state) // assert the required signals in each clock cycle
 		Default: begin
 			PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
-			R2out <= 0; R6out <= 0; MARin <= 0; Zin <= 0; 
+			 MARin <= 0; Zin <= 0; 
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
-			R2in <= 0; R6in <= 0; R7in <= 0;  Clear <= 0;
+			Clear <= 0;
 			HIin <= 0; LOin <= 0;
 			opcode <= 5'bzzzzz;
 		end
@@ -128,8 +97,8 @@ always @(Present_state) // do the required job in each state
 			#15 Read <= 0; MDRin <= 0; // for your current implementation
 		end
 		Reg_load1b: begin
-		  MDRout <= 1; R2in <= 1; 
-		  #15 MDRout <= 0; R2in <= 0; 
+		  MDRout <= 1; 
+		  #15 MDRout <= 0; 
 		end
 		Reg_load2a: begin 
 		//	Mdatain <= 32'hABCDE; // Load this value into MDR to then be loaded into 
@@ -137,8 +106,8 @@ always @(Present_state) // do the required job in each state
 			#15 Read <= 0; MDRin <= 0; 
 		end
 		Reg_load2b: begin
-		  MDRout <= 1; R6in <= 1; 
-		  #15 MDRout <= 0; R6in <= 0; 
+		  MDRout <= 1; 
+		  #15 MDRout <= 0;  
 		end
 		Reg_load3a: begin 
 		//	Mdatain <= 32'hFF543211; // -ABCDEF 
@@ -146,8 +115,8 @@ always @(Present_state) // do the required job in each state
 			#15 Read <= 0; MDRin <= 0;
 		end
 		Reg_load3b: begin
-		  MDRout <= 1; R2in <= 1; 
-		  #15 MDRout <= 0; R2in <= 0; 
+		  MDRout <= 1; 
+		  #15 MDRout <= 0; 
 		end
 		T0: begin // see if you need to de-assert these signals
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1;
@@ -162,28 +131,34 @@ always @(Present_state) // do the required job in each state
 			#15 MDRout <= 0; IRin <= 0;
 		end
 		T3: begin
-			R2out <= 1; Yin <= 1; 	// R2 goes into Y, then A, it is dividend, R6 is divisor --> R2 / R6
-			#15 Yin <= 0; R2out <= 0; 
+			Grb <= 1; Yin <= 1; BAout <= 1;			
+			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
 		T4: begin
-			R6out <= 1; opcode <= 5'b01111; Zin <= 1; // opcode for divide
-			#15 opcode <= 5'bzzzzz; Zin <= 0; R6out <= 0;
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // opcode for ADD
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
 		end
 		T5: begin
-			Zlowout <= 1; LOin <= 1; 
-			#15 Zlowout <= 0; LOin <= 0;
+			// check if LOin needed
+			Zlowout <= 1;  MARin <= 1;
+			#15 Zlowout <= 0; MARin <= 0;
 		end
 		T6: begin
-			Zhighout <= 1; HIin <= 1;
-			#15 Zhighout <= 0; HIin <= 0;
+			Read <= 1; MDRin <= 1;
+			#15 Read <= 0; MDRin <= 0;
+		end
+		T7: begin
+			MDRout <= 1; Gra <= 1; Rin <= 1;
+			#15 MDRout <= 0; Gra <= 0; Rin <= 0;
 		end
   endcase
 end
+
  // Monitor signals
- initial begin
-	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
-				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
- end
+// initial begin
+//	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
+//				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
+// end
 
 // Test run length
 initial

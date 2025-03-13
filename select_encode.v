@@ -1,12 +1,13 @@
 // Select and Encode Logic 
 module select_encode( 
 	input Gra, Grb, Grc, Rin, Rout, BAout,
+	input [31:0] instruction,
 	output R0in, R1in, R2in, R3in, R4in, R5in, 
 	R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
 	output R0out, R1out, R2out, R3out, R4out, R5out, 
 	R6out, R7out, R8out, R9out, R10out, R11out, R12out, 
 	R13out, R14out, R15out,
-	input [31:0] instruction,
+
 	output [31:0] C_sign_extended
 );
 
@@ -31,6 +32,11 @@ R11 = 16'b0000100000000000, R12 = 16'b0001000000000000, R13 = 16'b00100000000000
 R14 = 16'b0100000000000000, R15 = 16'b1000000000000000; */
 
 reg R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15;
+initial begin
+	{R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15} = 0;
+end
+
+
 always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
 // Should probably make this work on the clock edge but ....
 // I'll keep it as is for now
@@ -51,9 +57,7 @@ always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
 		4'hD: R13 <= 1;
 		4'hE: R14 <= 1;
 		4'hF: R15 <= 1;
-		default: {R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15} <= 0;
 	endcase
-
 end
 	
 	assign R0in = R0 & Rin;
@@ -92,8 +96,13 @@ end
 	
 	// Push out C_sign_extended, use shift right arithmetic to extend the
 	// 19 bit C_sign_extended to 32 bits, 
-	assign C_sign_extended[31:0] = 32'b0;
-	assign C_sign_extended[31:13] = instruction[18:0];
-	assign C_sign_extended[31:0] = C_sign_extended >>> 13;
+	reg [31:0] q;
+	initial begin
+		q = 32'b0;
+		q[31:13] = instruction[18:0];
+		q = q >>> 13;
+	end
+	assign C_sign_extended = q;
+
 
 endmodule

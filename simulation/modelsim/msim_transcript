@@ -1,4 +1,4 @@
-# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # do CPU_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -7,210 +7,264 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/Bus.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/Bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/Bus.v 
+# Start time: 10:59:47 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/Bus.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/DataPath.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/DataPath.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath.v 
 # -- Compiling module DataPath
 # 
 # Top level modules:
 # 	DataPath
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/register.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/register.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/mux2to1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/mux2to1.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mux2to1.v 
 # -- Compiling module mux2to1
 # 
 # Top level modules:
 # 	mux2to1
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/and32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/and32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/and32.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/and32.v 
 # -- Compiling module and32
 # 
 # Top level modules:
 # 	and32
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/or32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/or32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/or32.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/or32.v 
 # -- Compiling module or32
 # 
 # Top level modules:
 # 	or32
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/not32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/not32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/not32.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/not32.v 
 # -- Compiling module not32
 # 
 # Top level modules:
 # 	not32
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/add32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/add32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/add32.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/add32.v 
 # -- Compiling module cla_4bit_adder
 # -- Compiling module cla_16bit_adder
 # -- Compiling module add32
 # 
 # Top level modules:
 # 	add32
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/mul32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mul32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/mul32.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mul32.v 
 # -- Compiling module mul32
 # 
 # Top level modules:
 # 	mul32
-# End time: 12:43:07 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/neg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/neg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:07 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/neg.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/neg.v 
 # -- Compiling module neg
 # 
 # Top level modules:
 # 	neg
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:01
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/ALU.v 
+# Start time: 10:59:48 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/div32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/div32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/div32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/div32.v 
 # -- Compiling module div32
 # 
 # Top level modules:
 # 	div32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/rol32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/rol32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/rol32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/rol32.v 
 # -- Compiling module rol32
 # 
 # Top level modules:
 # 	rol32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/ror32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ror32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/ror32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ror32.v 
 # -- Compiling module ror32
 # 
 # Top level modules:
 # 	ror32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shl32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shl32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/shl32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shl32.v 
 # -- Compiling module shl32
 # 
 # Top level modules:
 # 	shl32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shr32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shr32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/shr32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shr32.v 
 # -- Compiling module shr32
 # 
 # Top level modules:
 # 	shr32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shra32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shra32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/shra32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shra32.v 
 # -- Compiling module shra32
 # 
 # Top level modules:
 # 	shra32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/sub32.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/sub32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/sub32.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/sub32.v 
 # -- Compiling module sub32
 # 
 # Top level modules:
 # 	sub32
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/InPort.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/InPort.v 
+# -- Compiling module InPort
+# 
+# Top level modules:
+# 	InPort
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/select_encode.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/select_encode.v 
+# -- Compiling module select_encode
+# 
+# Top level modules:
+# 	select_encode
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/con_ff.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/con_ff.v 
+# -- Compiling module con_ff
+# 
+# Top level modules:
+# 	con_ff
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register_R0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/register_R0.v 
+# -- Compiling module register_R0
+# 
+# Top level modules:
+# 	register_R0
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/RAM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/RAM.v 
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/DataPath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:43:08 on Feb 27,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sloth/CPU_Project" C:/Users/sloth/CPU_Project/DataPath_tb.v 
+# Start time: 10:59:49 on Mar 13,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath_tb.v 
 # -- Compiling module DataPath_tb
 # 
 # Top level modules:
 # 	DataPath_tb
-# End time: 12:43:08 on Feb 27,2025, Elapsed time: 0:00:00
+# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DataPath_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" DataPath_tb 
-# Start time: 12:43:09 on Feb 27,2025
+# Start time: 10:59:50 on Mar 13,2025
 # Loading work.DataPath_tb
 # Loading work.DataPath
+# Loading work.select_encode
+# Loading work.register_R0
 # Loading work.register
+# Loading work.InPort
 # Loading work.mux2to1
+# Loading work.RAM
 # Loading work.ALU
 # Loading work.add32
 # Loading work.cla_16bit_adder
@@ -228,106 +282,103 @@
 # Loading work.neg
 # Loading work.not32
 # Loading work.Bus
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/DataPath.v(89): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/sloth/CPU_Project/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/sloth/CPU_Project/register.v
-# ** Warning: (vsim-3017) C:/Users/sloth/CPU_Project/ALU.v(19): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/add_32 File: C:/Users/sloth/CPU_Project/add32.v
-# ** Warning: (vsim-3722) C:/Users/sloth/CPU_Project/ALU.v(19): [TFMPC] - Missing connection for port 'Overflow'.
-# ** Warning: (vsim-3017) C:/Users/sloth/CPU_Project/sub32.v(15): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/sub_32/cla_adder File: C:/Users/sloth/CPU_Project/add32.v
-# ** Warning: (vsim-3722) C:/Users/sloth/CPU_Project/sub32.v(15): [TFMPC] - Missing connection for port 'Overflow'.
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(25): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/ror32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/ror_32 File: C:/Users/sloth/CPU_Project/ror32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(26): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/rol32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/rol_32 File: C:/Users/sloth/CPU_Project/rol32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(27): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shr32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shr_32 File: C:/Users/sloth/CPU_Project/shr32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(28): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shra32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shra_32 File: C:/Users/sloth/CPU_Project/shra32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(29): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shl32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shl_32 File: C:/Users/sloth/CPU_Project/shl32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/DataPath.v(102): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_InPort'. The port definition is at: C:/Users/sloth/CPU_Project/Bus.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/bus File: C:/Users/sloth/CPU_Project/Bus.v
+# Loading work.con_ff
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Too few port connections. Expected 31, found 25.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT File: C:/Users/20js32/CPU_Project/DataPath.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'RAMwrite'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Outport_Out'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Out_portIn'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Inport_In'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Strobe'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(75): [PCDPC] - Port size (32) does not match connection size (1) for port 'C_sign_extended'. The port definition is at: C:/Users/20js32/CPU_Project/select_encode.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/selectEncode File: C:/Users/20js32/CPU_Project/select_encode.v
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/R0 File: C:/Users/20js32/CPU_Project/register_R0.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Missing connection for port 'BAout'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(109): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/20js32/CPU_Project/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/20js32/CPU_Project/register.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(111): [PCDPC] - Port size (9) does not match connection size (1) for port 'address'. The port definition is at: C:/Users/20js32/CPU_Project/RAM.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/ram File: C:/Users/20js32/CPU_Project/RAM.v
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/ALU.v(19): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/add_32 File: C:/Users/20js32/CPU_Project/add32.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/ALU.v(19): [TFMPC] - Missing connection for port 'Overflow'.
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/sub32.v(15): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/sub_32/cla_adder File: C:/Users/20js32/CPU_Project/add32.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/sub32.v(15): [TFMPC] - Missing connection for port 'Overflow'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(25): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/ror32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/ror_32 File: C:/Users/20js32/CPU_Project/ror32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(26): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/rol32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/rol_32 File: C:/Users/20js32/CPU_Project/rol32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(27): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shr32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shr_32 File: C:/Users/20js32/CPU_Project/shr32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(28): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shra32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shra_32 File: C:/Users/20js32/CPU_Project/shra32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(29): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shl32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shl_32 File: C:/Users/20js32/CPU_Project/shl32.v
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: 20js32  Hostname: WLH214-03  ProcessID: 4188
-#           Attempting to use alternate WLF file "./wlfthrh64x".
+#           Attempting to use alternate WLF file "./wlft5hrybg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfthrh64x
+#           Using alternate file: ./wlft5hrybg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
-# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=30 State=0010 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
-# Time=50 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=000abcde
-# Time=60 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
-# Time=65 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=00000000
-# Time=70 State=0100 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
-# Time=90 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=ff543211
-# Time=100 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
-# Time=105 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=000abcde
-# Time=110 State=0110 BusMuxOut=ff543211, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
-# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=ff543211 MDRMuxOut=00000000
-# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=ff543211 MDRMuxOut=2a2b8000
-# Time=160 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=165 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=xxxxxxxx
-# Time=170 State=1001 BusMuxOut=2a2b8000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=190 State=1010 BusMuxOut=ff543211, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff543211
-# Time=210 State=1011 BusMuxOut=000abcde, BusMuxIn_MDR=2a2b8000 MDRMuxOut=000abcde
-# Time=230 State=1100 BusMuxOut=fffffff1, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff1
-# Time=250 State=1101 BusMuxOut=fffffff0, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff0
-# ** Note: $finish    : C:/Users/sloth/CPU_Project/DataPath_tb.v(192)
+# ** Warning: (vsim-7) Failed to open readmem file "mem.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/20js32/CPU_Project/RAM.v(14)
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/ram
+# ** Note: $finish    : C:/Users/20js32/CPU_Project/DataPath_tb.v(166)
 #    Time: 500 ns  Iteration: 0  Instance: /DataPath_tb
 # 1
-# Break in Module DataPath_tb at C:/Users/sloth/CPU_Project/DataPath_tb.v line 192
-do div_tb.do
+# Break in Module DataPath_tb at C:/Users/20js32/CPU_Project/DataPath_tb.v line 166
+add wave -position 24  sim:/DataPath_tb/DUT/bus/BusMuxInR3
+add wave -position 25  sim:/DataPath_tb/DUT/bus/BusMuxOut
+add wave -position 26  sim:/DataPath_tb/DUT/bus/BusMuxInZlow
+add wave -position 27  sim:/DataPath_tb/DUT/bus/C_sign_extended
+add wave -position 24  sim:/DataPath_tb/DUT/bus/BusMuxInMDR
+add wave -position 24  sim:/DataPath_tb/DUT/bus/R3out
+add wave -position 25  sim:/DataPath_tb/DUT/bus/R5out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/20js32/CPU_Project/simulation/modelsim/phase2_ld.do
+clear
+# invalid command name "clear"
 restart
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/DataPath.v(89): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/sloth/CPU_Project/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/sloth/CPU_Project/register.v
-# ** Warning: (vsim-3017) C:/Users/sloth/CPU_Project/ALU.v(19): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/add_32 File: C:/Users/sloth/CPU_Project/add32.v
-# ** Warning: (vsim-3722) C:/Users/sloth/CPU_Project/ALU.v(19): [TFMPC] - Missing connection for port 'Overflow'.
-# ** Warning: (vsim-3017) C:/Users/sloth/CPU_Project/sub32.v(15): [TFMPC] - Too few port connections. Expected 6, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/sub_32/cla_adder File: C:/Users/sloth/CPU_Project/add32.v
-# ** Warning: (vsim-3722) C:/Users/sloth/CPU_Project/sub32.v(15): [TFMPC] - Missing connection for port 'Overflow'.
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(25): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/ror32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/ror_32 File: C:/Users/sloth/CPU_Project/ror32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(26): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/rol32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/rol_32 File: C:/Users/sloth/CPU_Project/rol32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(27): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shr32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shr_32 File: C:/Users/sloth/CPU_Project/shr32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(28): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shra32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shra_32 File: C:/Users/sloth/CPU_Project/shra32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/ALU.v(29): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/sloth/CPU_Project/shl32.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shl_32 File: C:/Users/sloth/CPU_Project/shl32.v
-# ** Warning: (vsim-3015) C:/Users/sloth/CPU_Project/DataPath.v(102): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_InPort'. The port definition is at: C:/Users/sloth/CPU_Project/Bus.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/bus File: C:/Users/sloth/CPU_Project/Bus.v
-run 450ns
-# Time=0 State=0000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=10 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
-# Time=25 State=0001 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=00000000 MDRMuxOut=xxxxxxxx
-# Time=30 State=0010 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=00000000
-# Time=50 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=00000000 MDRMuxOut=000abcde
-# Time=60 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
-# Time=65 State=0011 BusMuxOut=00000000, BusMuxIn_MDR=000abcde MDRMuxOut=00000000
-# Time=70 State=0100 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=000abcde
-# Time=90 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=000abcde MDRMuxOut=ff543211
-# Time=100 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
-# Time=105 State=0101 BusMuxOut=000abcde, BusMuxIn_MDR=ff543211 MDRMuxOut=000abcde
-# Time=110 State=0110 BusMuxOut=ff543211, BusMuxIn_MDR=ff543211 MDRMuxOut=ff543211
-# Time=130 State=0111 BusMuxOut=00000000, BusMuxIn_MDR=ff543211 MDRMuxOut=00000000
-# Time=150 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=ff543211 MDRMuxOut=2a2b8000
-# Time=160 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=165 State=1000 BusMuxOut=xxxxxxxx, BusMuxIn_MDR=2a2b8000 MDRMuxOut=xxxxxxxx
-# Time=170 State=1001 BusMuxOut=2a2b8000, BusMuxIn_MDR=2a2b8000 MDRMuxOut=2a2b8000
-# Time=190 State=1010 BusMuxOut=ff543211, BusMuxIn_MDR=2a2b8000 MDRMuxOut=ff543211
-# Time=210 State=1011 BusMuxOut=000abcde, BusMuxIn_MDR=2a2b8000 MDRMuxOut=000abcde
-# Time=230 State=1100 BusMuxOut=fffffff1, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff1
-# Time=250 State=1101 BusMuxOut=fffffff0, BusMuxIn_MDR=2a2b8000 MDRMuxOut=fffffff0
-# End time: 12:47:11 on Feb 27,2025, Elapsed time: 0:04:02
-# Errors: 0, Warnings: 24
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Too few port connections. Expected 31, found 25.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT File: C:/Users/20js32/CPU_Project/DataPath.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'RAMwrite'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Outport_Out'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Out_portIn'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Inport_In'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Strobe'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(75): [PCDPC] - Port size (32) does not match connection size (1) for port 'C_sign_extended'. The port definition is at: C:/Users/20js32/CPU_Project/select_encode.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/selectEncode File: C:/Users/20js32/CPU_Project/select_encode.v
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/R0 File: C:/Users/20js32/CPU_Project/register_R0.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Missing connection for port 'BAout'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(109): [PCDPC] - Port size (32) does not match connection size (1) for port 'RegisterOutput'. The port definition is at: C:/Users/20js32/CPU_Project/register.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/MAR File: C:/Users/20js32/CPU_Project/register.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(111): [PCDPC] - Port size (9) does not match connection size (1) for port 'address'. The port definition is at: C:/Users/20js32/CPU_Project/RAM.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/ram File: C:/Users/20js32/CPU_Project/RAM.v
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/ALU.v(19): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/add_32 File: C:/Users/20js32/CPU_Project/add32.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/ALU.v(19): [TFMPC] - Missing connection for port 'Overflow'.
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/sub32.v(15): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/sub_32/cla_adder File: C:/Users/20js32/CPU_Project/add32.v
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/sub32.v(15): [TFMPC] - Missing connection for port 'Overflow'.
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(25): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/ror32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/ror_32 File: C:/Users/20js32/CPU_Project/ror32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(26): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/rol32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/rol_32 File: C:/Users/20js32/CPU_Project/rol32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(27): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shr32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shr_32 File: C:/Users/20js32/CPU_Project/shr32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(28): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shra32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shra_32 File: C:/Users/20js32/CPU_Project/shra32.v
+# ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(29): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shl32.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shl_32 File: C:/Users/20js32/CPU_Project/shl32.v
+do phase2_ld.do
+# End time: 11:18:12 on Mar 13,2025, Elapsed time: 0:18:22
+# Errors: 1, Warnings: 45

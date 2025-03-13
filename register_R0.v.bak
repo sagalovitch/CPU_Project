@@ -1,0 +1,4 @@
+register_R0 (input clear, clock, enable, 
+	input [31:0] RegisterInput,
+	output wire [31:0] RegisterOutput
+)
