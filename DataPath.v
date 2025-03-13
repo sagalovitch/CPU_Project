@@ -376,11 +376,5 @@ con_ff myConFF (
     .conOut(conOut)
 );
 
-
-
-
-endmodule
-
 	
-
 endmodule
