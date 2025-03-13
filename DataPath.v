@@ -1,35 +1,10 @@
 module DataPath(
 	input clock, clear, read, RAMwrite,
-	// 16 32-bit registers control (out is to put it into the bus, in is to write to the register)
-	// R0-7 General-purpose registers
-	input	R0out, R0in,
-			R1out, R1in,
-			R2out, R2in,
-			R3out, R3in,
-			R4out, R4in,
-			R5out, R5in,
-			R6out, R6in,
-			R7out, R7in,
-	// R8 is return address register (RA)
-			R8out, R8in,
-	// R9 is Stack Pointer (SP)
-			R9out, R9in,
-	// R10-13 are argument registers
-			R10out, R10in,
-			R11out, R11in,
-			R12out, R12in,
-			R13out, R13in,
-	// R14-15 are return value registers
-			R14out, R14in,
-			R15out, R15in,
 			HIout, HIin,
 			LOout, LOin,
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC,
-	// No longer require Mdatain as input, this will come from the RAM 
-	//input [31:0] Mdatain,
-	input [4:0] opcode,
 	output [31:0] Outport_Out, 
 	input Out_portIn,
 	input [31: 0] Inport_In,
@@ -66,8 +41,41 @@ wire [31:0]	BusMuxOut,
 			Yout,
 			IRout,
 			BusMuxIn_InPort;
-
+			
+		// 16 32-bit registers control (out is to put it into the bus, in is to write to the register)
+	// R0-7 General-purpose registers
+wire 		R0out, R0in,
+			R1out, R1in,
+			R2out, R2in,
+			R3out, R3in,
+			R4out, R4in,
+			R5out, R5in,
+			R6out, R6in,
+			R7out, R7in,
+	// R8 is return address register (RA)
+			R8out, R8in,
+	// R9 is Stack Pointer (SP)
+			R9out, R9in,
+	// R10-13 are argument registers
+			R10out, R10in,
+			R11out, R11in,
+			R12out, R12in,
+			R13out, R13in,
+	// R14-15 are return value registers
+			R14out, R14in,
+			R15out, R15in;
+			
+// Output of RAM, into MDRmux
 wire [31:0] Mdatain;
+
+// Select Encode Logic that reads instruction and outputs correct Register Out and In signal
+/*select_encode selectEncode(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .instruction(IRout), 
+		.R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .R4in(R4in), .R5in(R5in), .R6in(R6in), .R7in(R7in), .R8in(R8in), .R9in(R9in),
+		.R10in(R10in), .R11in(R11in), .R12in(R12in), .R13in(R13in), .R14in(R14in), .R15in(R15in),
+		.R0out(R0out), .R1out(R1out), .R2out(R2out), .R3out(R3out), .R4out(R4out), .R5out(R5out), .R6out(R6out), .R7out(R7out), .R8out(R8out), 
+		.R9out(R9out), .R10out(R10out), .R11out(R11out), .R12out(R12out), .R13out(R13out), .R14out(R14out), .R15out(R15out));
+*/
+
 // Registers
 register R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
 register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
@@ -206,8 +214,6 @@ module DataPath(
 	input Out_portIn,
 	input [31: 0] Inport_In,
 	input Strobe
-	
-	
 );
 
 
@@ -366,7 +372,7 @@ Bus bus(
 //con_ff logic
 wire [1:0] c2 = IRout[20:19];
 wire conOut; // The latched result
-reg conIn;   // Will come from testbench or control
+wire conIn;   // Will come from testbench or control
 
 con_ff myConFF (
     .busIn(BusMuxOut),
@@ -376,5 +382,4 @@ con_ff myConFF (
     .conOut(conOut)
 );
 
-	
 endmodule
