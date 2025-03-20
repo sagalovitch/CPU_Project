@@ -13,15 +13,15 @@ module DataPath_tb;
 	reg [4:0] opcode;
 
   // State parameters
-  parameter Default = 4'b0000, 
-            T0 = 4'b0001, 
-            T1 = 4'b0010,
-            T2 = 4'b0011,
-            T3 = 4'b0100, 
-            T4 = 4'b0101,
-            T5 = 4'b0110,
-				T6 = 4'b0111,
-				T7 = 4'b1000;
+  parameter Default = 4'd0, 
+            T0 = 4'd1, 
+            T1 = 4'd2,
+            T2 = 4'd3,
+            T3 = 4'd4, 
+            T4 = 4'd5,
+            T5 = 4'd6,
+				T6 = 4'd7,
+				T7 = 4'd8;
 
   reg [3:0] Present_state = Default;
 
@@ -77,36 +77,36 @@ always @(Present_state) // do the required job in each state
 			HIin <= 0; LOin <= 0;
 			opcode <= 5'bzzzzz;
 		end
-		T0: begin // see if you need to de-assert these signals
+		T0: begin // Instruction Fetch
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
 			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;  
 		end
-		T1: begin
+		T1: begin // Instruction Fetch
 			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
-		T2: begin
+		T2: begin // Instruction Fetch
 			MDRout <= 1; IRin <= 1; 
 			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin
+		T3: begin // Cycle Operation 
 			Grb <= 1; Yin <= 1; BAout <= 1;			
 			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
-		T4: begin
+		T4: begin // Cycle Operation 
 			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // opcode for ADD
 			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
 		end
-		T5: begin
+		T5: begin // Cycle Operation 
 			// check if LOin needed
 			Zlowout <= 1;  MARin <= 1;
 			#15 Zlowout <= 0; MARin <= 0;
 		end
-		T6: begin
+		T6: begin // Cycle Operation
 			Read <= 1; MDRin <= 1;
 			#15 Read <= 0; MDRin <= 0;
 		end
-		T7: begin
+		T7: begin // Cycle Operation
 			MDRout <= 1; Gra <= 1; Rin <= 1;
 			#15 MDRout <= 0; Gra <= 0; Rin <= 0;
 		end

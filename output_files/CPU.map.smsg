@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at select_encode.v(34): always construct contains both blocking and non-blocking assignments File: C:/Users/sloth/CPU_Project/select_encode.v Line: 34
+Warning (10268): Verilog HDL information at pc.v(8): always construct contains both blocking and non-blocking assignments File: C:/Users/20js32/CPU_Project/pc.v Line: 8

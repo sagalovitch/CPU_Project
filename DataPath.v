@@ -43,7 +43,8 @@ wire [31:0]	BusMuxOut,
 			MDRMuxOut, 
 			Yout,
 			IRout,
-			BusMuxIn_InPort;
+			BusMuxIn_InPort,
+			MARoutput;
 			
 		// 16 32-bit registers control (out is to put it into the bus, in is to write to the register)
 	// R0-7 General-purpose registers
@@ -71,12 +72,6 @@ wire 		R0out, R0in,
 // Output of RAM, into MDRmux
 wire [31:0] Mdatain;
 
-// Select Encode Logic that reads instruction and outputs correct Register Out and In signal
-select_encode selectEncode(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .instruction(IRout), 
-		.R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .R4in(R4in), .R5in(R5in), .R6in(R6in), .R7in(R7in), .R8in(R8in), .R9in(R9in),
-		.R10in(R10in), .R11in(R11in), .R12in(R12in), .R13in(R13in), .R14in(R14in), .R15in(R15in),
-		.R0out(R0out), .R1out(R1out), .R2out(R2out), .R3out(R3out), .R4out(R4out), .R5out(R5out), .R6out(R6out), .R7out(R7out), .R8out(R8out), 
-		.R9out(R9out), .R10out(R10out), .R11out(R11out), .R12out(R12out), .R13out(R13out), .R14out(R14out), .R15out(R15out), .C_sign_extended(C_signextended));
 
 
 // Registers
@@ -108,10 +103,18 @@ mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
 register MDR(clear, clock, MDRin, MDRMuxOut, BusMuxIn_MDR);
 register MAR(clear, clock, MARin, BusMuxOut, MARoutput);
 // Use RAM from Library
-RAM ram(.clock(clock), .memRead(read), .memWrite(RAMwrite), .address(MARoutput), .dataIn(MDRMuxOut), .dataOut(Mdatain));
+RAM ram(.clock(clock), .memRead(read), .memWrite(RAMwrite), .address(MARoutput[8:0]), .dataIn(MDRMuxOut), .dataOut(Mdatain));
 
-register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
+pc #(32'h00000000) PC(.clock(clock), .IncPC(IncPC), .PC_enable(PCin), .BusMuxOut(BusMuxOut), .PC_data_out(BusMuxIn_PC));
 register IR(clear, clock, IRin, BusMuxOut, IRout);
+
+
+// Select Encode Logic that reads instruction and outputs correct Register Out and In signal
+select_encode selectEncode(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .instruction(IRout), 
+		.R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .R4in(R4in), .R5in(R5in), .R6in(R6in), .R7in(R7in), .R8in(R8in), .R9in(R9in),
+		.R10in(R10in), .R11in(R11in), .R12in(R12in), .R13in(R13in), .R14in(R14in), .R15in(R15in),
+		.R0out(R0out), .R1out(R1out), .R2out(R2out), .R3out(R3out), .R4out(R4out), .R5out(R5out), .R6out(R6out), .R7out(R7out), .R8out(R8out), 
+		.R9out(R9out), .R10out(R10out), .R11out(R11out), .R12out(R12out), .R13out(R13out), .R14out(R14out), .R15out(R15out), .C_sign_extended(C_signextended));
 
 wire [63:0] Z_64;
 

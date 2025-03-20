@@ -27,6 +27,7 @@ vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js
 vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/select_encode.v}
 vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/con_ff.v}
 vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register_R0.v}
+vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/pc.v}
 vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/RAM.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath_tb.v}

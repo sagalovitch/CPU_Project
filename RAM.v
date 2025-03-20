@@ -14,7 +14,7 @@ module RAM(
 		$readmemh("load.hex", memory);
 		//memory[0] = 00000065;
 	 end
-    always @(posedge clock) begin
+    always @(negedge clock) begin
         if (memWrite)
             // Write dataIn into memory at this address
             memory[address] <= dataIn;
@@ -22,7 +22,6 @@ module RAM(
         if (memRead)
             // Read the memory contents to dataOut
             dataOut <= memory[address];
-				
     end
 
 endmodule
