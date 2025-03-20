@@ -79,10 +79,11 @@ always @(Present_state) // do the required job in each state
 		end
 		T0: begin // Instruction Fetch
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
-			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;  
+			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1;
+			// Get Setup for Read signal
 		end
 		T1: begin // Instruction Fetch
-			Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
+			Zlowout <= 1; PCin <= 1; MDRin <= 1;
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin // Instruction Fetch

@@ -40,25 +40,48 @@ end
 always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
 // Should probably make this work on the clock edge but ....
 // I'll keep it as is for now
-	case (binary_in)
-		4'h0: R0 <= 1;
-		4'h1: R1 <= 1;
-		4'h2: R2 <= 1;
-		4'h3: R3 <= 1;
-		4'h4:	R4 <= 1;
-		4'h5: R5 <= 1;
-		4'h6: R6 <= 1;
-		4'h7: R7 <= 1;
-		4'h8: R8 <= 1;
-		4'h9: R9 <= 1;
-		4'hA: R10 <= 1;
-		4'hB: R11 <= 1;
-		4'hC: R12 <= 1;
-		4'hD: R13 <= 1;
-		4'hE: R14 <= 1;
-		4'hF: R15 <= 1;
-	endcase
+if ( Gra || Grb || Grc || Rin || Rout || BAout) begin
+		case (binary_in)
+			4'h0: R0 <= 1;
+			4'h1: R1 <= 1;
+			4'h2: R2 <= 1;
+			4'h3: R3 <= 1;
+			4'h4:	R4 <= 1;
+			4'h5: R5 <= 1;
+			4'h6: R6 <= 1;
+			4'h7: R7 <= 1;
+			4'h8: R8 <= 1;
+			4'h9: R9 <= 1;
+			4'hA: R10 <= 1;
+			4'hB: R11 <= 1;
+			4'hC: R12 <= 1;
+			4'hD: R13 <= 1;
+			4'hE: R14 <= 1;
+			4'hF: R15 <= 1;
+		endcase
+	end
+	else begin
+			case (binary_in)
+			4'h0: R0 <= 0;
+			4'h1: R1 <= 0;
+			4'h2: R2 <= 0;
+			4'h3: R3 <= 0;
+			4'h4:	R4 <= 0;
+			4'h5: R5 <= 0;
+			4'h6: R6 <= 0;
+			4'h7: R7 <= 0;
+			4'h8: R8 <= 0;
+			4'h9: R9 <= 0;
+			4'hA: R10 <= 0;
+			4'hB: R11 <= 0;
+			4'hC: R12 <= 0;
+			4'hD: R13 <= 0;
+			4'hE: R14 <= 0;
+			4'hF: R15 <= 0;
+		endcase
+	end
 end
+	
 	
 	assign R0in = R0 & Rin;
 	assign R1in = R1 & Rin;
@@ -97,7 +120,7 @@ end
 	// Push out C_sign_extended, use shift right arithmetic to extend the
 	// 19 bit C_sign_extended to 32 bits, 
 	reg [31:0] q;
-	initial begin
+	always @ (instruction) begin
 		q = 32'b0;
 		q[31:13] = instruction[18:0];
 		q = q >>> 13;

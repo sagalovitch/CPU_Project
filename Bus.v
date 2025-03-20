@@ -61,29 +61,29 @@ always @(*) begin
   
   // Priority encoder structure
 	if (R0out)   q = BusMuxInR0;
-	if (R1out)   q = BusMuxInR1;
-	if (R2out)   q = BusMuxInR2;
-	if (R3out)   q = BusMuxInR3;
-	if (R4out)   q = BusMuxInR4;
-	if (R5out)   q = BusMuxInR5;
-	if (R6out)   q = BusMuxInR6;
-	if (R7out)   q = BusMuxInR7;
-	if (R8out)   q = BusMuxInR8;
-	if (R9out)   q = BusMuxInR9;
-	if (R10out)  q = BusMuxInR10;
-	if (R11out)  q = BusMuxInR11;
-	if (R12out)  q = BusMuxInR12;
-	if (R13out)  q = BusMuxInR13;
-	if (R14out)  q = BusMuxInR14;
-	if (R15out)  q = BusMuxInR15;
-	if (MDRout)  q = BusMuxInMDR;
-	if (HIout)   q = BusMuxInHI;
-	if (LOout)   q = BusMuxInLO;
-	if (Zhighout) q = BusMuxInZhigh;
-	if (Zlowout) q = BusMuxInZlow;
-	if (PCout)   q = BusMuxInPC;
-	if (InPortout) q = BusMuxIn_InPort;
-	if (Cout)    q = C_sign_extended;
+	else if (R1out)   q = BusMuxInR1;
+	else if (R2out)   q = BusMuxInR2;
+	else if (R3out)   q = BusMuxInR3;
+	else if (R4out)   q = BusMuxInR4;
+	else if (R5out)   q = BusMuxInR5;
+	else if (R6out)   q = BusMuxInR6;
+	else if (R7out)   q = BusMuxInR7;
+	else if (R8out)   q = BusMuxInR8;
+	else if (R9out)   q = BusMuxInR9;
+	else if (R10out)  q = BusMuxInR10;
+	else if (R11out)  q = BusMuxInR11;
+	else if (R12out)  q = BusMuxInR12;
+	else if (R13out)  q = BusMuxInR13;
+	else if (R14out)  q = BusMuxInR14;
+	else if (R15out)  q = BusMuxInR15;
+	else if (MDRout)  q = BusMuxInMDR;
+	else if (HIout)   q = BusMuxInHI;
+	else if (LOout)   q = BusMuxInLO;
+	else if (Zhighout) q = BusMuxInZhigh;
+	else if (Zlowout) q = BusMuxInZlow;
+	else if (PCout)   q = BusMuxInPC;
+	else if (InPortout) q = BusMuxIn_InPort;
+	else if (Cout)    q <= C_sign_extended;
 end
  
 assign BusMuxOut = q;
