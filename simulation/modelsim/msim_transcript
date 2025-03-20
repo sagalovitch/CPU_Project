@@ -12,77 +12,77 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/Bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:47 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/Bus.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:01
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath.v 
 # -- Compiling module DataPath
 # 
 # Top level modules:
 # 	DataPath
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mux2to1.v 
 # -- Compiling module mux2to1
 # 
 # Top level modules:
 # 	mux2to1
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/and32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/and32.v 
 # -- Compiling module and32
 # 
 # Top level modules:
 # 	and32
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/or32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/or32.v 
 # -- Compiling module or32
 # 
 # Top level modules:
 # 	or32
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/not32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/not32.v 
 # -- Compiling module not32
 # 
 # Top level modules:
 # 	not32
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/add32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/add32.v 
 # -- Compiling module cla_4bit_adder
 # -- Compiling module cla_16bit_adder
@@ -90,173 +90,173 @@
 # 
 # Top level modules:
 # 	add32
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:30 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mul32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:30 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/mul32.v 
 # -- Compiling module mul32
 # 
 # Top level modules:
 # 	mul32
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/neg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/neg.v 
 # -- Compiling module neg
 # 
 # Top level modules:
 # 	neg
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:48 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 10:59:48 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/div32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/div32.v 
 # -- Compiling module div32
 # 
 # Top level modules:
 # 	div32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/rol32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/rol32.v 
 # -- Compiling module rol32
 # 
 # Top level modules:
 # 	rol32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ror32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/ror32.v 
 # -- Compiling module ror32
 # 
 # Top level modules:
 # 	ror32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shl32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shl32.v 
 # -- Compiling module shl32
 # 
 # Top level modules:
 # 	shl32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shr32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shr32.v 
 # -- Compiling module shr32
 # 
 # Top level modules:
 # 	shr32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shra32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/shra32.v 
 # -- Compiling module shra32
 # 
 # Top level modules:
 # 	shra32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/sub32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/sub32.v 
 # -- Compiling module sub32
 # 
 # Top level modules:
 # 	sub32
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/InPort.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/InPort.v 
 # -- Compiling module InPort
 # 
 # Top level modules:
 # 	InPort
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/select_encode.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/select_encode.v 
 # -- Compiling module select_encode
 # 
 # Top level modules:
 # 	select_encode
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/con_ff.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/con_ff.v 
 # -- Compiling module con_ff
 # 
 # Top level modules:
 # 	con_ff
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register_R0.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:31 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/register_R0.v 
 # -- Compiling module register_R0
 # 
 # Top level modules:
 # 	register_R0
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:31 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:32 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:32 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:59:49 on Mar 13,2025
+# Start time: 21:41:32 on Mar 19,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/20js32/CPU_Project" C:/Users/20js32/CPU_Project/DataPath_tb.v 
 # -- Compiling module DataPath_tb
 # 
 # Top level modules:
 # 	DataPath_tb
-# End time: 10:59:49 on Mar 13,2025, Elapsed time: 0:00:00
+# End time: 21:41:32 on Mar 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DataPath_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" DataPath_tb 
-# Start time: 10:59:50 on Mar 13,2025
+# Start time: 21:41:32 on Mar 19,2025
 # Loading work.DataPath_tb
 # Loading work.DataPath
 # Loading work.select_encode
@@ -283,14 +283,14 @@
 # Loading work.not32
 # Loading work.Bus
 # Loading work.con_ff
-# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Too few port connections. Expected 31, found 25.
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Too few port connections. Expected 31, found 25.
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT File: C:/Users/20js32/CPU_Project/DataPath.v
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'RAMwrite'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Cout'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Outport_Out'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Out_portIn'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Inport_In'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Strobe'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'RAMwrite'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Outport_Out'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Out_portIn'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Inport_In'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Strobe'.
 # ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(75): [PCDPC] - Port size (32) does not match connection size (1) for port 'C_sign_extended'. The port definition is at: C:/Users/20js32/CPU_Project/select_encode.v(11).
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/selectEncode File: C:/Users/20js32/CPU_Project/select_encode.v
 # ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Too few port connections. Expected 6, found 5.
@@ -320,40 +320,28 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: 20js32  Hostname: WLH214-03  ProcessID: 4188
-#           Attempting to use alternate WLF file "./wlft5hrybg".
+#           Attempting to use alternate WLF file "./wlftq83ejm".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft5hrybg
+#           Using alternate file: ./wlftq83ejm
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Warning: (vsim-7) Failed to open readmem file "mem.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/20js32/CPU_Project/RAM.v(14)
-#    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/ram
-# ** Note: $finish    : C:/Users/20js32/CPU_Project/DataPath_tb.v(166)
+# ** Note: $finish    : C:/Users/20js32/CPU_Project/DataPath_tb.v(125)
 #    Time: 500 ns  Iteration: 0  Instance: /DataPath_tb
 # 1
-# Break in Module DataPath_tb at C:/Users/20js32/CPU_Project/DataPath_tb.v line 166
-add wave -position 24  sim:/DataPath_tb/DUT/bus/BusMuxInR3
-add wave -position 25  sim:/DataPath_tb/DUT/bus/BusMuxOut
-add wave -position 26  sim:/DataPath_tb/DUT/bus/BusMuxInZlow
-add wave -position 27  sim:/DataPath_tb/DUT/bus/C_sign_extended
-add wave -position 24  sim:/DataPath_tb/DUT/bus/BusMuxInMDR
-add wave -position 24  sim:/DataPath_tb/DUT/bus/R3out
-add wave -position 25  sim:/DataPath_tb/DUT/bus/R5out
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/20js32/CPU_Project/simulation/modelsim/phase2_ld.do
-clear
-# invalid command name "clear"
+# Break in Module DataPath_tb at C:/Users/20js32/CPU_Project/DataPath_tb.v line 125
+do ld_phase2.do
 restart
-# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Too few port connections. Expected 31, found 25.
+# ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Too few port connections. Expected 31, found 25.
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT File: C:/Users/20js32/CPU_Project/DataPath.v
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'RAMwrite'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Cout'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Outport_Out'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Out_portIn'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Inport_In'.
-# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(35): [TFMPC] - Missing connection for port 'Strobe'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'RAMwrite'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Outport_Out'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Out_portIn'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Inport_In'.
+# ** Warning: (vsim-3722) C:/Users/20js32/CPU_Project/DataPath_tb.v(29): [TFMPC] - Missing connection for port 'Strobe'.
 # ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/DataPath.v(75): [PCDPC] - Port size (32) does not match connection size (1) for port 'C_sign_extended'. The port definition is at: C:/Users/20js32/CPU_Project/select_encode.v(11).
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/selectEncode File: C:/Users/20js32/CPU_Project/select_encode.v
 # ** Warning: (vsim-3017) C:/Users/20js32/CPU_Project/DataPath.v(83): [TFMPC] - Too few port connections. Expected 6, found 5.
@@ -379,6 +367,7 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shra_32 File: C:/Users/20js32/CPU_Project/shra32.v
 # ** Warning: (vsim-3015) C:/Users/20js32/CPU_Project/ALU.v(29): [PCDPC] - Port size (5) does not match connection size (32) for port 'shift_amt'. The port definition is at: C:/Users/20js32/CPU_Project/shl32.v(3).
 #    Time: 0 ps  Iteration: 0  Instance: /DataPath_tb/DUT/alu/shl_32 File: C:/Users/20js32/CPU_Project/shl32.v
-do phase2_ld.do
-# End time: 11:18:12 on Mar 13,2025, Elapsed time: 0:18:22
-# Errors: 1, Warnings: 45
+run 450ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/20js32/CPU_Project/simulation/modelsim/lb_phase2.do
+# End time: 21:46:22 on Mar 19,2025, Elapsed time: 0:04:50
+# Errors: 0, Warnings: 44

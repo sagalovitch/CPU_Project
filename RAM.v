@@ -11,7 +11,8 @@ module RAM(
     reg [31:0] memory [0:511];
 			 
 	 initial begin
-		$readmemh("mem.txt", memory);
+		$readmemh("load.hex", memory);
+		//memory[0] = 00000065;
 	 end
     always @(posedge clock) begin
         if (memWrite)
