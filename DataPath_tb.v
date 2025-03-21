@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
 module DataPath_tb; 
-  	reg Clock, Clear, Read,
+  	reg Clock, Clear, Read, Write,
 			Gra, Grb, Grc, Rin, Rout, BAout,
 			HIout, HIin,
 			LOout, LOin,
@@ -29,7 +29,7 @@ module DataPath_tb;
   DataPath DUT (
 	.clock(Clock),
 	.clear(Clear),
-	.read(Read),
+	.read(Read), .write(Write),
 	.Gra(Gra), .Grb(Grb), .Grc(Grc), 
 	.BAout(BAout), .Rin(Rin), .Rout(Rout),
 	.HIout(HIout), .HIin(HIin),
@@ -64,7 +64,8 @@ always @(posedge Clock)
 		T6				 : Present_state = T7;
     endcase
 end
- 
+ // st C, Ra 
+ // st C(Rb), Ra
 always @(Present_state) // do the required job in each state
   begin
   case (Present_state) // assert the required signals in each clock cycle
@@ -72,7 +73,7 @@ always @(Present_state) // do the required job in each state
 			PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
 			 MARin <= 0; Zin <= 0; 
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
-			IncPC <= 0; Read <= 0; AND <= 0;
+			IncPC <= 0; Read <= 0; Write <= 0;
 			Clear <= 0;
 			HIin <= 0; LOin <= 0; Cout <= 0; 
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
@@ -91,27 +92,25 @@ always @(Present_state) // do the required job in each state
 			MDRout <= 1; IRin <= 1; 
 			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin // Cycle Operation --> Get value from register (value in register)
+		T3: begin // Cycle Operation --> Get address from instruction and put into ALU for offset
 			Grb <= 1; Yin <= 1; BAout <= 1;			
 			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
 		T4: begin // Cycle Operation 
-			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // opcode for ADD
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // opcode for ADD , Get offset address to be accessed / written in RAM
 			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
 		end
 		T5: begin // Cycle Operation 
-			Zlowout <= 1;  MARin <= 1;
-			#15 Zlowout <= 0; MARin <= 0; Write <= 1;
-			// Must Delay Write In T5 so it can be setup in T6 properly
+			Zlowout <= 1;  MARin <= 1;	// Send Address to RAM from ALU into MAR-> RAM
+			#15 Zlowout <= 0; MARin <= 0; 
 		end
-		T6: begin // Cycle Operation
-			// Read <= 1; 
-			Rout <= 1; MDRin <= 1;
-			#15 Write <= 0; MDRin <= 0; Rout <= 0;
+		T6: begin // Cycle Operation 
+			Gra <= 1; Rout <= 1; MDRin <= 1;	// Output data from R3
+			#15 Write <= 1; MDRin <= 0; Rout <= 0; Gra <= 0; // Delaying write (in T6 instead of T7 as it is on postive edge so needs some setup time
 		end
 		T7: begin // Cycle Operation
-			MDRout <= 1; Gra <= 1; Rin <= 1;
-			#15 MDRout <= 0; Gra <= 0; Rin <= 0;
+			MDRout <= 1; 
+			#15 MDRout <= 0; Write <= 0;
 		end
   endcase
 end
