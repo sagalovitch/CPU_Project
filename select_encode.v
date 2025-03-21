@@ -23,37 +23,38 @@ assign Rb = instruction[22:19];
 assign Rc = instruction[18:15];
 
 always @ (*) begin
-	binary_in <= (Ra & (Gra ? 4'b1111 : 4'b0000)) | (Rb & (Grb ? 4'b1111 : 4'b0000)) | (Rc & (Grc ? 4'b1111 : 4'b0000));
+	if ({Gra, Grb, Grc}) binary_in <= (Ra & (Gra ? 4'b1111 : 4'b0000)) | (Rb & (Grb ? 4'b1111 : 4'b0000)) | (Rc & (Grc ? 4'b1111 : 4'b0000));
 end
 
 
 reg R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15;
 initial begin
-	{R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15} = 0;
+	{R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15} <= 0;
 end
 
 
 always @ (*) begin
 // Should probably make this work on the clock edge but ....
 // I'll keep it as is for now
+	{R0,R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15} = 0; // only enables reading and writing of one register at a time
 	case (binary_in)
-		4'h0: R0 <= 1;
-		4'h1: R1 <= 1;
-		4'h2: R2 <= 1;
-		4'h3: R3 <= 1;
-		4'h4:	R4 <= 1;
-		4'h5: R5 <= 1;
-		4'h6: R6 <= 1;
-		4'h7: R7 <= 1;
-		4'h8: R8 <= 1;
-		4'h9: R9 <= 1;
-		4'hA: R10 <= 1;
-		4'hB: R11 <= 1;
-		4'hC: R12 <= 1;
-		4'hD: R13 <= 1;
-		4'hE: R14 <= 1;
-		4'hF: R15 <= 1;
-		default: {R0,R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15} <= 0;
+		4'h0: R0 = 1;
+		4'h1: R1 = 1;
+		4'h2: R2 = 1;
+		4'h3: R3 = 1;
+		4'h4:	R4 = 1;
+		4'h5: R5 = 1;
+		4'h6: R6 = 1;
+		4'h7: R7 = 1;
+		4'h8: R8 = 1;
+		4'h9: R9 = 1;
+		4'hA: R10 = 1;
+		4'hB: R11 = 1;
+		4'hC: R12 = 1;
+		4'hD: R13 = 1;
+		4'hE: R14 = 1;
+		4'hF: R15 	= 1;
+		default: ;
 	endcase
 end
 

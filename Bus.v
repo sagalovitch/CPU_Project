@@ -63,7 +63,8 @@ always @(*) begin
 	if (R0out)   q = BusMuxInR0;
 	else if (R1out)   q = BusMuxInR1;
 	else if (R2out)   q = BusMuxInR2;
-	else if (R3out)   q = BusMuxInR3;
+	else if (R3out)   q = 32'hB6; // R3 preloaded to 0xB6 
+	//else if (R3out)   q = BusMuxInR3;
 	else if (R4out)   q = BusMuxInR4;
 	else if (R5out)   q = BusMuxInR5;
 	else if (R6out)   q = BusMuxInR6;

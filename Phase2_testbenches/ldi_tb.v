@@ -19,9 +19,7 @@ module DataPath_tb;
             T2 = 4'd3,
             T3 = 4'd4, 
             T4 = 4'd5,
-            T5 = 4'd6,
-				T6 = 4'd7,
-				T7 = 4'd8;
+            T5 = 4'd6;
 
   reg [3:0] Present_state = Default;
 
@@ -60,8 +58,6 @@ always @(posedge Clock)
       T2           : Present_state = T3;
       T3           : Present_state = T4;
       T4           : Present_state = T5;
-		T5				 : Present_state = T6;
-		T6				 : Present_state = T7;
     endcase
 end
  
@@ -91,7 +87,7 @@ always @(Present_state) // do the required job in each state
 			MDRout <= 1; IRin <= 1; 
 			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin // Cycle Operation --> Get value from register (value in register)
+		T3: begin // Cycle Operation 
 			Grb <= 1; Yin <= 1; BAout <= 1;			
 			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
@@ -100,18 +96,9 @@ always @(Present_state) // do the required job in each state
 			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
 		end
 		T5: begin // Cycle Operation 
-			Zlowout <= 1;  MARin <= 1;
-			#15 Zlowout <= 0; MARin <= 0; Write <= 1;
-			// Must Delay Write In T5 so it can be setup in T6 properly
-		end
-		T6: begin // Cycle Operation
-			// Read <= 1; 
-			Rout <= 1; MDRin <= 1;
-			#15 Write <= 0; MDRin <= 0; Rout <= 0;
-		end
-		T7: begin // Cycle Operation
-			MDRout <= 1; Gra <= 1; Rin <= 1;
-			#15 MDRout <= 0; Gra <= 0; Rin <= 0;
+			Zlowout <= 1;  Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Rin <= 0; Gra <= 0;
+			// Must Delay Read In T5 so it can be setup in T6 properly
 		end
   endcase
 end

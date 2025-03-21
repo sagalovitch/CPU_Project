@@ -1,5 +1,5 @@
 module DataPath(
-	input clock, clear, read, RAMwrite,
+	input clock, clear, read, write,
 	// Temp control unit signals before Contorl Unit is created in Phase 3
 			Gra, Grb, Grc, Rin, Rout, BAout,
 			HIout, HIin,
@@ -104,7 +104,7 @@ register MDR(clear, clock, MDRin, MDRMuxOut, BusMuxIn_MDR);
 register MAR(clear, clock, MARin, BusMuxOut, MARoutput);
 
 // Use RAM from Library
-RAM ram(.clock(clock), .memRead(read), .memWrite(RAMwrite), .address(MARoutput[8:0]), .dataIn(MDRMuxOut), .dataOut(Mdatain));
+RAM ram(.clock(clock), .memRead(read), .memWrite(write), .address(MARoutput[8:0]), .dataIn(MDRMuxOut), .dataOut(Mdatain));
 
 pc #(32'h00000000) PC(.clock(clock), .IncPC(IncPC), .PC_enable(PCin), .BusMuxOut(BusMuxOut), .PC_data_out(BusMuxIn_PC));
 register IR(clear, clock, IRin, BusMuxOut, IRout);

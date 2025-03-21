@@ -91,7 +91,7 @@ always @(Present_state) // do the required job in each state
 			MDRout <= 1; IRin <= 1; 
 			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin // Cycle Operation --> Get value from register (value in register)
+		T3: begin // Cycle Operation 
 			Grb <= 1; Yin <= 1; BAout <= 1;			
 			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
@@ -101,13 +101,13 @@ always @(Present_state) // do the required job in each state
 		end
 		T5: begin // Cycle Operation 
 			Zlowout <= 1;  MARin <= 1;
-			#15 Zlowout <= 0; MARin <= 0; Write <= 1;
-			// Must Delay Write In T5 so it can be setup in T6 properly
+			#15 Zlowout <= 0; MARin <= 0; Read <= 1;
+			// Must Delay Read In T5 so it can be setup in T6 properly
 		end
 		T6: begin // Cycle Operation
 			// Read <= 1; 
-			Rout <= 1; MDRin <= 1;
-			#15 Write <= 0; MDRin <= 0; Rout <= 0;
+			MDRin <= 1;
+			#15 Read <= 0; MDRin <= 0;
 		end
 		T7: begin // Cycle Operation
 			MDRout <= 1; Gra <= 1; Rin <= 1;

@@ -60,6 +60,13 @@ add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/Y/RegisterOutput
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/A
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/B
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/C
+add wave -noupdate /DataPath_tb/DUT/selectEncode/Ra
+add wave -noupdate /DataPath_tb/DUT/selectEncode/Rb
+add wave -noupdate /DataPath_tb/DUT/selectEncode/Rc
+add wave -noupdate /DataPath_tb/DUT/selectEncode/binary_in
+add wave -noupdate /DataPath_tb/DUT/selectEncode/R0
+add wave -noupdate /DataPath_tb/DUT/selectEncode/R2
+add wave -noupdate /DataPath_tb/DUT/selectEncode/R6
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R4in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R0out
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R1out
@@ -94,7 +101,7 @@ add wave -noupdate /DataPath_tb/DUT/selectEncode/R13in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R14in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R15in
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {43076 ps} 0}
+WaveRestoreCursors {{Cursor 1} {90000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 288
 configure wave -valuecolwidth 134
