@@ -38,7 +38,7 @@ module DataPath_tb;
 	.Zin(Zin), .Yin(Yin),
 	.MDRout(MDRout), .MDRin(MDRin),
 	.PCout(PCout), .PCin(PCin), .IRin(IRin),
-	.MARin(MARin), .IncPC(IncPC), .opcode(opcode)
+	.MARin(MARin), .IncPC(IncPC), .opcode(opcode), .Cout(Cout)
   );
 
   // Clock generation - unchanged
@@ -74,7 +74,7 @@ always @(Present_state) // do the required job in each state
 			PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; 
 			IncPC <= 0; Read <= 0; AND <= 0;
 			Clear <= 0;
-			HIin <= 0; LOin <= 0;
+			HIin <= 0; LOin <= 0; Cout <= 0;
 			opcode <= 5'bzzzzz;
 		end
 		T0: begin // Instruction Fetch

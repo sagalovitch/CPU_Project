@@ -83,7 +83,7 @@ always @(*) begin
 	else if (Zlowout) q = BusMuxInZlow;
 	else if (PCout)   q = BusMuxInPC;
 	else if (InPortout) q = BusMuxIn_InPort;
-	else if (Cout)    q <= C_sign_extended;
+	else if (Cout)    q = C_sign_extended;
 end
  
 assign BusMuxOut = q;

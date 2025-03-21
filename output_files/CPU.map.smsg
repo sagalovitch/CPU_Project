@@ -1,2 +1,1 @@
-Warning (10268): Verilog HDL information at Bus.v(63): always construct contains both blocking and non-blocking assignments File: C:/Users/20js32/CPU_Project/Bus.v Line: 63
 Warning (10268): Verilog HDL information at pc.v(8): always construct contains both blocking and non-blocking assignments File: C:/Users/20js32/CPU_Project/pc.v Line: 8

@@ -2,8 +2,10 @@
 module select_encode( 
 	input Gra, Grb, Grc, Rin, Rout, BAout,
 	input [31:0] instruction,
+	
 	output R0in, R1in, R2in, R3in, R4in, R5in, 
 	R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
+	
 	output R0out, R1out, R2out, R3out, R4out, R5out, 
 	R6out, R7out, R8out, R9out, R10out, R11out, R12out, 
 	R13out, R14out, R15out,
@@ -14,22 +16,16 @@ module select_encode(
 
 
 
-wire [3:0] Ra, Rb, Rc, binary_in;
+wire [3:0] Ra, Rb, Rc;
+reg [3:0] binary_in;
 assign Ra = instruction[26:23];
 assign Rb = instruction[22:19];
 assign Rc = instruction[18:15];
 
+always @ (*) begin
+	binary_in <= (Ra & (Gra ? 4'b1111 : 4'b0000)) | (Rb & (Grb ? 4'b1111 : 4'b0000)) | (Rc & (Grc ? 4'b1111 : 4'b0000));
+end
 
-assign binary_in = (Ra & Gra) | (Rb & Grb) | (Rc & Grc);
-
-// 4 to 16 encoder
-// If Ra = 0000 Then it means Ra is R0, Rb = 0001 then Rb is R1 ....
-/* parameter R0 = 16'b0000000000000001, R1 = 16'b0000000000000010, 
-R2 = 16'b0000000000000100, R3 = 16'b0000000000001000, R4 = 16'b0000000000010000,
-R5 = 16'b0000000000100000, R6 = 16'b0000000001000000, R7 = 16'b0000000010000000,
-R8 = 16'b0000000100000000, R9 = 16'b0000001000000000, R10 = 16'b0000010000000000,
-R11 = 16'b0000100000000000, R12 = 16'b0001000000000000, R13 = 16'b0010000000000000,
-R14 = 16'b0100000000000000, R15 = 16'b1000000000000000; */
 
 reg R0, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15;
 initial begin
@@ -37,50 +33,30 @@ initial begin
 end
 
 
-always @ (Gra, Grb, Grc, Rin, Rout, BAout) begin
+always @ (*) begin
 // Should probably make this work on the clock edge but ....
 // I'll keep it as is for now
-if ( Gra || Grb || Grc || Rin || Rout || BAout) begin
-		case (binary_in)
-			4'h0: R0 <= 1;
-			4'h1: R1 <= 1;
-			4'h2: R2 <= 1;
-			4'h3: R3 <= 1;
-			4'h4:	R4 <= 1;
-			4'h5: R5 <= 1;
-			4'h6: R6 <= 1;
-			4'h7: R7 <= 1;
-			4'h8: R8 <= 1;
-			4'h9: R9 <= 1;
-			4'hA: R10 <= 1;
-			4'hB: R11 <= 1;
-			4'hC: R12 <= 1;
-			4'hD: R13 <= 1;
-			4'hE: R14 <= 1;
-			4'hF: R15 <= 1;
-		endcase
-	end
-	else begin
-			case (binary_in)
-			4'h0: R0 <= 0;
-			4'h1: R1 <= 0;
-			4'h2: R2 <= 0;
-			4'h3: R3 <= 0;
-			4'h4:	R4 <= 0;
-			4'h5: R5 <= 0;
-			4'h6: R6 <= 0;
-			4'h7: R7 <= 0;
-			4'h8: R8 <= 0;
-			4'h9: R9 <= 0;
-			4'hA: R10 <= 0;
-			4'hB: R11 <= 0;
-			4'hC: R12 <= 0;
-			4'hD: R13 <= 0;
-			4'hE: R14 <= 0;
-			4'hF: R15 <= 0;
-		endcase
-	end
+	case (binary_in)
+		4'h0: R0 <= 1;
+		4'h1: R1 <= 1;
+		4'h2: R2 <= 1;
+		4'h3: R3 <= 1;
+		4'h4:	R4 <= 1;
+		4'h5: R5 <= 1;
+		4'h6: R6 <= 1;
+		4'h7: R7 <= 1;
+		4'h8: R8 <= 1;
+		4'h9: R9 <= 1;
+		4'hA: R10 <= 1;
+		4'hB: R11 <= 1;
+		4'hC: R12 <= 1;
+		4'hD: R13 <= 1;
+		4'hE: R14 <= 1;
+		4'hF: R15 <= 1;
+		default: {R0,R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14,R15} <= 0;
+	endcase
 end
+
 	
 	
 	assign R0in = R0 & Rin;
@@ -116,6 +92,9 @@ end
 	assign R13out = R13 & (Rout | BAout);
 	assign R14out = R14 & (Rout | BAout);
 	assign R15out = R15 & (Rout | BAout);
+	
+	
+	
 	
 	// Push out C_sign_extended, use shift right arithmetic to extend the
 	// 19 bit C_sign_extended to 32 bits, 
