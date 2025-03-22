@@ -69,7 +69,8 @@ always @(*) begin
 	else if (R5out)   q = BusMuxInR5;
 	else if (R6out)   q = BusMuxInR6;
 	else if (R7out)   q = BusMuxInR7;
-	else if (R8out)   q = BusMuxInR8;
+//	else if (R8out)   q = BusMuxInR8;
+	else if (R8out)   q = 32'hB6;
 	else if (R9out)   q = BusMuxInR9;
 	else if (R10out)  q = BusMuxInR10;
 	else if (R11out)  q = BusMuxInR11;
