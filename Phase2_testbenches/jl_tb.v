@@ -73,29 +73,24 @@ always @(Present_state) // do the required job in each state
 			IncPC <= 0; Read <= 0; Write <= 0;
 			Clear <= 0;
 			HIin <= 0; LOin <= 0; Cout <= 0; 
-			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0; R8_RAin <= 0;
+			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			opcode <= 5'bzzzzz;
 		end
 		T0: begin // Instruction Fetch
-			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
-			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1; 
+			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; R8_RAin <= 1;
+			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1; R8_RAin <= 0;
 			// Get Setup for Read signal
 		end
 		T1: begin // Instruction Fetch
-			Zlowout <= 1; PCin <= 1; MDRin <= 1; 
+			Zlowout <= 1; PCin <= 1; MDRin <= 1;
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin // Instruction Fetch
-			MDRout <= 1; IRin <= 1; PCin <= 1;
-			#15 MDRout <= 0; IRin <= 0; PCin <= 0;
+			MDRout <= 1; IRin <= 1; 
+			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin
-			IncPC <= 1; R8_RAin <= 1; PCout <= 1;
-			#15 R8_RAin <= 0; PCout <= 0; IncPC <= 0;
-		end
-		T4: begin 
+		T3: begin 
 			Gra <= 1; Rout <= 1; PCin <= 1;
-			#15 Gra <= 0; Rout <= 0; PCin <= 0;
 		end
   endcase
 end

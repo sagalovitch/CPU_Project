@@ -6,7 +6,7 @@ module DataPath(
 			LOout, LOin,
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
-			PCout, PCin, IRin, IncPC, Cout,
+			PCout, PCin, IRin, IncPC, Cout, R8_RAin,
 	output [31:0] Outport_Out, 
 	input Out_portIn,
 	input [31: 0] Inport_In,
@@ -72,8 +72,6 @@ wire 		R0out, R0in,
 // Output of RAM, into MDRmux
 wire [31:0] Mdatain;
 
-
-
 // Registers
 register_R0 R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
 register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
@@ -83,7 +81,7 @@ register R4(clear, clock, R4in, BusMuxOut, BusMuxIn_R4);
 register R5(clear, clock, R5in, BusMuxOut, BusMuxIn_R5);
 register R6(clear, clock, R6in, BusMuxOut, BusMuxIn_R6);
 register R7(clear, clock, R7in, BusMuxOut, BusMuxIn_R7);
-register R8(clear, clock, R8in, BusMuxOut, BusMuxIn_R8);
+register R8(clear, clock, (R8in | R8_RAin), BusMuxOut, BusMuxIn_R8);
 register R9(clear, clock, R9in, BusMuxOut, BusMuxIn_R9);
 register R10(clear, clock, R10in, BusMuxOut, BusMuxIn_R10);
 register R11(clear, clock, R11in, BusMuxOut, BusMuxIn_R11);

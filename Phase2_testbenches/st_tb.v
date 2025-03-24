@@ -7,7 +7,7 @@ module DataPath_tb;
 			LOout, LOin,
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
-			PCout, PCin, IRin, IncPC, Cout, R8_RAin;
+			PCout, PCin, IRin, IncPC, Cout;
 	// reg [31:0] Mdatain;
 	reg AND;
 	reg [4:0] opcode;
@@ -31,7 +31,7 @@ module DataPath_tb;
 	.clear(Clear),
 	.read(Read), .write(Write),
 	.Gra(Gra), .Grb(Grb), .Grc(Grc), 
-	.BAout(BAout), .Rin(Rin), .Rout(Rout), .R8_RAin(R8_RAin),
+	.BAout(BAout), .Rin(Rin), .Rout(Rout),
 	.HIout(HIout), .HIin(HIin),
 	.LOout(LOout), .LOin(LOin),
 	.Zhighout(Zhighout), .Zlowout(Zlowout),
@@ -50,7 +50,7 @@ module DataPath_tb;
   
 
 
- // State machine - unchanged
+  // State machine - unchanged
 always @(posedge Clock)
   begin
     case (Present_state)
@@ -59,10 +59,13 @@ always @(posedge Clock)
       T1           : Present_state = T2;
       T2           : Present_state = T3;
       T3           : Present_state = T4;
+      T4           : Present_state = T5;
+		T5				 : Present_state = T6;
+		T6				 : Present_state = T7;
     endcase
 end
- // jal R5 --> R8 is return address register
- // Before jumping, store PC + 1 into R8, current PC is 0, store 1 in R8 
+ // st C, Ra 
+ // st C(Rb), Ra
 always @(Present_state) // do the required job in each state
   begin
   case (Present_state) // assert the required signals in each clock cycle
@@ -73,33 +76,50 @@ always @(Present_state) // do the required job in each state
 			IncPC <= 0; Read <= 0; Write <= 0;
 			Clear <= 0;
 			HIin <= 0; LOin <= 0; Cout <= 0; 
-			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0; R8_RAin <= 0;
+			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			opcode <= 5'bzzzzz;
 		end
 		T0: begin // Instruction Fetch
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
-			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1; 
+			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1;
 			// Get Setup for Read signal
 		end
 		T1: begin // Instruction Fetch
-			Zlowout <= 1; PCin <= 1; MDRin <= 1; 
+			Zlowout <= 1; PCin <= 1; MDRin <= 1;
 			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin // Instruction Fetch
-			MDRout <= 1; IRin <= 1; PCin <= 1;
-			#15 MDRout <= 0; IRin <= 0; PCin <= 0;
+			MDRout <= 1; IRin <= 1; 
+			#15 MDRout <= 0; IRin <= 0;
 		end
-		T3: begin
-			IncPC <= 1; R8_RAin <= 1; PCout <= 1;
-			#15 R8_RAin <= 0; PCout <= 0; IncPC <= 0;
+		T3: begin // Cycle Operation --> Get address from instruction and put into ALU for offset
+			Grb <= 1; Yin <= 1; BAout <= 1;			
+			#15 Yin <= 0; Grb <= 0; BAout <= 0;
 		end
-		T4: begin 
-			Gra <= 1; Rout <= 1; PCin <= 1;
-			#15 Gra <= 0; Rout <= 0; PCin <= 0;
+		T4: begin // Cycle Operation 
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // opcode for ADD , Get offset address to be accessed / written in RAM
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+		T5: begin // Cycle Operation 
+			Zlowout <= 1;  MARin <= 1;	// Send Address to RAM from ALU into MAR-> RAM
+			#15 Zlowout <= 0; MARin <= 0; 
+		end
+		T6: begin // Cycle Operation 
+			Gra <= 1; Rout <= 1; MDRin <= 1;	// Output data from R3
+			#15 Write <= 1; MDRin <= 0; Rout <= 0; Gra <= 0; // Delaying write (in T6 instead of T7 as it is on postive edge so needs some setup time
+		end
+		T7: begin // Cycle Operation
+			MDRout <= 1; 
+			#15 MDRout <= 0; Write <= 0;
 		end
   endcase
 end
 
+ // Monitor signals
+// initial begin
+//	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
+//				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
+// end
 
 // Test run length
 initial
