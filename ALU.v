@@ -30,6 +30,10 @@ shl32 shl_32(.Ra(A), .shift_amt(B), .result(shl_out));
 neg neg_32(.a(A), .b(neg_out));
 not32 not_32(.Ra(A), .Rb(not_out));
 
+initial begin
+	C <= 64'bz;
+end
+
 always @(*) begin
 	case (opcode)
 		Add: begin

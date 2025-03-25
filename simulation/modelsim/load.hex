@@ -1,5 +1,5 @@
 // Created with SRC-ASM (https://github.com/davlaf/elec374-assembler)
-  @0 A2800000 // jal R5            
+  @0 C9800000 // mfhi R3
   @1 00000000
   @2 00000000
   @3 00000000

@@ -5,11 +5,11 @@ initial begin
 	PC_data_out = INIT_VAL;
 end
 
-always@(posedge clock)
+always@(negedge clock)
     begin
-        if(IncPC === 1 && PC_enable === 1)
-			PC_data_out = PC_data_out + 1;
-		else if (PC_enable == 1 && conOut == 1)
+        if(IncPC === 1)
+			PC_data_out <= PC_data_out + 1;
+		else if (PC_enable == 1 || (PC_enable == 1 && conOut == 1))
 			PC_data_out <= BusMuxOut;
     end
 

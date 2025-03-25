@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/20js32/CPU_Project/simulation/modelsim
 vadd32
-Z1 !s110 1742839726
+Z1 !s110 1742946883
 !i10b 1
 !s100 n?7UJ7_I:<0d@c:V:@Sk41
 I>YoNHRKI4?kg9OXfV10V<1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1742829315
+Z3 w1742932903
 Z4 8C:/Users/20js32/CPU_Project/add32.v
 Z5 FC:/Users/20js32/CPU_Project/add32.v
 L0 42
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1742839726.000000
+Z7 !s108 1742946883.000000
 Z8 !s107 C:/Users/20js32/CPU_Project/add32.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/CPU_Project|C:/Users/20js32/CPU_Project/add32.v|
 !i113 1
@@ -33,11 +33,11 @@ Z12 tCvgOpt 0
 vALU
 R1
 !i10b 1
-!s100 a[UnOTmiTV]Ofl4`G<aEY2
-IDAO:05bB7H=InUbYi3XXh2
+!s100 Nb21H>c^8U2DkEZ8MG4M^1
+IVzPLj;K68QBFJ8ACmWA=`0
 R2
 R0
-R3
+w1742944402
 8C:/Users/20js32/CPU_Project/ALU.v
 FC:/Users/20js32/CPU_Project/ALU.v
 L0 3
@@ -78,11 +78,11 @@ R12
 vBus
 R1
 !i10b 1
-!s100 5LgBd_4R6Z2zBT:4BaRa00
-IaCKKfBLd7A9m^1[bZEfe>1
+!s100 R499VM;7H4`J^BfDeLjNA2
+I_cJf>`HzW0dJ9=W0Z294W1
 R2
 R0
-w1742833145
+w1742946015
 8C:/Users/20js32/CPU_Project/Bus.v
 FC:/Users/20js32/CPU_Project/Bus.v
 L0 1
@@ -90,7 +90,7 @@ R6
 r1
 !s85 0
 31
-R7
+!s108 1742946882.000000
 !s107 C:/Users/20js32/CPU_Project/Bus.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/CPU_Project|C:/Users/20js32/CPU_Project/Bus.v|
 !i113 1
@@ -143,7 +143,7 @@ R10
 R11
 R12
 vcon_ff
-Z13 !s110 1742839727
+Z13 !s110 1742946884
 !i10b 1
 !s100 @^`PF9GEV1Pf:R780BI]02
 I3mGCVjNd>hfcaedCm]ZC:2
@@ -157,7 +157,7 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1742839727.000000
+Z14 !s108 1742946884.000000
 !s107 C:/Users/20js32/CPU_Project/con_ff.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/CPU_Project|C:/Users/20js32/CPU_Project/con_ff.v|
 !i113 1
@@ -171,7 +171,7 @@ R1
 IfUK5zaMXehJ1V=Rh4<P1n3
 R2
 R0
-w1742836034
+Z15 w1742932902
 8C:/Users/20js32/CPU_Project/DataPath.v
 FC:/Users/20js32/CPU_Project/DataPath.v
 L0 1
@@ -190,11 +190,11 @@ n@data@path
 vDataPath_tb
 R13
 !i10b 1
-!s100 0?RfneL=3FnG^]U@0ckI_0
-I3R:XOVFk2;HDbc_LPCW243
+!s100 V^g<Imi=NA>ZI0J:Yoc200
+IMiFzlHWOg_1h2SVHUf4gg2
 R2
 R0
-w1742839686
+w1742946673
 8C:/Users/20js32/CPU_Project/DataPath_tb.v
 FC:/Users/20js32/CPU_Project/DataPath_tb.v
 L0 3
@@ -239,7 +239,7 @@ R13
 IZ:WnVT9ATPm;FjoS^KEG?2
 R2
 R0
-R3
+R15
 8C:/Users/20js32/CPU_Project/InPort.v
 FC:/Users/20js32/CPU_Project/InPort.v
 L0 1
@@ -368,11 +368,11 @@ R12
 vpc
 R13
 !i10b 1
-!s100 V_<>5dLgNg425gKSz1fZ_2
-I=[Ec[96o?R:z?e8B=IX2X0
+!s100 >:F9jdZ1P_8@;0d6=L^NT0
+Ig5nKj6I`GWTnoH6O>lZel2
 R2
 R0
-R3
+w1742943283
 8C:/Users/20js32/CPU_Project/pc.v
 FC:/Users/20js32/CPU_Project/pc.v
 L0 1
@@ -456,7 +456,7 @@ R11
 R12
 nregister_@r0
 vrol32
-R13
+R1
 !i10b 1
 !s100 L<AN9fN1d8m6VP;YLfURE1
 I?Z4^jjToP89_V9jje4GFO3
@@ -470,7 +470,7 @@ R6
 r1
 !s85 0
 31
-R14
+R7
 !s107 C:/Users/20js32/CPU_Project/rol32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20js32/CPU_Project|C:/Users/20js32/CPU_Project/rol32.v|
 !i113 1

@@ -24,14 +24,12 @@ add wave -noupdate /DataPath_tb/IRin
 add wave -noupdate /DataPath_tb/IncPC
 add wave -noupdate /DataPath_tb/Cout
 add wave -noupdate /DataPath_tb/opcode
-add wave -noupdate /DataPath_tb/Present_state
+add wave -noupdate -radix unsigned /DataPath_tb/Present_state
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxInPC
-add wave -noupdate /DataPath_tb/Rout
-add wave -noupdate /DataPath_tb/PCin
 add wave -noupdate /DataPath_tb/IncPC
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxOut
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {120932 ps} 0}
+WaveRestoreCursors {{Cursor 1} {100915 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 245
 configure wave -valuecolwidth 100

@@ -31,14 +31,14 @@ module DataPath_tb;
 	.clear(Clear),
 	.read(Read), .write(Write),
 	.Gra(Gra), .Grb(Grb), .Grc(Grc), 
-	.BAout(BAout), .Rin(Rin), .Rout(Rout), .R8_RAin(R8_RAin),
+	.BAout(BAout), .Rin(Rin), .Rout(Rout),
 	.HIout(HIout), .HIin(HIin),
 	.LOout(LOout), .LOin(LOin),
 	.Zhighout(Zhighout), .Zlowout(Zlowout),
 	.Zin(Zin), .Yin(Yin),
 	.MDRout(MDRout), .MDRin(MDRin),
 	.PCout(PCout), .PCin(PCin), .IRin(IRin),
-	.MARin(MARin), .IncPC(IncPC), .opcode(opcode), .Cout(Cout)
+	.MARin(MARin), .IncPC(IncPC), .opcode(opcode), .Cout(Cout), .R8_RAin(R8_RAin)
   );
 
   // Clock generation - unchanged
@@ -50,7 +50,7 @@ module DataPath_tb;
   
 
 
- // State machine - unchanged
+  // State machine - unchanged
 always @(posedge Clock)
   begin
     case (Present_state)
@@ -61,8 +61,8 @@ always @(posedge Clock)
       T3           : Present_state = T4;
     endcase
 end
- // jal R5 --> R8 is return address register
- // Before jumping, store PC + 1 into R8, current PC is 0, store 1 in R8 
+ // st C, Ra 
+ // st C(Rb), Ra
 always @(Present_state) // do the required job in each state
   begin
   case (Present_state) // assert the required signals in each clock cycle
@@ -77,24 +77,34 @@ always @(Present_state) // do the required job in each state
 			opcode <= 5'bzzzzz;
 		end
 		T0: begin // Instruction Fetch
-			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; R8_RAin <= 1;
-			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1; R8_RAin <= 0;
+			PCout <= 1;  MARin <= 1;  IncPC <= 1;
+			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Read <= 1;
 			// Get Setup for Read signal
 		end
 		T1: begin // Instruction Fetch
-			Zlowout <= 1; PCin <= 1; MDRin <= 1;
-			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
+			PCin <= 1; MDRin <= 1;
+			#15 PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		T2: begin // Instruction Fetch
 			MDRout <= 1; IRin <= 1; 
-			#15 MDRout <= 0; IRin <= 0;
+			#15 MDRout <= 0; IRin <= 0; 
 		end
-		T3: begin 
+		T3: begin
+		PCout <= 1; R8_RAin <= 1;
+		#15 PCout <= 0; R8_RAin <= 0;
+		end
+		T4: begin 
 			Gra <= 1; Rout <= 1; PCin <= 1;
+			#15 Gra <= 0; Rout <= 0; PCin <= 0;
 		end
   endcase
 end
 
+ // Monitor signals
+// initial begin
+//	  $monitor("Time=%0d State=%b BusMuxOut=%h, BusMuxIn_MDR=%h MDRMuxOut=%h",
+//				  $time, Present_state, DUT.BusMuxOut, DUT.BusMuxIn_MDR, DUT.MDRMuxOut);
+// end
 
 // Test run length
 initial

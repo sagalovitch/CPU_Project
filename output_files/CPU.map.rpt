@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPU
-Mon Mar 24 14:08:20 2025
+Tue Mar 25 19:53:42 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -76,7 +76,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                  ;
 +-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Mar 24 14:08:20 2025           ;
+; Analysis & Elaboration Status ; Successful - Tue Mar 25 19:53:42 2025           ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                 ; CPU                                             ;
 ; Top-level Entity Name         ; DataPath                                        ;
@@ -647,7 +647,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon Mar 24 14:08:09 2025
+    Info: Processing started: Tue Mar 25 19:53:31 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -726,72 +726,72 @@ Info (10041): Inferred latch for "binary_in[1]" at select_encode.v(26) File: C:/
 Info (10041): Inferred latch for "binary_in[2]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (10041): Inferred latch for "binary_in[3]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 121
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(34): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(34): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[0]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[1]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[2]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[3]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[4]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[5]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[6]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[7]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[8]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[9]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[10]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[11]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[12]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[13]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[14]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[15]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[16]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[17]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[18]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[19]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[20]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[21]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[22]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[23]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[24]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[25]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[26]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[27]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[28]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[29]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[30]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[31]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[32]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[33]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[34]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[35]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[36]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[37]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[38]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[39]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[40]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[41]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[42]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[43]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[44]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[45]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[46]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[47]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[48]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[49]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[50]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[51]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[52]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[53]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[54]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[55]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[56]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[57]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[58]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[59]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[60]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[61]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[62]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
-Info (10041): Inferred latch for "C[63]" at ALU.v(34) File: C:/Users/20js32/CPU_Project/ALU.v Line: 34
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(38): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(38): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[0]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[1]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[2]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[3]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[4]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[5]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[6]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[7]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[8]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[9]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[10]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[11]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[12]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[13]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[14]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[15]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[16]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[17]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[18]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[19]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[20]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[21]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[22]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[23]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[24]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[25]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[26]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[27]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[28]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[29]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[30]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[31]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[32]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[33]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[34]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[35]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[36]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[37]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[38]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[39]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[40]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[41]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[42]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[43]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[44]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[45]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[46]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[47]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[48]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[49]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[50]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[51]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[52]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[53]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[54]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[55]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[56]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[57]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[58]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[59]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[60]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[61]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[62]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Info (10041): Inferred latch for "C[63]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
 Info (12128): Elaborating entity "add32" for hierarchy "ALU:alu|add32:add_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 19
 Info (12128): Elaborating entity "cla_16bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low" File: C:/Users/20js32/CPU_Project/add32.v Line: 51
 Info (12128): Elaborating entity "cla_4bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low|cla_4bit_adder:adder0" File: C:/Users/20js32/CPU_Project/add32.v Line: 35
@@ -819,45 +819,45 @@ Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" Fi
 Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 30
 Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 31
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 185
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/Bus.v Line: 63
-Info (10041): Inferred latch for "q[0]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[1]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[2]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[3]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[4]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[5]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[6]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[7]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[8]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[9]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[10]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[11]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[12]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[13]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[14]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[15]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[16]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[17]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[18]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[19]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[20]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[21]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[22]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[23]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[24]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[25]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[26]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[27]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[28]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[29]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[30]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
-Info (10041): Inferred latch for "q[31]" at Bus.v(64) File: C:/Users/20js32/CPU_Project/Bus.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(65): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/Bus.v Line: 65
+Info (10041): Inferred latch for "q[0]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[1]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[2]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[3]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[4]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[5]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[6]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[7]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[8]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[9]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[10]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[11]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[12]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[13]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[14]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[15]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[16]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[17]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[18]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[19]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[20]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[21]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[22]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[23]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[24]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[25]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[26]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[27]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[28]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[29]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[30]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[31]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
 Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:myConFF" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 199
 Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/20js32/CPU_Project/output_files/CPU.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Mon Mar 24 14:08:20 2025
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Tue Mar 25 19:53:42 2025
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:10
 

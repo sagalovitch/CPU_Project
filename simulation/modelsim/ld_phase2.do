@@ -3,12 +3,9 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate /DataPath_tb/Clock
 add wave -noupdate /DataPath_tb/Clear
 add wave -noupdate /DataPath_tb/Read
-add wave -noupdate /DataPath_tb/Write
 add wave -noupdate /DataPath_tb/Gra
 add wave -noupdate /DataPath_tb/Grb
-add wave -noupdate /DataPath_tb/Grc
 add wave -noupdate /DataPath_tb/Rin
-add wave -noupdate /DataPath_tb/Rout
 add wave -noupdate /DataPath_tb/BAout
 add wave -noupdate /DataPath_tb/Zlowout
 add wave -noupdate /DataPath_tb/Zin
@@ -99,7 +96,7 @@ add wave -noupdate /DataPath_tb/DUT/selectEncode/R13in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R14in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R15in
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {53778 ps} 0}
+WaveRestoreCursors {{Cursor 1} {175091 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 288
 configure wave -valuecolwidth 134
@@ -115,4 +112,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {236250 ps}
+WaveRestoreZoom {0 ps} {506749 ps}

@@ -54,7 +54,9 @@ module Bus (
 );
 
 reg [31:0] q;
- 
+initial begin
+	q <= 32'bz;
+end
 always @(*) begin
 	// Default case to prevent latches
   //q = 32'h00000000; 
@@ -65,8 +67,7 @@ always @(*) begin
 	else if (R2out)   q = BusMuxInR2;
 	else if (R3out)   q = BusMuxInR3;
 	else if (R4out)   q = BusMuxInR4;
-	//else if (R5out)   q = BusMuxInR5;
-	else if (R5out)   q = 32'h2A; // Hold value 0x2A (Address to jump to in jal)
+	else if (R5out)   q = BusMuxInR5;
 	else if (R6out)   q = BusMuxInR6;
 	else if (R7out)   q = BusMuxInR7;
 	else if (R8out)   q = BusMuxInR8;
@@ -78,8 +79,10 @@ always @(*) begin
 	else if (R14out)  q = BusMuxInR14;
 	else if (R15out)  q = BusMuxInR15;
 	else if (MDRout)  q = BusMuxInMDR;
-	else if (HIout)   q = BusMuxInHI;
-	else if (LOout)   q = BusMuxInLO;
+	//else if (HIout)   q = BusMuxInHI;
+	else if (HIout)   q = 32'hBEEF;
+	// else if (LOout)   q = BusMuxInLO;
+	else if (LOout)   q = 32'hF00D;
 	else if (Zhighout) q = BusMuxInZhigh;
 	else if (Zlowout) q = BusMuxInZlow;
 	else if (PCout)   q = BusMuxInPC;

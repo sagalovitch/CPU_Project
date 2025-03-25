@@ -91,6 +91,7 @@ always @(Present_state) // do the required job in each state
 		end
 		T3: begin 
 			Gra <= 1; Rout <= 1; PCin <= 1;
+			#15 Gra <= 0; Rout <= 0; PCin <= 0;
 		end
   endcase
 end
