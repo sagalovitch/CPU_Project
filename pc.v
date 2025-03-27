@@ -10,6 +10,7 @@ always@(negedge clock)
         if(IncPC === 1)
 			PC_data_out <= PC_data_out + 1;
 		else if (PC_enable == 1 || (PC_enable == 1 && conOut == 1))
+			//replace || (PC_enable == 1 && conOut == 1) with && ^BusMuxOut !== 1'bx
 			PC_data_out <= BusMuxOut;
     end
 
