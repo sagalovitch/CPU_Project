@@ -11,7 +11,8 @@ module DataPath(
 	input Out_portIn,
 	input [31: 0] Inport_In,
 	input [4:0] opcode,
-	input Strobe
+	input Strobe,
+	input InPortout
 );
 
 
