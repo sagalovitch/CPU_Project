@@ -33,6 +33,8 @@ add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/R5/q
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/R6/RegisterInput
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/R6/RegisterOutput
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/R6/q
+add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxInR5
+add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInR6
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/add_32/A
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/add_32/B
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/alu/add_32/Cin
@@ -43,7 +45,7 @@ add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/Y/enable
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/Y/RegisterInput
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/Y/RegisterOutput
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {160899 ps} 0}
+WaveRestoreCursors {{Cursor 1} {123581 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 267
 configure wave -valuecolwidth 199
@@ -59,4 +61,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {595688 ps}
+WaveRestoreZoom {0 ps} {236250 ps}

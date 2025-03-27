@@ -24,6 +24,7 @@ add wave -noupdate -radix unsigned /DataPath_tb/Present_state
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxInZlow
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxOut
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxInR4
+add wave -noupdate /DataPath_tb/DUT/bus/BusMuxInR6
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/bus/BusMuxInMDR
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/selectEncode/instruction
 add wave -noupdate -radix hexadecimal /DataPath_tb/DUT/IRout
@@ -96,7 +97,7 @@ add wave -noupdate /DataPath_tb/DUT/selectEncode/R13in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R14in
 add wave -noupdate /DataPath_tb/DUT/selectEncode/R15in
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {175091 ps} 0}
+WaveRestoreCursors {{Cursor 1} {137949 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 288
 configure wave -valuecolwidth 134
@@ -112,4 +113,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {506749 ps}
+WaveRestoreZoom {0 ps} {472500 ps}

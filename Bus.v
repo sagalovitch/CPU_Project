@@ -64,13 +64,14 @@ always @(*) begin
   // Priority encoder structure
 	if (R0out)   q = BusMuxInR0;
 	else if (R1out)   q = BusMuxInR1;
-	else if (R2out)   q = BusMuxInR2;
+	//else if (R2out)   q = BusMuxInR2;
+	else if (R2out ) q = 32'h78; // For ld case 2
 	else if (R3out)   q = BusMuxInR3;
-	// else if (R3out)   q = 32'hB6; // R3 preloaded to 0xB6 for st instruction need to remove it for input instruction
+	//else if (R3out)   q = 32'hB6; // R3 preloaded to 0xB6 for st instruction need to remove it for input instruction
 	else if (R4out)   q = BusMuxInR4;
 	else if (R5out)   q = BusMuxInR5;
 	else if (R6out)   q = BusMuxInR6;
-	// else if (R6out)   q = 32'h84; // Preloading R6 to 0x86 for output instruction
+	//else if (R6out)   q = 32'h84; // Preloading R6 to 0x86 for output instruction
 	else if (R7out)   q = BusMuxInR7;
 	else if (R8out)   q = BusMuxInR8;
 	// else if (R8out)   q = 32'hB6; //Preloading R8 for some instruction (i do not remember)

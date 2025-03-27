@@ -99,28 +99,28 @@ end
 	
 	// Push out C_sign_extended, use shift right arithmetic to extend the
 	// 19 bit C_sign_extended to 32 bits, 
-	reg [31:0] q;
-	always @ (instruction) begin
-		q = 32'b0;
-		q[31:13] = instruction[18:0];
-		q = q >>> 13;
-	end
-	assign C_sign_extended = q;
+//	reg [31:0] q;
+//	always @ (instruction) begin
+//		q = 32'b0;
+//		q[31:13] = instruction[18:0];
+//		q = q >>> 13;
+//	end
+//	assign C_sign_extended = q;
 
 
 
 	//potential sign extension logic
 	// made a change here ::	
 
-	// reg [31:0] C;
-	// always @(*) begin
-	// 	// extending sign bit in both cases 
-	// 	if (instruction[18] == 1'b1) begin
-	// 		C = {13'b1111111111111, instruction[18:0]};
-	// 	end else begin
-	// 		C = {13'b0000000000000, instruction[18:0]};
-	// 	end
-	// end
-
+	 reg [31:0] C;
+	 always @(*) begin
+	 	// extending sign bit in both cases 
+	 	if (instruction[18] == 1'b1) begin
+	 		C = {13'b1111111111111, instruction[18:0]};
+	 	end else begin
+	 		C = {13'b0000000000000, instruction[18:0]};
+	 	end
+	 end
+	assign C_sign_extended = C;
 
 endmodule

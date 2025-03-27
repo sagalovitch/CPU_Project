@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPU
-Tue Mar 25 19:53:42 2025
+Thu Mar 27 10:37:49 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -36,8 +36,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  28. Parameter Settings for User Entity Instance: ALU:alu
  29. Parameter Settings for User Entity Instance: register:Zhi
  30. Parameter Settings for User Entity Instance: register:Zlo
- 31. Analysis & Elaboration Settings
- 32. Port Connectivity Checks: "con_ff:myConFF"
+ 31. Parameter Settings for User Entity Instance: con_ff:myConFF
+ 32. Analysis & Elaboration Settings
  33. Port Connectivity Checks: "ALU:alu|shl32:shl_32"
  34. Port Connectivity Checks: "ALU:alu|shra32:shra_32"
  35. Port Connectivity Checks: "ALU:alu|shr32:shr_32"
@@ -76,7 +76,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                  ;
 +-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Mar 25 19:53:42 2025           ;
+; Analysis & Elaboration Status ; Successful - Thu Mar 27 10:37:49 2025           ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                 ; CPU                                             ;
 ; Top-level Entity Name         ; DataPath                                        ;
@@ -442,6 +442,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: con_ff:myConFF ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; INIT_VAL       ; 0     ; Unsigned Binary                    ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -527,15 +537,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
 ; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "con_ff:myConFF"                                                                       ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; conOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -647,7 +648,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Mar 25 19:53:31 2025
+    Info: Processing started: Thu Mar 27 10:37:39 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -711,21 +712,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: register_R0 File: C:/Users/20js32/CPU_Project/register_R0.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
     Info (12023): Found entity 1: pc File: C:/Users/20js32/CPU_Project/pc.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(180): created implicit net for "InPortout" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 180
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
-Info (12128): Elaborating entity "register_R0" for hierarchy "register_R0:R0" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 76
-Info (12128): Elaborating entity "register" for hierarchy "register:R1" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 77
-Info (12128): Elaborating entity "InPort" for hierarchy "InPort:In_port" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 97
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 100
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 105
-Info (12128): Elaborating entity "pc" for hierarchy "pc:PC" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 107
-Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:selectEncode" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 116
+Info (12128): Elaborating entity "register_R0" for hierarchy "register_R0:R0" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 80
+Info (12128): Elaborating entity "register" for hierarchy "register:R1" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 81
+Info (12128): Elaborating entity "InPort" for hierarchy "InPort:In_port" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 101
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 104
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 109
+Info (12128): Elaborating entity "pc" for hierarchy "pc:PC" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 111
+Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:selectEncode" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 120
 Warning (10240): Verilog HDL Always Construct warning at select_encode.v(26): inferring latch(es) for variable "binary_in", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (10041): Inferred latch for "binary_in[0]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (10041): Inferred latch for "binary_in[1]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (10041): Inferred latch for "binary_in[2]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
 Info (10041): Inferred latch for "binary_in[3]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 121
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 125
 Warning (10270): Verilog HDL Case Statement warning at ALU.v(38): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(38): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
 Info (10041): Inferred latch for "C[0]" at ALU.v(38) File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
@@ -818,7 +818,7 @@ Info (12128): Elaborating entity "shra32" for hierarchy "ALU:alu|shra32:shra_32"
 Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 29
 Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 30
 Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 31
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 185
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 189
 Warning (10240): Verilog HDL Always Construct warning at Bus.v(65): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/Bus.v Line: 65
 Info (10041): Inferred latch for "q[0]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
 Info (10041): Inferred latch for "q[1]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
@@ -852,13 +852,13 @@ Info (10041): Inferred latch for "q[28]" at Bus.v(66) File: C:/Users/20js32/CPU_
 Info (10041): Inferred latch for "q[29]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
 Info (10041): Inferred latch for "q[30]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
 Info (10041): Inferred latch for "q[31]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
-Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:myConFF" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 199
+Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:myConFF" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 198
 Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/20js32/CPU_Project/output_files/CPU.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Tue Mar 25 19:53:42 2025
-    Info: Elapsed time: 00:00:11
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Thu Mar 27 10:37:49 2025
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:10
 
 
