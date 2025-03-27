@@ -108,4 +108,19 @@ end
 	assign C_sign_extended = q;
 
 
+
+	//potential sign extension logic
+	// made a change here ::	
+
+	// reg [31:0] C;
+	// always @(*) begin
+	// 	// extending sign bit in both cases 
+	// 	if (instruction[18] == 1'b1) begin
+	// 		C = {13'b1111111111111, instruction[18:0]};
+	// 	end else begin
+	// 		C = {13'b0000000000000, instruction[18:0]};
+	// 	end
+	// end
+
+
 endmodule
