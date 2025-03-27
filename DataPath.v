@@ -7,12 +7,15 @@ module DataPath(
 			Zhighout, Zlowout, Zin, Yin,
 			MDRout, MDRin, MARin,
 			PCout, PCin, IRin, IncPC, Cout, R8_RAin,
+			conIn, 
 	output [31:0] Outport_Out, 
 	input Out_portIn,
 	input [31: 0] Inport_In,
 	input [4:0] opcode,
 	input Strobe,
-	input InPortout
+	input InPortout,
+	// add conIn and conOut ::        
+   	output conOut 
 );
 
 
@@ -185,18 +188,13 @@ Bus bus(
     .BusMuxOut(BusMuxOut)
 );
 
-
 //con_ff logic
-wire [1:0] c2 = IRout[20:19];
-wire conOut; // The latched result
-wire conIn;   // Will come from testbench or control
-
 con_ff myConFF (
     .busIn(BusMuxOut),
-    .c2(c2),
-    .conIn(conIn),
+    .c2(IRout[20:19]),
+    .conIn(conIn),   
     .clock(clock),
-    .conOut(conOut)
+    .conOut(conOut) 
 );
 
 endmodule
