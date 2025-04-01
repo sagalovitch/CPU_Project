@@ -94,3 +94,4 @@ set_global_assignment -name VERILOG_FILE con_ff.v
 set_global_assignment -name VERILOG_FILE register_R0.v
 set_global_assignment -name VERILOG_FILE pc.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE control_unit.v
