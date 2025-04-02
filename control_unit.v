@@ -180,18 +180,25 @@ begin
 			#15 MDRout <= 0; IRin <= 0;
 		end
 		//-------------------------------------------
-		and3: begin
-	
-		end
-		and4: begin
-		
-		end
-		and5: begin
-		
-		end
-		//-------------------------------------------
+//		and3: begin
+//	
+//		end
+//		and4: begin
+//		
+//		end
+//		and5: begin
+//		
+//		end
+//		//-------------------------------------------
+
+
+
+
 		// changes below here 
 		
+		
+		
+		// below are the testbenches for all modules implemented in phase 1
 		
 		add3: begin
 			 Grb <= 1;  // replaced direct register with grb
@@ -215,6 +222,22 @@ begin
 			 Zlowout <= 0; Gra <= 0;Rin <= 0;			 
 		end
 		//--------------------------------------------
+		sub3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		sub4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b00100; Zin <= 1;  // SUB opcode
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		sub5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
 		mul3: begin
 			 Grb <= 1;Rout <= 1;Yin <= 1;
 			 #15
@@ -271,6 +294,392 @@ begin
 
 		end
 		
+		//--------------------------------------------
+		
+		and3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+		
+		and4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b00101; Zin <= 1;
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+		
+		and5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		neg3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		neg4: begin
+			opcode <= 5'b10001; Zin <= 1;
+			#15 opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		neg5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		or3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		or4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b00110; Zin <= 1;
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		or5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		not3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		not4: begin
+			opcode <= 5'b10010; Zin <= 1; 
+			#15 opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		not5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		rol3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		rol4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b01000; Zin <= 1;
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		rol5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		ror3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		ror4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b00111; Zin <= 1;  
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		ror5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		shl3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		shl4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b01011; Zin <= 1;  
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		shl5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		shr3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		shr4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b01001; Zin <= 1;  
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		shr5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		
+		shra3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		shra4: begin
+			Grc <= 1; Rout <= 1; opcode <= 5'b01010; Zin <= 1;  
+			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		end
+
+		shra5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		
+		
+		// below are the testbenches for all modules implemented in phase 2
+		
+		
+		//-------------------------------------------
+		addi3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		addi4: begin
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // ADD operation
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		addi5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		
+		andi3: begin
+			Grb <= 1; Rout <= 1; Yin <= 1;
+			#15 Grb <= 0; Rout <= 0; Yin <= 0;
+		end
+
+		andi4: begin
+			Cout <= 1; Zin <= 1; opcode <= 5'b00101; // AND operation
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		andi5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		//-------------------------------------------
+		
+		br3: begin  
+			Gra   <= 1;
+			Rout  <= 1;
+			conIn <= 1;
+			#15 Gra <= 0; Rout <= 0;
+		end
+
+		br4: begin 
+			conIn <= 0;
+			PCout <= 1;
+			Yin   <= 1;
+			#15 PCout <= 0; Yin <= 0;
+		end
+
+		br5: begin 
+			Cout   <= 1;
+			Zin    <= 1;
+			opcode <= 5'b00011; 
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		br6: begin  
+			Zlowout <= 1;
+			if (conOut)
+				PCin <= 1;
+			else
+				PCin <= 0;
+			#15 Zlowout <= 0; PCin <= 0;
+		end
+		//-------------------------------------------
+
+		
+		//what's R8_RAin? 
+		
+//		  jal3: begin
+//            PCout   <= 1; 
+//            R8_RAin <= 1;        
+//            #15;
+//            PCout   <= 0;
+//            R8_RAin <= 0;
+//        end
+//
+//        jal4: begin
+//            Gra   <= 1;
+//            Rout  <= 1;
+//            PCin  <= 1;         
+//            #15;
+//            Gra   <= 0;
+//            Rout  <= 0;
+//            PCin  <= 0;
+//        end
+		
+		//-------------------------------------------
+		
+		jr3: begin
+			Gra   <= 1;
+			Rout  <= 1;
+			PCin  <= 1;
+			#15;
+			Gra   <= 0;
+			Rout  <= 0;
+			PCin  <= 0;
+		end
+
+		//-------------------------------------------
+		ld3: begin
+			Grb   <= 1;
+			BAout <= 1;
+			Yin   <= 1;
+			#15;
+			Grb   <= 0;
+			BAout <= 0;
+			Yin   <= 0;
+		end
+
+		ld4: begin 
+			Cout   <= 1;
+			Zin    <= 1;
+			opcode <= 5'b00011; // ADD
+			#15;
+			Cout   <= 0;
+			Zin    <= 0;
+			opcode <= 5'bzzzzz;
+		end
+
+		ld5: begin 
+			Zlowout <= 1;
+			MARin   <= 1;
+			#15;
+			Zlowout <= 0;
+			MARin   <= 0;
+			Read    <= 1;
+		end
+
+		ld6: begin
+			MDRin <= 1;
+			#15;
+			Read  <= 0;
+			MDRin <= 0;
+		end
+
+		ld7: begin 
+			MDRout <= 1;
+			Gra    <= 1;
+			Rin    <= 1;
+			#15;
+			MDRout <= 0;
+			Gra    <= 0;
+			Rin    <= 0;
+		end
+
+		//--------------------------------------------
+
+		ldi3: begin
+			Grb <= 1; BAout <= 1; Yin <= 1;
+			#15 Grb <= 0; BAout <= 0; Yin <= 0;
+		end
+
+		ldi4: begin
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // ADD 
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		ldi5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+		
+		
+		//--------------------------------------------
+		mfhi3: begin
+		  HIout <= 1; Gra <= 1; Rin <= 1;
+		  next_state <= fetch0;
+		  #15 HIout <= 0; Gra <= 0; Rin <= 0;
+		end
+
+		//--------------------------------------------
+
+		mflo3: begin
+		  LOout <= 1; Gra <= 1; Rin <= 1;
+		  next_state <= fetch0;
+		  #15 LOout <= 0; Gra <= 0; Rin <= 0;
+		end
+
+		
+		//--------------------------------------------
+
+		ori3: begin
+			Gra <= 0; Grb <= 1; Grc <= 0;
+			Rout <= 1; Yin <= 1;
+			next_state <= ori4;
+			#15 Rout <= 0; Yin <= 0;
+		end
+
+		ori4: begin
+			Cout <= 1; Zin <= 1; opcode <= 5'b00110;  // ORI opcode
+			next_state <= ori5;
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		ori5: begin
+			Zlowout <= 1; Gra <= 1; Rin <= 1;
+			next_state <= fetch0;
+			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
+		end
+
+		
+		//--------------------------------------------
+		
+		st3: begin 
+			Gra <= 0; Grb <= 1; Grc <= 0;
+			BAout <= 1; Yin <= 1;
+			next_state <= st4;
+			#15 BAout <= 0; Yin <= 0;
+		end
+
+		st4: begin
+			Cout <= 1; Zin <= 1; opcode <= 5'b00011; 
+			next_state <= st5;
+			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+		end
+
+		st5: begin
+			Zlowout <= 1; MARin <= 1;
+			next_state <= st6;
+			#15 Zlowout <= 0; MARin <= 0;
+		end
+
+		st6: begin
+			Gra <= 1; Rout <= 1; MDRin <= 1;
+			next_state <= st7;
+			#15 Gra <= 0; Rout <= 0; MDRin <= 0; Write <= 1;
+		end
+
+		st7: begin
+			MDRout <= 1;
+			next_state <= fetch0;
+			#15 MDRout <= 0; Write <= 0;
+		end
+
+
 		
 		//changes end here 
 		//--------------------------------------------
