@@ -190,6 +190,92 @@ begin
 		
 		end
 		//-------------------------------------------
+		// changes below here 
+		
+		
+		add3: begin
+			 Grb <= 1;  // replaced direct register with grb
+			 Rout <= 1;Yin <= 1;
+			 #15 Grb <= 0;Rout <= 0;Yin <= 0;
+		end
+
+		add4: begin
+			 Grc <= 1;  
+			 Rout <= 1;
+			 opcode <= 5'b00011; // will opcode be handled automatically? if so, comment out
+			 // if opcode handled automatically, similar cases like add and sub can be merged 
+			 Zin <= 1;
+			 #15
+			 opcode <= 5'bzzzzz; Zin <= 0; Grc <= 0;Rout <= 0;
+		end
+
+		add5: begin
+			 Zlowout <= 1; Gra <= 1;Rin <= 1;
+			 #15
+			 Zlowout <= 0; Gra <= 0;Rin <= 0;			 
+		end
+		//--------------------------------------------
+		mul3: begin
+			 Grb <= 1;Rout <= 1;Yin <= 1;
+			 #15
+			 Grb <= 0;Rout <= 0;Yin <= 0;
+		end
+
+		mul4: begin
+			 Grc <= 1;  
+			 Rout <= 1;
+			 opcode <= 5'b10000;//mul opcode
+			 Zin <= 1;
+			 #15
+			 Grc <= 0;Rout <= 0;opcode <= 5'bzzzzz;Zin <= 0; 
+		end
+
+		mul5: begin
+			 Zlowout <= 1;
+			 LOin <= 1;  
+			 #15 Zlowout <= 0; LOin <= 0;
+		end
+
+		mul6: begin
+			 Zhighout <= 1;
+			 HIin <= 1;
+			 #15 Zhighout <= 0; HIin <= 0;
+
+		end
+		//--------------------------------------------
+		div3: begin
+			 Grb <= 1;Rout <= 1;Yin <= 1;
+			 #15
+			 Grb <= 0;Rout <= 0;Yin <= 0;
+		end
+
+		div4: begin
+			 Grc <= 1;
+			 Rout <= 1;
+			 opcode <= 5'b01111; // opcode for DIV
+			 Zin <= 1;
+			 #15
+			 Grc <= 0;Rout <= 0;opcode <= 5'bzzzzz;Zin <= 0;
+		end
+
+		div5: begin
+			 Zlowout <= 1;LOin <= 1;
+			 #15
+			 Zlowout <= 0; LOin <= 0;
+		end
+
+		div6: begin
+			 Zhighout <= 1;HIin <= 1;
+			 #15 
+			 Zhighout <= 0; HIin <= 0;
+
+		end
+		
+		
+		//changes end here 
+		//--------------------------------------------
+
+		
 	endcase
 end
 endmodule
