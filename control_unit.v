@@ -1,10 +1,11 @@
+`timescale 1ns/10ps
 module control_unit (
 	output reg Gra, Grb, Grc, Rin, Rout, BAout,
 	HIout, HIin, LOout, LOin, Zhighout, Zlowout, 
-	Zin, Yin, MDRout, MDRin, MARin, PCout, CONin, 
-	PCin, IRin, Out_portIn, conIn, Read, Write, Run, Clear,
+	Zin, Yin, MDRout, MDRin, MARin, PCout, 
+	PCin, IRin, Out_portIn, InPortout, conIn, Read, Write, Run, R8_RAin, IncPC, Cout,
 	input [31:0] IR,
-	input Clock, Reset, Stop, conOut
+	input Clock, Stop, conOut, Clear
 );
 
 parameter reset_state = 8'h0, fetch0 = 8'h1, fetch1 = 8'h2, fetch2 = 8'h3, 
@@ -22,12 +23,12 @@ parameter reset_state = 8'h0, fetch0 = 8'h1, fetch1 = 8'h2, fetch2 = 8'h3,
 			jal4 = 8'h46, mfhi3 = 8'h47, mflo3 = 8'h48, in3 = 8'h49, out3 = 8'h4A, nop3 = 8'h4B, 
 			halt3 = 8'h4C, shra3 = 8'h4D, shra4 = 8'h4E, shra5 = 8'h4F;
 
-reg [7:0] present_state = reset_sate;
+reg [7:0] present_state = reset_state;
 
-always @ (posedge Clock, posedge Reset, posedge Stop) 
+always @ (posedge Clock, posedge Clear, posedge Stop) 
 	begin
-		if(Reset == 1'b1) present_state = reset_state;
-		if(stop == 1) present_state = halt3;
+		if(Clear == 1'b1) present_state = reset_state;
+		if(Stop == 1) present_state = halt3;
 		else 
 			case (present_state) 
 				reset_state: present_state = fetch0;
@@ -35,6 +36,9 @@ always @ (posedge Clock, posedge Reset, posedge Stop)
 				fetch1: present_state = fetch2;
 				fetch2: begin
 					case (IR[31:27]) // inst. decoding bvased on opcode (also found in ALU.v) to set next state
+						5'b00000: present_state = ld3;
+						5'b00001: present_state = ldi3;
+						5'b00010: present_state = st3;
 						5'b00011: present_state = add3;
 						5'b00100: present_state = sub3;
 						5'b00101: present_state = and3;
@@ -51,6 +55,16 @@ always @ (posedge Clock, posedge Reset, posedge Stop)
 						5'b10000: present_state = mul3;
 						5'b10001: present_state = neg3;
 						5'b10010: present_state = not3;
+						5'b10011: present_state = br3;
+						5'b10100: present_state = jal3;
+						5'b10101: present_state = jr3;
+						5'b10110: present_state = in3;
+						5'b10111: present_state = out3;
+						5'b11000: present_state = mflo3;
+						5'b11001: present_state = mfhi3;
+						5'b11010: present_state = nop3;
+						5'b11011: present_state = halt3;
+						
 					endcase
 				end
 				
@@ -91,6 +105,7 @@ always @ (posedge Clock, posedge Reset, posedge Stop)
 				mfhi3: present_state = reset_state;
 
 				nop3:  present_state = reset_state;
+				halt3: present_state = reset_state;
 				
 				// ALu
 				
@@ -116,9 +131,9 @@ always @ (posedge Clock, posedge Reset, posedge Stop)
 				div5: present_state = div6;
 				div6: present_state = reset_state;
 				
-				or3: #resent_state = or4;
-				or4: #resent_state = or5;
-				or5: #resent_state = reset_state;
+				or3: present_state = or4;
+				or4: present_state = or5;
+				or5: present_state = reset_state;
 				
 				and3: present_state = and4;
 				and4: present_state = and5;
@@ -164,8 +179,8 @@ begin
 		reset_state: begin
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			HIout <= 0; HIin <= 0; LOout <= 0; LOin <= 0; Zhighout <= 0; Zlowout <= 0; 
-			Zin <= 0; Yin <= 0; MDRout <= 0; MDRin <= 0; MARin <= 0; PCout <= 0; CONin <= 0;
-			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0; Run <= 0; Clear <= 0;
+			Zin <= 0; Yin <= 0; MDRout <= 0; MDRin <= 0; MARin <= 0; PCout <= 0; conIn <= 0;
+			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0; Run <= 0; //Clear <= 0;
 		end
 		fetch0: begin
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
@@ -173,273 +188,99 @@ begin
 		end
 		fetch1: begin
 			Zlowout <= 1; PCin <= 1; MDRin <= 1;
-			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;\
+			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 		end
 		fetch2: begin
 			MDRout <= 1; IRin <= 1; 
 			#15 MDRout <= 0; IRin <= 0;
 		end
-		//-------------------------------------------
-//		and3: begin
-//	
-//		end
-//		and4: begin
-//		
-//		end
-//		and5: begin
-//		
-//		end
-//		//-------------------------------------------
-
-
-
-
+		
 		// changes below here 
-		
-		
 		
 		// below are the testbenches for all modules implemented in phase 1
 		
-		add3: begin
+		add3, sub3: begin
 			 Grb <= 1;  // replaced direct register with grb
 			 Rout <= 1;Yin <= 1;
 			 #15 Grb <= 0;Rout <= 0;Yin <= 0;
 		end
 
-		add4: begin
+		add4, sub4: begin
 			 Grc <= 1;  
 			 Rout <= 1;
-			 opcode <= 5'b00011; // will opcode be handled automatically? if so, comment out
-			 // if opcode handled automatically, similar cases like add and sub can be merged 
 			 Zin <= 1;
 			 #15
-			 opcode <= 5'bzzzzz; Zin <= 0; Grc <= 0;Rout <= 0;
+			 Zin <= 0; Grc <= 0;Rout <= 0;
 		end
 
-		add5: begin
+		add5, sub5: begin
 			 Zlowout <= 1; Gra <= 1;Rin <= 1;
 			 #15
 			 Zlowout <= 0; Gra <= 0;Rin <= 0;			 
 		end
-		//--------------------------------------------
-		sub3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		sub4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b00100; Zin <= 1;  // SUB opcode
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		sub5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
 		
-		mul3: begin
+		//--------------------------------------------
+		
+		mul3, div3: begin
 			 Grb <= 1;Rout <= 1;Yin <= 1;
 			 #15
 			 Grb <= 0;Rout <= 0;Yin <= 0;
 		end
 
-		mul4: begin
+		mul4, div4: begin
 			 Grc <= 1;  
 			 Rout <= 1;
-			 opcode <= 5'b10000;//mul opcode
 			 Zin <= 1;
 			 #15
-			 Grc <= 0;Rout <= 0;opcode <= 5'bzzzzz;Zin <= 0; 
+			 Grc <= 0;Rout <= 0;Zin <= 0; 
 		end
 
-		mul5: begin
+		mul5, div5: begin
 			 Zlowout <= 1;
 			 LOin <= 1;  
 			 #15 Zlowout <= 0; LOin <= 0;
 		end
 
-		mul6: begin
+		mul6, div6: begin
 			 Zhighout <= 1;
 			 HIin <= 1;
 			 #15 Zhighout <= 0; HIin <= 0;
 
 		end
 		//--------------------------------------------
-		div3: begin
-			 Grb <= 1;Rout <= 1;Yin <= 1;
-			 #15
-			 Grb <= 0;Rout <= 0;Yin <= 0;
-		end
-
-		div4: begin
-			 Grc <= 1;
-			 Rout <= 1;
-			 opcode <= 5'b01111; // opcode for DIV
-			 Zin <= 1;
-			 #15
-			 Grc <= 0;Rout <= 0;opcode <= 5'bzzzzz;Zin <= 0;
-		end
-
-		div5: begin
-			 Zlowout <= 1;LOin <= 1;
-			 #15
-			 Zlowout <= 0; LOin <= 0;
-		end
-
-		div6: begin
-			 Zhighout <= 1;HIin <= 1;
-			 #15 
-			 Zhighout <= 0; HIin <= 0;
-
-		end
 		
-		//--------------------------------------------
-		
-		and3: begin
+		and3, or3, rol3, ror3, shl3, shr3, shra3: begin
 			Grb <= 1; Rout <= 1; Yin <= 1;
 			#15 Grb <= 0; Rout <= 0; Yin <= 0;
 		end
 		
-		and4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b00101; Zin <= 1;
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
+		and4, or4, rol4, ror4, shl4, shr4, shra4: begin
+			Grc <= 1; Rout <= 1; Zin <= 1;
+			#15 Grc <= 0; Rout <= 0; Zin <= 0;
 		end
 		
-		and5: begin
+		and5, or5, rol5, ror5, shl5, shr5, shra5: begin
 			Zlowout <= 1; Gra <= 1; Rin <= 1;
 			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
 		end
 		//-------------------------------------------
 		
-		neg3: begin
+		neg3, not3: begin
 			Grb <= 1; Rout <= 1; Yin <= 1;
 			#15 Grb <= 0; Rout <= 0; Yin <= 0;
 		end
 
-		neg4: begin
-			opcode <= 5'b10001; Zin <= 1;
-			#15 opcode <= 5'bzzzzz; Zin <= 0;
+		neg4, not4: begin
+			Zin <= 1;
+			#15 Zin <= 0;
 		end
 
-		neg5: begin
+		neg5, not5: begin
 			Zlowout <= 1; Gra <= 1; Rin <= 1;
 			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
 		end
-		//-------------------------------------------
 		
-		or3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		or4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b00110; Zin <= 1;
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		or5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
 		//-------------------------------------------
-		
-		not3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		not4: begin
-			opcode <= 5'b10010; Zin <= 1; 
-			#15 opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		not5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		
-		rol3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		rol4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b01000; Zin <= 1;
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		rol5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		ror3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		ror4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b00111; Zin <= 1;  
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		ror5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		
-		shl3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		shl4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b01011; Zin <= 1;  
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		shl5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		
-		shr3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		shr4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b01001; Zin <= 1;  
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		shr5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		
-		
-		shra3: begin
-			Grb <= 1; Rout <= 1; Yin <= 1;
-			#15 Grb <= 0; Rout <= 0; Yin <= 0;
-		end
-
-		shra4: begin
-			Grc <= 1; Rout <= 1; opcode <= 5'b01010; Zin <= 1;  
-			#15 Grc <= 0; Rout <= 0; opcode <= 5'bzzzzz; Zin <= 0;
-		end
-
-		shra5: begin
-			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
-		end
-		//-------------------------------------------
-		
 		
 		
 		// below are the testbenches for all modules implemented in phase 2
@@ -452,8 +293,8 @@ begin
 		end
 
 		addi4: begin
-			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // ADD operation
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			Cout <= 1; Zin <= 1; 
+			#15 Cout <= 0; Zin <= 0;
 		end
 
 		addi5: begin
@@ -469,8 +310,8 @@ begin
 		end
 
 		andi4: begin
-			Cout <= 1; Zin <= 1; opcode <= 5'b00101; // AND operation
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			Cout <= 1; Zin <= 1;
+			#15 Cout <= 0; Zin <= 0; 
 		end
 
 		andi5: begin
@@ -496,8 +337,7 @@ begin
 		br5: begin 
 			Cout   <= 1;
 			Zin    <= 1;
-			opcode <= 5'b00011; 
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			#15 Cout <= 0; Zin <= 0;
 		end
 
 		br6: begin  
@@ -511,25 +351,25 @@ begin
 		//-------------------------------------------
 
 		
-		//what's R8_RAin? 
+		//what's R8_RAin? It's the return address register signal
 		
-//		  jal3: begin
-//            PCout   <= 1; 
-//            R8_RAin <= 1;        
-//            #15;
-//            PCout   <= 0;
-//            R8_RAin <= 0;
-//        end
-//
-//        jal4: begin
-//            Gra   <= 1;
-//            Rout  <= 1;
-//            PCin  <= 1;         
-//            #15;
-//            Gra   <= 0;
-//            Rout  <= 0;
-//            PCin  <= 0;
-//        end
+		  jal3: begin
+            PCout   <= 1; 
+            R8_RAin <= 1;        
+            #15;
+            PCout   <= 0;
+            R8_RAin <= 0;
+        end
+
+        jal4: begin
+            Gra   <= 1;
+            Rout  <= 1;
+            PCin  <= 1;         
+            #15;
+            Gra   <= 0;
+            Rout  <= 0;
+            PCin  <= 0;
+        end
 		
 		//-------------------------------------------
 		
@@ -557,11 +397,9 @@ begin
 		ld4: begin 
 			Cout   <= 1;
 			Zin    <= 1;
-			opcode <= 5'b00011; // ADD
 			#15;
 			Cout   <= 0;
 			Zin    <= 0;
-			opcode <= 5'bzzzzz;
 		end
 
 		ld5: begin 
@@ -598,8 +436,8 @@ begin
 		end
 
 		ldi4: begin
-			Cout <= 1; Zin <= 1; opcode <= 5'b00011; // ADD 
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			Cout <= 1; Zin <= 1; 
+			#15 Cout <= 0; Zin <= 0; 
 		end
 
 		ldi5: begin
@@ -611,7 +449,6 @@ begin
 		//--------------------------------------------
 		mfhi3: begin
 		  HIout <= 1; Gra <= 1; Rin <= 1;
-		  next_state <= fetch0;
 		  #15 HIout <= 0; Gra <= 0; Rin <= 0;
 		end
 
@@ -619,7 +456,6 @@ begin
 
 		mflo3: begin
 		  LOout <= 1; Gra <= 1; Rin <= 1;
-		  next_state <= fetch0;
 		  #15 LOout <= 0; Gra <= 0; Rin <= 0;
 		end
 
@@ -629,19 +465,16 @@ begin
 		ori3: begin
 			Gra <= 0; Grb <= 1; Grc <= 0;
 			Rout <= 1; Yin <= 1;
-			next_state <= ori4;
 			#15 Rout <= 0; Yin <= 0;
 		end
 
 		ori4: begin
-			Cout <= 1; Zin <= 1; opcode <= 5'b00110;  // ORI opcode
-			next_state <= ori5;
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			Cout <= 1; Zin <= 1; 
+			#15 Cout <= 0; Zin <= 0;
 		end
 
 		ori5: begin
 			Zlowout <= 1; Gra <= 1; Rin <= 1;
-			next_state <= fetch0;
 			#15 Zlowout <= 0; Gra <= 0; Rin <= 0;
 		end
 
@@ -651,39 +484,62 @@ begin
 		st3: begin 
 			Gra <= 0; Grb <= 1; Grc <= 0;
 			BAout <= 1; Yin <= 1;
-			next_state <= st4;
 			#15 BAout <= 0; Yin <= 0;
 		end
 
 		st4: begin
-			Cout <= 1; Zin <= 1; opcode <= 5'b00011; 
-			next_state <= st5;
-			#15 Cout <= 0; Zin <= 0; opcode <= 5'bzzzzz;
+			Cout <= 1; Zin <= 1;
+			#15 Cout <= 0; Zin <= 0;
 		end
 
 		st5: begin
 			Zlowout <= 1; MARin <= 1;
-			next_state <= st6;
 			#15 Zlowout <= 0; MARin <= 0;
 		end
 
 		st6: begin
 			Gra <= 1; Rout <= 1; MDRin <= 1;
-			next_state <= st7;
 			#15 Gra <= 0; Rout <= 0; MDRin <= 0; Write <= 1;
 		end
 
 		st7: begin
 			MDRout <= 1;
-			next_state <= fetch0;
 			#15 MDRout <= 0; Write <= 0;
 		end
 
-
-		
-		//changes end here 
 		//--------------------------------------------
-
+		
+		in3: begin
+		  Gra <= 1;  // Select R3 as indicated by the instruction field in IR.
+        Rin <= 1;  // Load the bus data into R3.
+		  InPortout <= 1;
+		  #15 Gra <= 0; Rin <= 0; InPortout <= 0;  
+		end
+		
+		//--------------------------------------------
+		
+		out3: begin
+			Gra <= 1; Rout <= 1; Out_portIn <= 1;		
+			#15 Gra <= 0; Rout <= 0; Out_portIn <= 0;
+		end
+		
+		//--------------------------------------------
+		
+		nop3: begin
+			// Do nothing
+		end
+		
+		//--------------------------------------------
+		
+		halt3: begin
+			Run <= 0;
+		end
+		
+		//--------------------------------------------
+		
+		default: begin
+			// Do nothing
+		end
 		
 	endcase
 end

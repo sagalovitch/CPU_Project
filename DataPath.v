@@ -1,22 +1,40 @@
 module DataPath(
-	input clock, clear, read, write,
-	// Temp control unit signals before Contorl Unit is created in Phase 3
-			Gra, Grb, Grc, Rin, Rout, BAout,
-			HIout, HIin,
-			LOout, LOin,
-			Zhighout, Zlowout, Zin, Yin,
-			MDRout, MDRin, MARin,
-			PCout, PCin, IRin, IncPC, Cout, R8_RAin,
-			conIn, 
+	input clock, clear, stop,
 	output [31:0] Outport_Out, 
-	input Out_portIn,
-	input [31: 0] Inport_In,
-	input [4:0] opcode,
-	input Strobe,
-	input InPortout,
-	// add conIn and conOut ::        
-   	output conOut 
+	input [31: 0] Inport_In
 );
+
+// Wires for Control Unit
+wire	Gra, 
+		Grb,
+		Grc,
+		Rin,
+		Rout,
+		BAout,
+		HIout,
+		HIin,
+		LOout,
+		LOin,
+		Zhighout,
+		Zlowout,
+		Zin,
+		Yin,
+		MDRout,
+		MDRin,
+		MARin,
+		PCout,
+		PCin,
+		IRin,
+		IncPC,
+		Cout,
+		R8_RAin,
+		conIn,
+		read,
+		write,
+		run,
+		Out_portIn, // Enable signal for outport
+		Inportout, // Enable signal for Inport
+		conOut;
 
 
 // Wires for the bus
@@ -98,7 +116,8 @@ register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
 register Y(clear, clock, Yin, BusMuxOut, Yout);
 
 register Out_Port(clear, clock, Out_portIn, BusMuxOut, Outport_Out);
-InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort);
+//InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort);
+register In_port(.clear(clear), .clock(clock), .RegisterInput(Inport_In), .RegisterOutput(BusMuxIn_Inport));
 
 // Memory Registers
 mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
@@ -121,8 +140,7 @@ select_encode selectEncode(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rou
 
 wire [63:0] Z_64;
 
-// ALU alu(.A(Yout), .B(BusMuxOut), .C(Z_64),.opcode(Mdatain[31:27])); // Trying to decode Mdatain, ignore for now
-ALU alu(.A(Yout), .B(BusMuxOut), .C(Z_64),.opcode(opcode));
+ALU alu(.A(Yout), .B(BusMuxOut), .C(Z_64),.opcode(IRout[31:27]));
 register Zhi(clear, clock, Zin, Z_64[63:32], BusMuxIn_Zhigh);
 register Zlo(clear, clock, Zin, Z_64[31:0], BusMuxIn_Zlow);
 
@@ -195,6 +213,42 @@ con_ff myConFF (
     .conIn(conIn),   
     .clock(clock),
     .conOut(conOut) 
+);
+
+control_unit CU(
+	.IR(IRout),
+	.Clock(clock),
+	.Stop(stop),
+	.Gra(Gra),
+	.Grb(Grb),
+	.Grc(Grc),
+	.Rin(Rin),
+	.Rout(Rout),
+	.BAout(BAout),
+	.HIout(HIout),
+	.HIin(HIin),
+	.LOout(LOout),
+	.LOin(LOin),
+	.Zhighout(Zhighout),
+	.Zlowout(Zlowout),
+	.Zin(Zin),
+	.Yin(Yin),
+	.MDRout(MDRout),
+	.MDRin(MDRin),
+	.MARin(MARin),
+	.PCout(PCout),
+	.conIn(conIn),
+	.Cout(Cout),
+	.PCin(PCin),
+	.IncPC(IncPC),
+	.IRin(IRin),
+	.Out_portIn(Out_portIn), // Enable signal for Outport (to allow input)
+	.InPortout(InPortOut), // Enable signal for InPort (to allow it to output)
+	.Read(read),
+	.Write(write),
+	.Run(run),
+	.Clear(clear),
+	.R8_RAin(R8_RAin)
 );
 
 endmodule

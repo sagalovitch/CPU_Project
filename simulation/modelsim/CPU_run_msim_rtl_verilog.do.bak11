@@ -5,32 +5,32 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/Bus.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mux2to1.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/and32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/or32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/not32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/add32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/mul32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/neg.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ALU.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/div32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/rol32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/ror32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shl32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shr32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/shra32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/sub32.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/InPort.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/select_encode.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/con_ff.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/register_R0.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/pc.v}
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/RAM.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/Bus.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/DataPath.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/register.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/mux2to1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/and32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/or32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/not32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/add32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/mul32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/neg.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/div32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/rol32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/ror32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shl32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shr32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/shra32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/sub32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/select_encode.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/con_ff.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/register_R0.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/pc.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/control_unit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/RAM.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/20js32/CPU_Project {C:/Users/20js32/CPU_Project/DataPath_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sloth/CPU_Project {C:/Users/sloth/CPU_Project/DataPath_tb.v}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  DataPath_tb
 

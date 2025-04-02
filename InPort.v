@@ -16,3 +16,5 @@ module InPort(
 	end
 	assign Inport_out = q;
 endmodule
+
+// Will replace this with just a normal register
