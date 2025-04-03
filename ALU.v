@@ -102,8 +102,8 @@ always @(*) begin
 			C[63:32] <= 32'd0;
 		end
 		Divide: begin
-			C[63:32] <= div_out;	
-			C[31:0] <= div_remainder; 
+			C[63:32] <= div_remainder;	
+			C[31:0] <= div_out; 
 		end
 		Multiply: begin
 			C[63:0] <= mul_out;

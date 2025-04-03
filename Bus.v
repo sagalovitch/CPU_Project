@@ -64,17 +64,13 @@ always @(*) begin
   // Priority encoder structure
 	if (R0out)   q = BusMuxInR0;
 	else if (R1out)   q = BusMuxInR1;
-	//else if (R2out)   q = BusMuxInR2;
-	else if (R2out ) q = 32'h78; // For ld case 2
+	else if (R2out)   q = BusMuxInR2;
 	else if (R3out)   q = BusMuxInR3;
-	//else if (R3out)   q = 32'hB6; // R3 preloaded to 0xB6 for st instruction need to remove it for input instruction
 	else if (R4out)   q = BusMuxInR4;
 	else if (R5out)   q = BusMuxInR5;
 	else if (R6out)   q = BusMuxInR6;
-	//else if (R6out)   q = 32'h84; // Preloading R6 to 0x86 for output instruction
 	else if (R7out)   q = BusMuxInR7;
 	else if (R8out)   q = BusMuxInR8;
-	// else if (R8out)   q = 32'hB6; //Preloading R8 for some instruction (i do not remember)
 	else if (R9out)   q = BusMuxInR9;
 	else if (R10out)  q = BusMuxInR10;
 	else if (R11out)  q = BusMuxInR11;
@@ -84,9 +80,7 @@ always @(*) begin
 	else if (R15out)  q = BusMuxInR15;
 	else if (MDRout)  q = BusMuxInMDR;
 	else if (HIout)   q = BusMuxInHI;
-	// else if (HIout)   q = 32'hBEEF; //Preloading HIout for special instuction i think (made my jacob)
 	else if (LOout)   q = BusMuxInLO;
-	// else if (LOout)   q = 32'hF00D; //Preloading LOout for special instruction i think (made by jacob)
 	else if (Zhighout) q = BusMuxInZhigh;
 	else if (Zlowout) q = BusMuxInZlow;
 	else if (PCout)   q = BusMuxInPC;

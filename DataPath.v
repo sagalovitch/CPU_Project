@@ -95,7 +95,13 @@ wire 		R0out, R0in,
 wire [31:0] Mdatain;
 
 // Registers
-register_R0 R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
+wire [31:0] R0_og_data;
+wire R0_enable;
+
+register R0(clear, clock, R0_enable, BusMuxOut, R0_og_data);
+assign BusMuxIn_R0 = R0_og_data & ~{32{BAout}};
+assign R0_enable = (R0in == 1 && BAout == 1) ? 0 : R0in;
+
 register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
 register R2(clear, clock, R2in, BusMuxOut, BusMuxIn_R2);
 register R3(clear, clock, R3in, BusMuxOut, BusMuxIn_R3);
@@ -248,7 +254,8 @@ control_unit CU(
 	.Write(write),
 	.Run(run),
 	.Clear(clear),
-	.R8_RAin(R8_RAin)
+	.R8_RAin(R8_RAin),
+	.conOut(conOut)
 );
 
 endmodule

@@ -20,7 +20,7 @@ wire [31:0] Outport_Out, Inport_In;
 
 		// Simulation time
 	initial begin
-		#5000 $finish;
+		#7000 $finish;
 	end
 	
 endmodule

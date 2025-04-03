@@ -105,7 +105,6 @@ always @ (posedge Clock, posedge Clear, posedge Stop)
 				mfhi3: present_state = reset_state;
 
 				nop3:  present_state = reset_state;
-				halt3: present_state = reset_state;
 				
 				// ALu
 				
@@ -147,6 +146,10 @@ always @ (posedge Clock, posedge Clear, posedge Stop)
 				shr4: present_state = shr5;
 				shr5: present_state = reset_state;
 				
+				shra3: present_state = shra4;
+				shra4: present_state = shra5;
+				shra5: present_state = reset_state;
+				
 				rol3: present_state = rol4;
 				rol4: present_state = rol5;
 				rol5: present_state = reset_state;
@@ -156,10 +159,12 @@ always @ (posedge Clock, posedge Clear, posedge Stop)
 				ror5: present_state = reset_state;
 				
 				neg3: present_state = neg4;
-				neg4: present_state = reset_state;
+				neg4: present_state = neg5;
+				neg5: present_state = reset_state;
 				
 				not3: present_state = not4;
-				not4: present_state = reset_state;
+				not4: present_state = not5;
+				not5: present_state = reset_state;
 
 				andi3: present_state = andi4;
 				andi4: present_state = andi5;
@@ -180,15 +185,15 @@ begin
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			HIout <= 0; HIin <= 0; LOout <= 0; LOin <= 0; Zhighout <= 0; Zlowout <= 0; 
 			Zin <= 0; Yin <= 0; MDRout <= 0; MDRin <= 0; MARin <= 0; PCout <= 0; conIn <= 0;
-			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0; Run <= 0; //Clear <= 0;
+			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0;
 		end
 		fetch0: begin
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
 			#15 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0; Read <= 1;
 		end
 		fetch1: begin
-			Zlowout <= 1; PCin <= 1; MDRin <= 1;
-			#15 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
+			MDRin <= 1; // PCin <= 1;
+			#15 Read <= 0; MDRin <= 0; // PCin <= 0;
 		end
 		fetch2: begin
 			MDRout <= 1; IRin <= 1; 
@@ -222,17 +227,17 @@ begin
 		//--------------------------------------------
 		
 		mul3, div3: begin
-			 Grb <= 1;Rout <= 1;Yin <= 1;
+			 Gra <= 1;Rout <= 1;Yin <= 1;
 			 #15
-			 Grb <= 0;Rout <= 0;Yin <= 0;
+			 Gra <= 0;Rout <= 0;Yin <= 0;
 		end
 
 		mul4, div4: begin
-			 Grc <= 1;  
+			 Grb <= 1;  
 			 Rout <= 1;
 			 Zin <= 1;
 			 #15
-			 Grc <= 0;Rout <= 0;Zin <= 0; 
+			 Grb <= 0;Rout <= 0;Zin <= 0; 
 		end
 
 		mul5, div5: begin
@@ -328,7 +333,7 @@ begin
 		end
 
 		br4: begin 
-			conIn <= 0;
+			//conIn <= 0;
 			PCout <= 1;
 			Yin   <= 1;
 			#15 PCout <= 0; Yin <= 0;
@@ -346,7 +351,7 @@ begin
 				PCin <= 1;
 			else
 				PCin <= 0;
-			#15 Zlowout <= 0; PCin <= 0;
+			#15 Zlowout <= 0; PCin <= 0; conIn <= 0;
 		end
 		//-------------------------------------------
 
@@ -386,11 +391,11 @@ begin
 		//-------------------------------------------
 		ld3: begin
 			Grb   <= 1;
-			BAout <= 1;
+			Rout 	<= 1;
 			Yin   <= 1;
 			#15;
 			Grb   <= 0;
-			BAout <= 0;
+			Rout <= 0;
 			Yin   <= 0;
 		end
 
@@ -465,7 +470,7 @@ begin
 		ori3: begin
 			Gra <= 0; Grb <= 1; Grc <= 0;
 			Rout <= 1; Yin <= 1;
-			#15 Rout <= 0; Yin <= 0;
+			#15 Rout <= 0; Yin <= 0; Grb <= 0;
 		end
 
 		ori4: begin

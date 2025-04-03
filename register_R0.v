@@ -13,7 +13,8 @@ always @ (negedge clock)
 				q <= {DATA_WIDTH_IN{1'b0}};
 			end
 			else if (enable) begin
-				q <= BAout & RegisterInput;
+				if (BAout == 0) q <= RegisterInput;
+				if (BAout == 1) q <= 32'b0;
 			end
 		end
 	assign RegisterOutput = q[DATA_WIDTH_OUT-1:0];
