@@ -1,7 +1,8 @@
 module DataPath(
 	input clock, clear, stop,
 	output [31:0] Outport_Out, 
-	input [31: 0] Inport_In
+	input [31: 0] Inport_In,
+	output run
 );
 
 // Wires for Control Unit
@@ -31,9 +32,9 @@ wire	Gra,
 		conIn,
 		read,
 		write,
-		run,
+		//run,
 		Out_portIn, // Enable signal for outport
-		Inportout, // Enable signal for Inport
+		InPortout, // Enable signal for Inport
 		conOut;
 
 
@@ -121,9 +122,12 @@ register HI(clear, clock, HIin, BusMuxOut, BusMuxIn_HI);
 register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
 register Y(clear, clock, Yin, BusMuxOut, Yout);
 
-register Out_Port(clear, clock, Out_portIn, BusMuxOut, Outport_Out);
-//InPort In_port(clear, clock, Strobe, Inport_In, BusMuxIn_InPort);
-register In_port(.clear(clear), .clock(clock), .RegisterInput(Inport_In), .RegisterOutput(BusMuxIn_Inport));
+// Phase 4, add temp variable for outport
+//wire [31:0] outport_out_temp;
+
+register Out_Port(clear, clock, Out_portIn, BusMuxOut, Outport_Out); // For Phase 3
+//register Out_Port(clear, clock, Out_portIn, BusMuxOut, outport_out_temp); // For Phase 4
+register In_port(.clear(clear), .clock(clock), .enable(1), .RegisterInput(Inport_In), .RegisterOutput(BusMuxIn_InPort));
 
 // Memory Registers
 mux2to1 MDR_Mux(read, Mdatain, BusMuxOut, MDRMuxOut);
@@ -249,7 +253,7 @@ control_unit CU(
 	.IncPC(IncPC),
 	.IRin(IRin),
 	.Out_portIn(Out_portIn), // Enable signal for Outport (to allow input)
-	.InPortout(InPortOut), // Enable signal for InPort (to allow it to output)
+	.InPortout(InPortout), // Enable signal for InPort (to allow it to output)
 	.Read(read),
 	.Write(write),
 	.Run(run),
@@ -257,5 +261,10 @@ control_unit CU(
 	.R8_RAin(R8_RAin),
 	.conOut(conOut)
 );
+
+// Phase 4 Stuff
+//Seven_Seg_Display_Out sevenSeg1(.outputt(Outport_Out[7:0]), .clk(clock), .data(outport_out_temp[3:0]));
+//Seven_Seg_Display_Out sevenSeg2(.outputt(Outport_Out[15:8]), .clk(clock), .data(outport_out_temp[7:4]));
+//Seven_Seg_Display_Out sevenSeg3(.outputt(Outport_Out[23:16]), .clk(clock), .data(outport_out_temp[11:8]));
 
 endmodule

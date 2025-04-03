@@ -1,6 +1,6 @@
 Analysis & Elaboration report for CPU
-Wed Apr 02 21:45:55 2025
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Apr 03 12:19:25 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -40,20 +40,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  32. Parameter Settings for User Entity Instance: con_ff:myConFF
  33. Parameter Settings for User Entity Instance: control_unit:CU
  34. Analysis & Elaboration Settings
- 35. Port Connectivity Checks: "control_unit:CU"
- 36. Port Connectivity Checks: "ALU:alu|shl32:shl_32"
- 37. Port Connectivity Checks: "ALU:alu|shra32:shra_32"
- 38. Port Connectivity Checks: "ALU:alu|shr32:shr_32"
- 39. Port Connectivity Checks: "ALU:alu|rol32:rol_32"
- 40. Port Connectivity Checks: "ALU:alu|ror32:ror_32"
- 41. Port Connectivity Checks: "ALU:alu|sub32:sub_32|add32:cla_adder"
- 42. Port Connectivity Checks: "ALU:alu|sub32:sub_32"
- 43. Port Connectivity Checks: "ALU:alu|add32:add_32"
- 44. Port Connectivity Checks: "pc:PC"
- 45. Port Connectivity Checks: "register:MAR"
- 46. Port Connectivity Checks: "register:In_port"
- 47. Analysis & Elaboration Messages
- 48. Analysis & Elaboration Suppressed Messages
+ 35. Port Connectivity Checks: "ALU:alu|shl32:shl_32"
+ 36. Port Connectivity Checks: "ALU:alu|shra32:shra_32"
+ 37. Port Connectivity Checks: "ALU:alu|shr32:shr_32"
+ 38. Port Connectivity Checks: "ALU:alu|rol32:rol_32"
+ 39. Port Connectivity Checks: "ALU:alu|ror32:ror_32"
+ 40. Port Connectivity Checks: "ALU:alu|sub32:sub_32|add32:cla_adder"
+ 41. Port Connectivity Checks: "ALU:alu|sub32:sub_32"
+ 42. Port Connectivity Checks: "ALU:alu|add32:add_32"
+ 43. Port Connectivity Checks: "pc:PC"
+ 44. Port Connectivity Checks: "register:MAR"
+ 45. Port Connectivity Checks: "register:In_port"
+ 46. Analysis & Elaboration Messages
+ 47. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -76,22 +75,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Apr 02 21:45:55 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; CPU                                         ;
-; Top-level Entity Name         ; DataPath                                    ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                  ;
++-------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Apr 03 12:19:25 2025           ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                 ; CPU                                             ;
+; Top-level Entity Name         ; DataPath                                        ;
+; Family                        ; Cyclone V                                       ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
+; Total registers               ; N/A until Partition Merge                       ;
+; Total pins                    ; N/A until Partition Merge                       ;
+; Total virtual pins            ; N/A until Partition Merge                       ;
+; Total block memory bits       ; N/A until Partition Merge                       ;
+; Total PLLs                    ; N/A until Partition Merge                       ;
+; Total DLLs                    ; N/A until Partition Merge                       ;
++-------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------+
@@ -99,8 +98,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -647,16 +646,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "control_unit:CU"                                                                         ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; InPortout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Run       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ALU:alu|shl32:shl_32"                                                                                                                                                                  ;
 +-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -751,15 +740,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register:In_port"                                                                                                                                      ;
-+----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                                                                                      ;
-+----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; RegisterOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "RegisterOutput[31..1]" have no fanouts          ;
-; RegisterOutput ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; enable         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:In_port"                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -767,370 +755,369 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 02 21:45:48 2025
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Apr 03 12:19:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/sloth/CPU_Project/adder.v Line: 2
+    Info (12023): Found entity 1: adder File: C:/Users/20js32/CPU_Project/adder.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus File: C:/Users/sloth/CPU_Project/Bus.v Line: 1
+    Info (12023): Found entity 1: Bus File: C:/Users/20js32/CPU_Project/Bus.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: DataPath File: C:/Users/sloth/CPU_Project/DataPath.v Line: 1
+    Info (12023): Found entity 1: DataPath File: C:/Users/20js32/CPU_Project/DataPath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/Users/sloth/CPU_Project/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/Users/20js32/CPU_Project/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
-    Info (12023): Found entity 1: DataPath_tb File: C:/Users/sloth/CPU_Project/DataPath_tb.v Line: 3
+    Info (12023): Found entity 1: DataPath_tb File: C:/Users/20js32/CPU_Project/DataPath_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: mux2to1 File: C:/Users/sloth/CPU_Project/mux2to1.v Line: 2
+    Info (12023): Found entity 1: mux2to1 File: C:/Users/20js32/CPU_Project/mux2to1.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file and32.v
-    Info (12023): Found entity 1: and32 File: C:/Users/sloth/CPU_Project/and32.v Line: 2
+    Info (12023): Found entity 1: and32 File: C:/Users/20js32/CPU_Project/and32.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file or32.v
-    Info (12023): Found entity 1: or32 File: C:/Users/sloth/CPU_Project/or32.v Line: 2
+    Info (12023): Found entity 1: or32 File: C:/Users/20js32/CPU_Project/or32.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file not32.v
-    Info (12023): Found entity 1: not32 File: C:/Users/sloth/CPU_Project/not32.v Line: 2
+    Info (12023): Found entity 1: not32 File: C:/Users/20js32/CPU_Project/not32.v Line: 2
 Info (12021): Found 3 design units, including 3 entities, in source file add32.v
-    Info (12023): Found entity 1: cla_4bit_adder File: C:/Users/sloth/CPU_Project/add32.v Line: 3
-    Info (12023): Found entity 2: cla_16bit_adder File: C:/Users/sloth/CPU_Project/add32.v Line: 27
-    Info (12023): Found entity 3: add32 File: C:/Users/sloth/CPU_Project/add32.v Line: 42
+    Info (12023): Found entity 1: cla_4bit_adder File: C:/Users/20js32/CPU_Project/add32.v Line: 3
+    Info (12023): Found entity 2: cla_16bit_adder File: C:/Users/20js32/CPU_Project/add32.v Line: 27
+    Info (12023): Found entity 3: add32 File: C:/Users/20js32/CPU_Project/add32.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file mul32.v
-    Info (12023): Found entity 1: mul32 File: C:/Users/sloth/CPU_Project/mul32.v Line: 3
+    Info (12023): Found entity 1: mul32 File: C:/Users/20js32/CPU_Project/mul32.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file neg.v
-    Info (12023): Found entity 1: neg File: C:/Users/sloth/CPU_Project/neg.v Line: 2
+    Info (12023): Found entity 1: neg File: C:/Users/20js32/CPU_Project/neg.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/sloth/CPU_Project/ALU.v Line: 3
+    Info (12023): Found entity 1: ALU File: C:/Users/20js32/CPU_Project/ALU.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file div32.v
-    Info (12023): Found entity 1: div32 File: C:/Users/sloth/CPU_Project/div32.v Line: 3
-Warning (10229): Verilog HDL Expression warning at rol32.v(6): truncated literal to match 5 bits File: C:/Users/sloth/CPU_Project/rol32.v Line: 6
+    Info (12023): Found entity 1: div32 File: C:/Users/20js32/CPU_Project/div32.v Line: 3
+Warning (10229): Verilog HDL Expression warning at rol32.v(6): truncated literal to match 5 bits File: C:/Users/20js32/CPU_Project/rol32.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rol32.v
-    Info (12023): Found entity 1: rol32 File: C:/Users/sloth/CPU_Project/rol32.v Line: 1
-Warning (10229): Verilog HDL Expression warning at ror32.v(6): truncated literal to match 5 bits File: C:/Users/sloth/CPU_Project/ror32.v Line: 6
+    Info (12023): Found entity 1: rol32 File: C:/Users/20js32/CPU_Project/rol32.v Line: 1
+Warning (10229): Verilog HDL Expression warning at ror32.v(6): truncated literal to match 5 bits File: C:/Users/20js32/CPU_Project/ror32.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file ror32.v
-    Info (12023): Found entity 1: ror32 File: C:/Users/sloth/CPU_Project/ror32.v Line: 1
+    Info (12023): Found entity 1: ror32 File: C:/Users/20js32/CPU_Project/ror32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shl32.v
-    Info (12023): Found entity 1: shl32 File: C:/Users/sloth/CPU_Project/shl32.v Line: 1
+    Info (12023): Found entity 1: shl32 File: C:/Users/20js32/CPU_Project/shl32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shr32.v
-    Info (12023): Found entity 1: shr32 File: C:/Users/sloth/CPU_Project/shr32.v Line: 1
+    Info (12023): Found entity 1: shr32 File: C:/Users/20js32/CPU_Project/shr32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shra32.v
-    Info (12023): Found entity 1: shra32 File: C:/Users/sloth/CPU_Project/shra32.v Line: 1
+    Info (12023): Found entity 1: shra32 File: C:/Users/20js32/CPU_Project/shra32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sub32.v
-    Info (12023): Found entity 1: sub32 File: C:/Users/sloth/CPU_Project/sub32.v Line: 3
+    Info (12023): Found entity 1: sub32 File: C:/Users/20js32/CPU_Project/sub32.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file inport.v
-    Info (12023): Found entity 1: InPort File: C:/Users/sloth/CPU_Project/InPort.v Line: 1
+    Info (12023): Found entity 1: InPort File: C:/Users/20js32/CPU_Project/InPort.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: RAM File: C:/Users/sloth/CPU_Project/RAM.v Line: 1
+    Info (12023): Found entity 1: RAM File: C:/Users/20js32/CPU_Project/RAM.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file select_encode.v
-    Info (12023): Found entity 1: select_encode File: C:/Users/sloth/CPU_Project/select_encode.v Line: 2
+    Info (12023): Found entity 1: select_encode File: C:/Users/20js32/CPU_Project/select_encode.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ram_1port.v
-    Info (12023): Found entity 1: ram_1port File: C:/Users/sloth/CPU_Project/ram_1port.v Line: 39
+    Info (12023): Found entity 1: ram_1port File: C:/Users/20js32/CPU_Project/ram_1port.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file ram_lib.v
-    Info (12023): Found entity 1: ram_lib File: C:/Users/sloth/CPU_Project/ram_lib.v Line: 39
+    Info (12023): Found entity 1: ram_lib File: C:/Users/20js32/CPU_Project/ram_lib.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file con_ff.v
-    Info (12023): Found entity 1: con_ff File: C:/Users/sloth/CPU_Project/con_ff.v Line: 1
+    Info (12023): Found entity 1: con_ff File: C:/Users/20js32/CPU_Project/con_ff.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: pc File: C:/Users/sloth/CPU_Project/pc.v Line: 1
+    Info (12023): Found entity 1: pc File: C:/Users/20js32/CPU_Project/pc.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
-    Info (12023): Found entity 1: control_unit File: C:/Users/sloth/CPU_Project/control_unit.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(126): created implicit net for "BusMuxIn_Inport" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 126
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(208): created implicit net for "InPortout" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 208
-Warning (10236): Verilog HDL Implicit Net warning at DataPath.v(252): created implicit net for "InPortOut" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 252
+    Info (12023): Found entity 1: control_unit File: C:/Users/20js32/CPU_Project/control_unit.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file seven_seg_display_out.v
+    Info (12023): Found entity 1: Seven_Seg_Display_Out File: C:/Users/20js32/CPU_Project/Seven_Seg_Display_Out.v Line: 1
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DataPath.v(103): truncated value with size 32 to match size of target (1) File: C:/Users/sloth/CPU_Project/DataPath.v Line: 103
-Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 101
-Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 129
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 134
-Info (12128): Elaborating entity "pc" for hierarchy "pc:PC" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 136
-Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:selectEncode" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 145
-Warning (10240): Verilog HDL Always Construct warning at select_encode.v(26): inferring latch(es) for variable "binary_in", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/select_encode.v Line: 26
-Info (10041): Inferred latch for "binary_in[0]" at select_encode.v(26) File: C:/Users/sloth/CPU_Project/select_encode.v Line: 26
-Info (10041): Inferred latch for "binary_in[1]" at select_encode.v(26) File: C:/Users/sloth/CPU_Project/select_encode.v Line: 26
-Info (10041): Inferred latch for "binary_in[2]" at select_encode.v(26) File: C:/Users/sloth/CPU_Project/select_encode.v Line: 26
-Info (10041): Inferred latch for "binary_in[3]" at select_encode.v(26) File: C:/Users/sloth/CPU_Project/select_encode.v Line: 26
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 149
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(55): incomplete case statement has no default case item File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(55): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[0]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[1]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[2]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[3]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[4]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[5]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[6]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[7]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[8]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[9]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[10]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[11]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[12]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[13]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[14]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[15]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[16]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[17]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[18]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[19]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[20]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[21]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[22]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[23]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[24]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[25]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[26]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[27]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[28]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[29]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[30]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[31]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[32]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[33]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[34]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[35]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[36]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[37]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[38]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[39]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[40]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[41]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[42]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[43]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[44]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[45]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[46]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[47]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[48]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[49]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[50]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[51]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[52]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[53]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[54]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[55]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[56]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[57]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[58]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[59]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[60]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[61]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[62]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (10041): Inferred latch for "C[63]" at ALU.v(55) File: C:/Users/sloth/CPU_Project/ALU.v Line: 55
-Info (12128): Elaborating entity "add32" for hierarchy "ALU:alu|add32:add_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 36
-Info (12128): Elaborating entity "cla_16bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low" File: C:/Users/sloth/CPU_Project/add32.v Line: 51
-Info (12128): Elaborating entity "cla_4bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low|cla_4bit_adder:adder0" File: C:/Users/sloth/CPU_Project/add32.v Line: 35
-Info (12128): Elaborating entity "sub32" for hierarchy "ALU:alu|sub32:sub_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 37
-Info (12128): Elaborating entity "mul32" for hierarchy "ALU:alu|mul32:mul_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 38
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(30): case item expression never matches the case expression File: C:/Users/sloth/CPU_Project/mul32.v Line: 30
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(31): case item expression never matches the case expression File: C:/Users/sloth/CPU_Project/mul32.v Line: 31
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(33): case item expression never matches the case expression File: C:/Users/sloth/CPU_Project/mul32.v Line: 33
-Warning (10199): Verilog HDL Case Statement warning at mul32.v(34): case item expression never matches the case expression File: C:/Users/sloth/CPU_Project/mul32.v Line: 34
-Warning (10230): Verilog HDL assignment warning at mul32.v(41): truncated value with size 65 to match size of target (64) File: C:/Users/sloth/CPU_Project/mul32.v Line: 41
-Info (12128): Elaborating entity "div32" for hierarchy "ALU:alu|div32:div_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 39
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "quotient_sign", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "remainder_sign", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "abs_dividend", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "abs_divisor", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "remainder_register", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "bit_position", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/div32.v Line: 16
-Info (12128): Elaborating entity "and32" for hierarchy "ALU:alu|and32:and_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 40
-Info (12128): Elaborating entity "or32" for hierarchy "ALU:alu|or32:or_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 41
-Info (12128): Elaborating entity "ror32" for hierarchy "ALU:alu|ror32:ror_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 42
-Info (12128): Elaborating entity "rol32" for hierarchy "ALU:alu|rol32:rol_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 43
-Info (12128): Elaborating entity "shr32" for hierarchy "ALU:alu|shr32:shr_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 44
-Info (12128): Elaborating entity "shra32" for hierarchy "ALU:alu|shra32:shra_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 45
-Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 46
-Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 47
-Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/sloth/CPU_Project/ALU.v Line: 48
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 213
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(65): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/Bus.v Line: 65
-Info (10041): Inferred latch for "q[0]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[1]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[2]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[3]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[4]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[5]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[6]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[7]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[8]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[9]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[10]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[11]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[12]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[13]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[14]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[15]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[16]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[17]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[18]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[19]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[20]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[21]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[22]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[23]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[24]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[25]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[26]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[27]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[28]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[29]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[30]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (10041): Inferred latch for "q[31]" at Bus.v(66) File: C:/Users/sloth/CPU_Project/Bus.v Line: 66
-Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:myConFF" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 222
-Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:CU" File: C:/Users/sloth/CPU_Project/DataPath.v Line: 259
-Warning (10270): Verilog HDL Case Statement warning at control_unit.v(38): incomplete case statement has no default case item File: C:/Users/sloth/CPU_Project/control_unit.v Line: 38
-Warning (10270): Verilog HDL Case Statement warning at control_unit.v(33): incomplete case statement has no default case item File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10264): Verilog HDL Case Statement information at control_unit.v(33): all case item expressions in this case statement are onehot File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(28): inferring latch(es) for variable "present_state", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at control_unit.v(350): variable "conOut" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/sloth/CPU_Project/control_unit.v Line: 350
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "HIout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "HIin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "LOout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "LOin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Zhighout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Zlowout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Zin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Yin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "MDRout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "MDRin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "PCout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "conIn", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "PCin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Out_portIn", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Read", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Write", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "IncPC", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Cout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "R8_RAin", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "InPortout", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(181): inferring latch(es) for variable "Run", which holds its previous value in one or more paths through the always construct File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Run" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "InPortout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "R8_RAin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Cout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "IncPC" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Write" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Read" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Out_portIn" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "IRin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "PCin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "conIn" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "PCout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "MARin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "MDRin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "MDRout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Yin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Zin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Zlowout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Zhighout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "LOin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "LOout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "HIin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "HIout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "BAout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Rout" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Rin" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Grc" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Grb" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "Gra" at control_unit.v(181) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 181
-Info (10041): Inferred latch for "present_state.shra5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shra4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shra3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.halt3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.nop3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.out3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.in3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mflo3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mfhi3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.jal4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.jal3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.jr3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.br6" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.br5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.br4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.br3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ori5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ori4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ori3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.andi5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.andi4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.andi3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.addi5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.addi4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.addi3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.st7" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.st6" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.st5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.st4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.st3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ldi5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ldi4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ldi3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ld7" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ld6" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ld5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ld4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ld3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.not5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.not4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.not3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.neg5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.neg4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.neg3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ror5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ror4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.ror3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.rol5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.rol4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.rol3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shr5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shr4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shr3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shl5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shl4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.shl3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.and5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.and4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.and3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.or5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.or4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.or3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.div6" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.div5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.div4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.div3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mul6" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mul5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mul4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.mul3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.sub5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.sub4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.sub3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.add5" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.add4" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.add3" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.fetch2" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.fetch1" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.fetch0" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
-Info (10041): Inferred latch for "present_state.reset_state" at control_unit.v(33) File: C:/Users/sloth/CPU_Project/control_unit.v Line: 33
+Warning (10230): Verilog HDL assignment warning at DataPath.v(104): truncated value with size 32 to match size of target (1) File: C:/Users/20js32/CPU_Project/DataPath.v Line: 104
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 102
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:MDR_Mux" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 133
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 138
+Info (12128): Elaborating entity "pc" for hierarchy "pc:PC" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 140
+Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:selectEncode" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 149
+Warning (10240): Verilog HDL Always Construct warning at select_encode.v(26): inferring latch(es) for variable "binary_in", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
+Info (10041): Inferred latch for "binary_in[0]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
+Info (10041): Inferred latch for "binary_in[1]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
+Info (10041): Inferred latch for "binary_in[2]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
+Info (10041): Inferred latch for "binary_in[3]" at select_encode.v(26) File: C:/Users/20js32/CPU_Project/select_encode.v Line: 26
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 153
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(55): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(55): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[0]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[1]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[2]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[3]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[4]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[5]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[6]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[7]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[8]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[9]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[10]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[11]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[12]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[13]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[14]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[15]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[16]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[17]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[18]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[19]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[20]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[21]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[22]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[23]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[24]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[25]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[26]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[27]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[28]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[29]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[30]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[31]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[32]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[33]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[34]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[35]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[36]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[37]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[38]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[39]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[40]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[41]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[42]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[43]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[44]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[45]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[46]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[47]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[48]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[49]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[50]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[51]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[52]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[53]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[54]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[55]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[56]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[57]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[58]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[59]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[60]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[61]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[62]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (10041): Inferred latch for "C[63]" at ALU.v(55) File: C:/Users/20js32/CPU_Project/ALU.v Line: 55
+Info (12128): Elaborating entity "add32" for hierarchy "ALU:alu|add32:add_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 36
+Info (12128): Elaborating entity "cla_16bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low" File: C:/Users/20js32/CPU_Project/add32.v Line: 51
+Info (12128): Elaborating entity "cla_4bit_adder" for hierarchy "ALU:alu|add32:add_32|cla_16bit_adder:adder_low|cla_4bit_adder:adder0" File: C:/Users/20js32/CPU_Project/add32.v Line: 35
+Info (12128): Elaborating entity "sub32" for hierarchy "ALU:alu|sub32:sub_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 37
+Info (12128): Elaborating entity "mul32" for hierarchy "ALU:alu|mul32:mul_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 38
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(30): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 30
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(31): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 31
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(33): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 33
+Warning (10199): Verilog HDL Case Statement warning at mul32.v(34): case item expression never matches the case expression File: C:/Users/20js32/CPU_Project/mul32.v Line: 34
+Warning (10230): Verilog HDL assignment warning at mul32.v(41): truncated value with size 65 to match size of target (64) File: C:/Users/20js32/CPU_Project/mul32.v Line: 41
+Info (12128): Elaborating entity "div32" for hierarchy "ALU:alu|div32:div_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 39
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "quotient_sign", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "remainder_sign", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "abs_dividend", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "abs_divisor", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "remainder_register", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at div32.v(16): inferring latch(es) for variable "bit_position", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/div32.v Line: 16
+Info (12128): Elaborating entity "and32" for hierarchy "ALU:alu|and32:and_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 40
+Info (12128): Elaborating entity "or32" for hierarchy "ALU:alu|or32:or_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 41
+Info (12128): Elaborating entity "ror32" for hierarchy "ALU:alu|ror32:ror_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 42
+Info (12128): Elaborating entity "rol32" for hierarchy "ALU:alu|rol32:rol_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 43
+Info (12128): Elaborating entity "shr32" for hierarchy "ALU:alu|shr32:shr_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 44
+Info (12128): Elaborating entity "shra32" for hierarchy "ALU:alu|shra32:shra_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 45
+Info (12128): Elaborating entity "shl32" for hierarchy "ALU:alu|shl32:shl_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 46
+Info (12128): Elaborating entity "neg" for hierarchy "ALU:alu|neg:neg_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 47
+Info (12128): Elaborating entity "not32" for hierarchy "ALU:alu|not32:not_32" File: C:/Users/20js32/CPU_Project/ALU.v Line: 48
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 217
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(65): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/Bus.v Line: 65
+Info (10041): Inferred latch for "q[0]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[1]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[2]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[3]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[4]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[5]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[6]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[7]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[8]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[9]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[10]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[11]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[12]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[13]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[14]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[15]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[16]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[17]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[18]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[19]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[20]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[21]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[22]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[23]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[24]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[25]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[26]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[27]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[28]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[29]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[30]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (10041): Inferred latch for "q[31]" at Bus.v(66) File: C:/Users/20js32/CPU_Project/Bus.v Line: 66
+Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:myConFF" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 226
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:CU" File: C:/Users/20js32/CPU_Project/DataPath.v Line: 263
+Warning (10270): Verilog HDL Case Statement warning at control_unit.v(42): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/control_unit.v Line: 42
+Warning (10270): Verilog HDL Case Statement warning at control_unit.v(37): incomplete case statement has no default case item File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10264): Verilog HDL Case Statement information at control_unit.v(37): all case item expressions in this case statement are onehot File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(32): inferring latch(es) for variable "present_state", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at control_unit.v(354): variable "conOut" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/20js32/CPU_Project/control_unit.v Line: 354
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "HIout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "HIin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "LOout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "LOin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Zhighout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Zlowout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Zin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Yin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "MDRout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "MDRin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "PCout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "conIn", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "PCin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Out_portIn", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Read", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Write", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "InPortout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "IncPC", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Cout", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "R8_RAin", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(185): inferring latch(es) for variable "Run", which holds its previous value in one or more paths through the always construct File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Run" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "R8_RAin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Cout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "IncPC" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "InPortout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Write" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Read" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Out_portIn" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "IRin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "PCin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "conIn" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "PCout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "MARin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "MDRin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "MDRout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Yin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Zin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Zlowout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Zhighout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "LOin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "LOout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "HIin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "HIout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "BAout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Rout" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Rin" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Grc" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Grb" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "Gra" at control_unit.v(185) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 185
+Info (10041): Inferred latch for "present_state.shra5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shra4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shra3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.halt3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.nop3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.out3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.in3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mflo3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mfhi3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.jal4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.jal3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.jr3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.br6" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.br5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.br4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.br3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ori5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ori4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ori3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.andi5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.andi4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.andi3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.addi5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.addi4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.addi3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.st7" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.st6" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.st5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.st4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.st3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ldi5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ldi4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ldi3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ld7" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ld6" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ld5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ld4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ld3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.not5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.not4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.not3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.neg5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.neg4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.neg3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ror5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ror4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.ror3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.rol5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.rol4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.rol3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shr5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shr4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shr3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shl5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shl4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.shl3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.and5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.and4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.and3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.or5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.or4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.or3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.div6" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.div5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.div4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.div3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mul6" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mul5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mul4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.mul3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.sub5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.sub4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.sub3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.add5" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.add4" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.add3" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.fetch2" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.fetch1" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.fetch0" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
+Info (10041): Inferred latch for "present_state.reset_state" at control_unit.v(37) File: C:/Users/20js32/CPU_Project/control_unit.v Line: 37
 Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file C:/Users/sloth/CPU_Project/output_files/CPU.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Wed Apr 02 21:45:55 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:13
+Info (144001): Generated suppressed messages file C:/Users/20js32/CPU_Project/output_files/CPU.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Thu Apr 03 12:19:25 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/sloth/CPU_Project/output_files/CPU.map.smsg.
+The suppressed messages can be found in C:/Users/20js32/CPU_Project/output_files/CPU.map.smsg.
 
 

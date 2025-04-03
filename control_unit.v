@@ -5,8 +5,12 @@ module control_unit (
 	Zin, Yin, MDRout, MDRin, MARin, PCout, 
 	PCin, IRin, Out_portIn, InPortout, conIn, Read, Write, Run, R8_RAin, IncPC, Cout,
 	input [31:0] IR,
-	input Clock, Stop, conOut, Clear
+	input Clock, Stop, conOut, Clear // Clear is same as reset
 );
+
+initial begin
+	Run <= 1;
+end
 
 parameter reset_state = 8'h0, fetch0 = 8'h1, fetch1 = 8'h2, fetch2 = 8'h3, 
 			add3 = 8'h4, add4 = 8'h5, add5 = 8'h6, sub3 = 8'h7, sub4 = 8'h8, sub5 = 8'h9,
@@ -185,7 +189,7 @@ begin
 			Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0; BAout <= 0;
 			HIout <= 0; HIin <= 0; LOout <= 0; LOin <= 0; Zhighout <= 0; Zlowout <= 0; 
 			Zin <= 0; Yin <= 0; MDRout <= 0; MDRin <= 0; MARin <= 0; PCout <= 0; conIn <= 0;
-			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0;
+			PCin <= 0; IRin <= 0; Out_portIn <= 0; conIn <= 0; Read <= 0; Write <= 0; InPortout <= 0;
 		end
 		fetch0: begin
 			PCout <= 1;  MARin <= 1; IncPC <= 1;  Zin <= 1; 
@@ -333,7 +337,7 @@ begin
 		end
 
 		br4: begin 
-			//conIn <= 0;
+			conIn <= 0;
 			PCout <= 1;
 			Yin   <= 1;
 			#15 PCout <= 0; Yin <= 0;
@@ -351,12 +355,9 @@ begin
 				PCin <= 1;
 			else
 				PCin <= 0;
-			#15 Zlowout <= 0; PCin <= 0; conIn <= 0;
+			#15 Zlowout <= 0; PCin <= 0; //conIn <= 0;
 		end
 		//-------------------------------------------
-
-		
-		//what's R8_RAin? It's the return address register signal
 		
 		  jal3: begin
             PCout   <= 1; 
@@ -392,8 +393,10 @@ begin
 		ld3: begin
 			Grb   <= 1;
 			Rout 	<= 1;
+			BAout <= 1;
 			Yin   <= 1;
 			#15;
+			BAout <= 0;
 			Grb   <= 0;
 			Rout <= 0;
 			Yin   <= 0;
@@ -489,7 +492,7 @@ begin
 		st3: begin 
 			Gra <= 0; Grb <= 1; Grc <= 0;
 			BAout <= 1; Yin <= 1;
-			#15 BAout <= 0; Yin <= 0;
+			#15 BAout <= 0; Yin <= 0; Grb <= 0;
 		end
 
 		st4: begin
@@ -515,8 +518,8 @@ begin
 		//--------------------------------------------
 		
 		in3: begin
-		  Gra <= 1;  // Select R3 as indicated by the instruction field in IR.
-        Rin <= 1;  // Load the bus data into R3.
+		  Gra <= 1;  
+        Rin <= 1;  
 		  InPortout <= 1;
 		  #15 Gra <= 0; Rin <= 0; InPortout <= 0;  
 		end
